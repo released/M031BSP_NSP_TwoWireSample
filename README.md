@@ -18,7 +18,9 @@ update @ 2021/09/03
 
 3. under NSP_project folder is zip file of NSP project , include project file with 6 wave file (index from 1 ~ 6) 
 
-open project file by Nuvoton NSP PlayList Editor , wave file re-sample as 16000 Hz (refer NSP PlayList Editor Tool User Guilde.pdf)
+	open project file by Nuvoton NSP PlayList Editor , wave file re-sample as 16000 Hz 
+
+	refer NSP PlayList Editor Tool User Guilde.pdf
 
 
 4. scenario 
