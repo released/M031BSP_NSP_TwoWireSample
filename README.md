@@ -35,7 +35,7 @@ update @ 2021/09/03
 	
 	by terminal , press digit 2 , 3 to play wave file (however , NSP will entry power down after play finish , and data will lost)
 	
-	by terminal , press digit 4 , 5 to play wave file (NSP will not into power down)
+	by terminal , press digit 4 , 5 to play wave file (NSP will not go into power down)
 	
 	by terminal , press A or a , to increase volume and D or d , to decrease volume
 	
