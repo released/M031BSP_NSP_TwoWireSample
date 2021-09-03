@@ -27,7 +27,7 @@ update @ 2021/09/03
 
 	initial GPIO : use PA11 as BP01(DATA) , PA10 as BP00(CLK) 
 	
-	initial NSP960B EVB , BP17 and BP20 as GPIO input , and connect with button 
+	initial NSP960B EVB , BP17 and BP20 as GPIO input , and connect with external button 
 		
 		BP17 use external PULL HIGH button , press button will play wave file
 		
