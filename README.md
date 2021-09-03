@@ -6,9 +6,9 @@ update @ 2021/09/03
 
 1. pre programming wave file index in NSP960B EVB by Nuvoton NSP PlayList Editor V1.13.000 with NSP 1-1 Writer
 
-2. Below file copy from Nuvoton NSP PlayList Editor V1.13.000 folder and use PA11 as BP01(DATA) , PA10 as BP00(CLK) 
+2. Below file copy from Nuvoton NSP PlayList Editor V1.13.000 folder
 
-	nsp_driver.c , 
+	nsp_driver.c , use PA11 as BP01(DATA) , PA10 as BP00(CLK)
 	
 	nsp_driver.h  ,
 	
