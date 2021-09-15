@@ -1,0 +1,1772 @@
+Executable File = D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING\CpuIf\Code_Release\VP_CpuIf_NSP960_SOP14.ocl
+
+Timestamp is Wed Sep 08 10:37:14 2021
+
+
+****************************************************************************************************
+* ROM Memory Utilization
+****************************************************************************************************
+ROM unused space [      39A1H -       4000H]=        65FH (       1631) Bytes
+
+Total size of unused memory =  (       1631) Bytes
+Total size of used memory =  (     125185) Bytes
+Total size of PROM =  (     126816) Bytes
+
+****************************************************************************************************
+* Section Summary
+****************************************************************************************************
+
+Address(Start)      Address(End)        Length              Name(section)                           
+
+00:0X000000         00:0X000025         0X26                LIBRARY_USED_RAM                        
+00:0X000026         00:0X000119         0XF4                USER_RAM                                
+00:0X0001E0         00:0X0001FF         0X20                STACK_RAM                               
+00:0X000200         00:0X000EFF         0XD00               SECTION_ReservedAddrRange1              
+00:0X000F00         00:0X000F15         0X16                USER_DPD_RAM                            
+00:0X000F20         00:0X000FFF         0XE0                SECTION_ReservedAddrRange2              
+00:0X001000         00:0X001068         0X69                WINBOND_TEST_CODE                       
+00:0X001080         00:0X001097         0X18                VECTOR                                  
+00:0X0010A0         00:0X001302         0X263               LIBRARY_CODE                            
+00:0X001303         00:0X003278         0X1F76              CODE                                    
+00:0X003279         00:0X0039A0         0X728               LIBRARY_CODE_NOCROSSING                 
+00:0X019E00         00:0X01A1FF         0X400               ISPSWAPPINGPAGE                         
+00:0X004000         00:0X007FFF         0X4000              INTERNAL_RESOURCE                       
+00:0X018000         00:0X01FFFF         0X8000              INTERNAL_RESOURCE                       
+00:0X028000         00:0X02FFFF         0X8000              INTERNAL_RESOURCE                       
+00:0X038000         00:0X03FFFF         0X8000              INTERNAL_RESOURCE                       
+
+****************************************************************************************************
+/*Global symbols sorting by address
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X000026     BAM_EVENT_ADDR_SP1                      UIO_SR.oc                               
+00:0X000026     UIO_MULTI_PIN_TABLE                     UIO_SR.oc                               
+00:0X000026     UIO_PIN_TABLE                           UIO_SR.oc                               
+00:0X000026     UIO_SET_PIN_ENABLE_VALUE_TABLE          UIO_SR.oc                               
+00:0X000026     UIO_SET_DIS_PIN_STOP_VALUE_TABLE        UIO_SR.oc                               
+00:0X000026     UIO_PIN_RAM_OFFSET_TABLE                UIO_SR.oc                               
+00:0X000026     UIO_EVENT_CH_FLAG                       UIO_SR.oc                               
+00:0X000026     UIO_PIN_CH_FLAG_ARRAY                   UIO_SR.oc                               
+00:0X000026     UIO_SET_PIN_STOP_VALUE_TABLE            UIO_SR.oc                               
+00:0X000026     UIO_EN_MULTI_PIN_ARRAY                  UIO_SR.oc                               
+00:0X000026     DUTY_LEVEL_ARRAY                        UIO_SR.oc                               
+00:0X000026     UIO_USED_PIN_TABLE                      UIO_SR.oc                               
+00:0X0010A0     SP_GLOBAL_VOLUME_TABLE                  ChannelTable.oc                         
+00:0X0010A0     _ISPPARTITION_CUSTOMER_                 ISPPartition.oc                         
+00:0X0010A3     SP_BUSY_GLOBAL_PLAY_TABLE               ChannelTable.oc                         
+00:0X0010A6     EVO_BUSY_GLOBAL_PLAY_TABLE              ChannelTable.oc                         
+00:0X0010A6     DIS_UIO_EVENT_FLAG                      ChannelTable.oc                         
+00:0X0010A9     PLAY_BACK_FLAG_TABLE                    ChannelTable.oc                         
+00:0X0010AC     MS_CH1_NOTE_ON_SYNC_TABLE               ChannelTable.oc                         
+00:0X0010AE     MS_CH1_NOTE_OFF_SYNC_TABLE              ChannelTable.oc                         
+00:0X0010B0     EVENT_INT_TYPE_TABLE                    ChannelTable.oc                         
+00:0X0010B2     EVENT_NRPN_ADDR_TABLE                   ChannelTable.oc                         
+00:0X0010B4     EVENT_COUNT_TABLE                       ChannelTable.oc                         
+00:0X0010B6     EVENT_CHUNK_ADDR_TABLE                  ChannelTable.oc                         
+00:0X0010B8     EVENT_CH_TABLE                          ChannelTable.oc                         
+00:0X0010BA     COLOR_FLY_EVENT_ADDR_TABLE              ChannelTable.oc                         
+00:0X0010BC     COLOR_FLY_GROUP_TABLE                   ChannelTable.oc                         
+00:0X0010BE     GET_EVENT_CHANNEL_TYPE                  ChannelTable.oc                         
+00:0X0010C8     GET_EVENT_CHANNEL                       ChannelTable.oc                         
+00:0X0010D0     CHK_HWE_IDLE                            ChannelTable.oc                         
+00:0X0010DD     LEAKPROOF_SETTING_FUNC                  ChannelTable.oc                         
+00:0X001109     RESERVE1_ISR                            ChannelTable.oc                         
+00:0X001114     CH_ISR_ACTION_RET                       ChannelTable.oc                         
+00:0X001118     RESERVE2_ISR                            ChannelTable.oc                         
+00:0X00111E     STOP_PLAY_Y_SP_API                      ChannelTable.oc                         
+00:0X001133     STOP_PLAY_Y_EVO_API                     ChannelTable.oc                         
+00:0X00114B     STOP_ALL_SP_API                         ChannelTable.oc                         
+00:0X001158     STOP_PLAY_ALL_API                       ChannelTable.oc                         
+00:0X00115F     SET_PLAYLIST_TABLE_PROC                 ChannelTable.oc                         
+00:0X001160     SEND_PLAY_CMD_PROC                      ChannelTable.oc                         
+****************************************************************************************************
+/*Global symbols sorting by address
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X001165     SEND_CMD_PROC                           ChannelTable.oc                         
+00:0X00116E     CHK_HANDSHAKE_PROC                      ChannelTable.oc                         
+00:0X001192     HWE_READY_PROC                          ChannelTable.oc                         
+00:0X00123E     HWE_TABLE_BA_PROC                       ChannelTable.oc                         
+00:0X00125E     HWE_TABLE_ALT1_BA_PROC                  ChannelTable.oc                         
+00:0X00127E     REFRESH_STATUS_PROC                     ChannelTable.oc                         
+00:0X001284     FLASH_ERASE_PAGE_PROC                   ChannelTable.oc                         
+00:0X001295     FLASH_READ_PAGE_PROC                    ChannelTable.oc                         
+00:0X0012A6     FLASH_WRITE_PAGE_PROC                   ChannelTable.oc                         
+00:0X0012B7     FLASH_COPY_PAGE_PROC                    ChannelTable.oc                         
+00:0X0012C8     FLASH_BLANK_CHECK_PAGE_PROC             ChannelTable.oc                         
+00:0X0012D9     FLASH_VERIFY_PAGE_PROC                  ChannelTable.oc                         
+00:0X0012EA     ADD_CHECKSUM_LIB                        ChannelTable.oc                         
+00:0X0012FB     ADC_CH_SETTING_TABLE                    ChannelTable.oc                         
+00:0X0012FF     ADC_CH_PIN_MASK_TABLE                   ChannelTable.oc                         
+00:0X001303     CAPKEY2T                                CapSensorCmd.oc                         
+00:0X001303     CAPKEY1T                                CapSensorCmd.oc                         
+00:0X001303     CAPKEY8T                                CapSensorCmd.oc                         
+00:0X001303     CAPKEY7T                                CapSensorCmd.oc                         
+00:0X001303     CAPKEY6T                                CapSensorCmd.oc                         
+00:0X001303     CAPKEY5T                                CapSensorCmd.oc                         
+00:0X001303     CAPKEY4T                                CapSensorCmd.oc                         
+00:0X001303     CAPKEY3T                                CapSensorCmd.oc                         
+00:0X001304     CAPKEY2U                                CapSensorCmd.oc                         
+00:0X001304     CAPKEY1U                                CapSensorCmd.oc                         
+00:0X001304     CAPKEY8U                                CapSensorCmd.oc                         
+00:0X001304     CAPKEY7U                                CapSensorCmd.oc                         
+00:0X001304     CAPKEY6U                                CapSensorCmd.oc                         
+00:0X001304     CAPKEY5U                                CapSensorCmd.oc                         
+00:0X001304     CAPKEY4U                                CapSensorCmd.oc                         
+00:0X001304     CAPKEY3U                                CapSensorCmd.oc                         
+00:0X001404     PREPARE_FOR_CAP_SLEEP_SETTING           Main.oc                                 
+00:0X0014B3     INIT                                    Main.oc                                 
+00:0X002FED     COMMAND_ADDR_TABLE                      UserCmd.oc                              
+00:0X00302D     SLD_COMMAND_ADDR_TABLE                  UIO_SR.oc                               
+00:0X003033     SLD_ENABLE_PIN                          UIO_SR.oc                               
+00:0X003033     SLD_STOP                                UIO_SR.oc                               
+00:0X003033     SLD_INIT                                UIO_SR.oc                               
+00:0X003034     SLD_DISABLE_PIN                         UIO_SR.oc                               
+00:0X003036     UIO_N55P_WAKE_UP                        UIO_SR.oc                               
+****************************************************************************************************
+/*Global symbols sorting by address
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X003036     BAM_EVENT_ADDR_OFFSET_TABLE             UIO_SR.oc                               
+00:0X003036     UIO_COMMAND_ADDR_TABLE                  UIO_SR.oc                               
+00:0X003036     UIO_N55P_INIT                           UIO_SR.oc                               
+00:0X003036     UIO_N55P_ENTER_SLEEP                    UIO_SR.oc                               
+00:0X003036     SLD_RELOAD_PROCESS                      UIO_SR.oc                               
+00:0X003036     UIO_STOP                                UIO_SR.oc                               
+00:0X003036     UIO_INIT                                UIO_SR.oc                               
+00:0X003036     UIO_START                               UIO_SR.oc                               
+00:0X003036     BAM_CH_BIT_TABLE                        UIO_SR.oc                               
+00:0X003037     CH_ISR_ACTION                           SYNTHESIS.oc                            
+00:0X0031BA     NOTE_ON_PROC_NEXT                       SYNTHESIS.oc                            
+00:0X0031C6     NOTE_OFF_PROC_NEXT                      SYNTHESIS.oc                            
+00:0X003914     ADD_CHECKSUM_HANDLE                     ISPLib.oc                               
+00:0X208F61     _ALIAS_EQU_1_128_16000_RESCRC2808FB41_151549VP_CpuIf_NSP960_SOP14_equ.oc            
+****************************************************************************************************
+/*Global symbols sorting by address
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+****************************************************************************************************
+****************************************************************************************************
+
+
+****************************************************************************************************
+/*Global symbols sorting by name
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X208F61     _ALIAS_EQU_1_128_16000_RESCRC2808FB41_151549VP_CpuIf_NSP960_SOP14_equ.oc            
+00:0X0010A0     _ISPPARTITION_CUSTOMER_                 ISPPartition.oc                         
+****************************************************************************************************
+/*Global symbols sorting by name
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X0012FF     ADC_CH_PIN_MASK_TABLE                   ChannelTable.oc                         
+00:0X0012FB     ADC_CH_SETTING_TABLE                    ChannelTable.oc                         
+00:0X003914     ADD_CHECKSUM_HANDLE                     ISPLib.oc                               
+00:0X0012EA     ADD_CHECKSUM_LIB                        ChannelTable.oc                         
+00:0X003036     BAM_CH_BIT_TABLE                        UIO_SR.oc                               
+00:0X003036     BAM_EVENT_ADDR_OFFSET_TABLE             UIO_SR.oc                               
+00:0X000026     BAM_EVENT_ADDR_SP1                      UIO_SR.oc                               
+00:0X001303     CAPKEY1T                                CapSensorCmd.oc                         
+00:0X001304     CAPKEY1U                                CapSensorCmd.oc                         
+00:0X001303     CAPKEY2T                                CapSensorCmd.oc                         
+00:0X001304     CAPKEY2U                                CapSensorCmd.oc                         
+00:0X001303     CAPKEY3T                                CapSensorCmd.oc                         
+00:0X001304     CAPKEY3U                                CapSensorCmd.oc                         
+00:0X001303     CAPKEY4T                                CapSensorCmd.oc                         
+00:0X001304     CAPKEY4U                                CapSensorCmd.oc                         
+00:0X001303     CAPKEY5T                                CapSensorCmd.oc                         
+00:0X001304     CAPKEY5U                                CapSensorCmd.oc                         
+00:0X001303     CAPKEY6T                                CapSensorCmd.oc                         
+00:0X001304     CAPKEY6U                                CapSensorCmd.oc                         
+00:0X001303     CAPKEY7T                                CapSensorCmd.oc                         
+00:0X001304     CAPKEY7U                                CapSensorCmd.oc                         
+00:0X001303     CAPKEY8T                                CapSensorCmd.oc                         
+00:0X001304     CAPKEY8U                                CapSensorCmd.oc                         
+00:0X003037     CH_ISR_ACTION                           SYNTHESIS.oc                            
+00:0X001114     CH_ISR_ACTION_RET                       ChannelTable.oc                         
+00:0X00116E     CHK_HANDSHAKE_PROC                      ChannelTable.oc                         
+00:0X0010D0     CHK_HWE_IDLE                            ChannelTable.oc                         
+00:0X0010BA     COLOR_FLY_EVENT_ADDR_TABLE              ChannelTable.oc                         
+00:0X0010BC     COLOR_FLY_GROUP_TABLE                   ChannelTable.oc                         
+00:0X002FED     COMMAND_ADDR_TABLE                      UserCmd.oc                              
+00:0X0010A6     DIS_UIO_EVENT_FLAG                      ChannelTable.oc                         
+00:0X000026     DUTY_LEVEL_ARRAY                        UIO_SR.oc                               
+00:0X0010B8     EVENT_CH_TABLE                          ChannelTable.oc                         
+00:0X0010B6     EVENT_CHUNK_ADDR_TABLE                  ChannelTable.oc                         
+00:0X0010B4     EVENT_COUNT_TABLE                       ChannelTable.oc                         
+00:0X0010B0     EVENT_INT_TYPE_TABLE                    ChannelTable.oc                         
+00:0X0010B2     EVENT_NRPN_ADDR_TABLE                   ChannelTable.oc                         
+00:0X0010A6     EVO_BUSY_GLOBAL_PLAY_TABLE              ChannelTable.oc                         
+00:0X0012C8     FLASH_BLANK_CHECK_PAGE_PROC             ChannelTable.oc                         
+00:0X0012B7     FLASH_COPY_PAGE_PROC                    ChannelTable.oc                         
+****************************************************************************************************
+/*Global symbols sorting by name
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X001284     FLASH_ERASE_PAGE_PROC                   ChannelTable.oc                         
+00:0X001295     FLASH_READ_PAGE_PROC                    ChannelTable.oc                         
+00:0X0012D9     FLASH_VERIFY_PAGE_PROC                  ChannelTable.oc                         
+00:0X0012A6     FLASH_WRITE_PAGE_PROC                   ChannelTable.oc                         
+00:0X0010C8     GET_EVENT_CHANNEL                       ChannelTable.oc                         
+00:0X0010BE     GET_EVENT_CHANNEL_TYPE                  ChannelTable.oc                         
+00:0X001192     HWE_READY_PROC                          ChannelTable.oc                         
+00:0X00125E     HWE_TABLE_ALT1_BA_PROC                  ChannelTable.oc                         
+00:0X00123E     HWE_TABLE_BA_PROC                       ChannelTable.oc                         
+00:0X0014B3     INIT                                    Main.oc                                 
+00:0X0010DD     LEAKPROOF_SETTING_FUNC                  ChannelTable.oc                         
+00:0X0010AE     MS_CH1_NOTE_OFF_SYNC_TABLE              ChannelTable.oc                         
+00:0X0010AC     MS_CH1_NOTE_ON_SYNC_TABLE               ChannelTable.oc                         
+00:0X0031C6     NOTE_OFF_PROC_NEXT                      SYNTHESIS.oc                            
+00:0X0031BA     NOTE_ON_PROC_NEXT                       SYNTHESIS.oc                            
+00:0X0010A9     PLAY_BACK_FLAG_TABLE                    ChannelTable.oc                         
+00:0X001404     PREPARE_FOR_CAP_SLEEP_SETTING           Main.oc                                 
+00:0X00127E     REFRESH_STATUS_PROC                     ChannelTable.oc                         
+00:0X001109     RESERVE1_ISR                            ChannelTable.oc                         
+00:0X001118     RESERVE2_ISR                            ChannelTable.oc                         
+00:0X001165     SEND_CMD_PROC                           ChannelTable.oc                         
+00:0X001160     SEND_PLAY_CMD_PROC                      ChannelTable.oc                         
+00:0X00115F     SET_PLAYLIST_TABLE_PROC                 ChannelTable.oc                         
+00:0X00302D     SLD_COMMAND_ADDR_TABLE                  UIO_SR.oc                               
+00:0X003034     SLD_DISABLE_PIN                         UIO_SR.oc                               
+00:0X003033     SLD_ENABLE_PIN                          UIO_SR.oc                               
+00:0X003033     SLD_INIT                                UIO_SR.oc                               
+00:0X003036     SLD_RELOAD_PROCESS                      UIO_SR.oc                               
+00:0X003033     SLD_STOP                                UIO_SR.oc                               
+00:0X0010A3     SP_BUSY_GLOBAL_PLAY_TABLE               ChannelTable.oc                         
+00:0X0010A0     SP_GLOBAL_VOLUME_TABLE                  ChannelTable.oc                         
+00:0X00114B     STOP_ALL_SP_API                         ChannelTable.oc                         
+00:0X001158     STOP_PLAY_ALL_API                       ChannelTable.oc                         
+00:0X001133     STOP_PLAY_Y_EVO_API                     ChannelTable.oc                         
+00:0X00111E     STOP_PLAY_Y_SP_API                      ChannelTable.oc                         
+00:0X003036     UIO_COMMAND_ADDR_TABLE                  UIO_SR.oc                               
+00:0X000026     UIO_EN_MULTI_PIN_ARRAY                  UIO_SR.oc                               
+00:0X000026     UIO_EVENT_CH_FLAG                       UIO_SR.oc                               
+00:0X003036     UIO_INIT                                UIO_SR.oc                               
+00:0X000026     UIO_MULTI_PIN_TABLE                     UIO_SR.oc                               
+****************************************************************************************************
+/*Global symbols sorting by name
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X003036     UIO_N55P_ENTER_SLEEP                    UIO_SR.oc                               
+00:0X003036     UIO_N55P_INIT                           UIO_SR.oc                               
+00:0X003036     UIO_N55P_WAKE_UP                        UIO_SR.oc                               
+00:0X000026     UIO_PIN_CH_FLAG_ARRAY                   UIO_SR.oc                               
+00:0X000026     UIO_PIN_RAM_OFFSET_TABLE                UIO_SR.oc                               
+00:0X000026     UIO_PIN_TABLE                           UIO_SR.oc                               
+00:0X000026     UIO_SET_DIS_PIN_STOP_VALUE_TABLE        UIO_SR.oc                               
+00:0X000026     UIO_SET_PIN_ENABLE_VALUE_TABLE          UIO_SR.oc                               
+00:0X000026     UIO_SET_PIN_STOP_VALUE_TABLE            UIO_SR.oc                               
+00:0X003036     UIO_START                               UIO_SR.oc                               
+00:0X003036     UIO_STOP                                UIO_SR.oc                               
+00:0X000026     UIO_USED_PIN_TABLE                      UIO_SR.oc                               
+****************************************************************************************************
+****************************************************************************************************
+
+
+****************************************************************************************************
+/*Local symbols sorting by address
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X000000     LIBRARY_RAM                             ChannelTable.oc                         
+00:0X000026     NUSP_FLAG                               Main.oc                                 
+00:0X000027     NUSP_FLAG1                              Main.oc                                 
+00:0X000028     STATUS_FLAG                             Main.oc                                 
+00:0X000029     IO_FLAG                                 Main.oc                                 
+00:0X00002A     SP_VOLUME                               Main.oc                                 
+00:0X00002B     ID_RAM                                  Main.oc                                 
+00:0X00002F     PLAY_LIST_COUNT                         Main.oc                                 
+00:0X000031     PLAY_LIST_ADDR                          Main.oc                                 
+00:0X000034     STARTADDR_PLAYLIST                      Main.oc                                 
+00:0X000037     SDA_PREV                                Main.oc                                 
+00:0X000038     SCLK_PREV                               Main.oc                                 
+00:0X000039     RAM_BUFFER                              Main.oc                                 
+00:0X000040     TX_DATA                                 Main.oc                                 
+00:0X00004D     TX_BYTE_COUNTER                         Main.oc                                 
+00:0X00004E     TX_BYTE_INDEX                           Main.oc                                 
+00:0X00004F     RX_DATA                                 Main.oc                                 
+00:0X000057     RX_BYTE_COUNTER                         Main.oc                                 
+00:0X000058     RX_BYTE_INDEX                           Main.oc                                 
+00:0X000059     RX_BIT_INDEX                            Main.oc                                 
+00:0X00005A     EQU_COUNTER                             Main.oc                                 
+00:0X00005B     EQU_INDEX                               Main.oc                                 
+00:0X00005D     EQU_ADDR                                Main.oc                                 
+00:0X000060     SIL_COUNT                               Main.oc                                 
+00:0X000061     PLAY_TYPE                               Main.oc                                 
+00:0X000062     PLAY_LIST_INDEX                         Main.oc                                 
+00:0X000064     PLAY_REPEAT_COUNT                       Main.oc                                 
+00:0X000065     CMD_JUMP                                Main.oc                                 
+00:0X000067     LVD_VALUE                               Main.oc                                 
+00:0X000068     LVD_INDEX                               Main.oc                                 
+00:0X000069     LVD_COUNT                               Main.oc                                 
+00:0X00006A     TXRX_GAP                                Main.oc                                 
+00:0X00006B     STANDBY_COUNT                           Main.oc                                 
+00:0X00006D     ISP_START_ADDR_RAM                      Main.oc                                 
+00:0X000070     ISP_END_ADDR_RAM                        Main.oc                                 
+00:0X000073     ISP_CHECKSUM_BYTE                       Main.oc                                 
+00:0X000075     ISP_ADDR_RAM                            Main.oc                                 
+00:0X000078     ISP_LEN_COUNT                           Main.oc                                 
+00:0X00007A     ISP_LEN                                 Main.oc                                 
+00:0X00007C     ISP_LEN_READ                            Main.oc                                 
+****************************************************************************************************
+/*Local symbols sorting by address
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X00007C     TEMP_USED                               Main.oc                                 
+00:0X00007E     RX_DATA_CMD                             Main.oc                                 
+00:0X00007F     RX_CHKSUM                               Main.oc                                 
+00:0X000080     MULTI_PLAY_INDEX                        Main.oc                                 
+00:0X000081     MULTI_PLAY_NUMBER                       Main.oc                                 
+00:0X000082     MULTI_PLAY_BUFFER                       Main.oc                                 
+00:0X0000C2     ISP_SWAP_RAM                            Main.oc                                 
+00:0X0000C5     ISP_PARTIAL_REAL_SIZE_RAM               Main.oc                                 
+00:0X0000C8     ISP_RAM_BUFFER                          Main.oc                                 
+00:0X0000D7     RAM_BUFFER2                             Main.oc                                 
+00:0X000119     RESOURCE_COUNT                          Main.oc                                 
+00:0X0001E0     STACK_USED_RAM                          ChannelTable.oc                         
+00:0X000200     Var_ReservedAddrRange1                  ReservedAddrRange.oc                    
+00:0X000200     HWENGINE_USED_SHARED_RAM                ChannelTable.oc                         
+00:0X000F00     CHECKSUM_BYTE                           Main.oc                                 
+00:0X000F03     NUSP_FLAG_BAK                           Main.oc                                 
+00:0X000F04     NUSP_FLAG1_BAK                          Main.oc                                 
+00:0X000F05     STATUS_FLAG_BAK                         Main.oc                                 
+00:0X000F06     IO_FLAG_BAK                             Main.oc                                 
+00:0X000F07     SP_VOLUME_BAK                           Main.oc                                 
+00:0X000F08     ID_RAM_BAK                              Main.oc                                 
+00:0X000F0C     PLAY_LIST_COUNT_BAK                     Main.oc                                 
+00:0X000F0E     PLAY_LIST_ADDR_BAK                      Main.oc                                 
+00:0X000F11     STARTADDR_PLAYLIST_BAK                  Main.oc                                 
+00:0X000F14     SDA_PREV_BAK                            Main.oc                                 
+00:0X000F15     SCLK_PREV_BAK                           Main.oc                                 
+00:0X000F20     Var_ReservedAddrRange2                  ReservedAddrRange.oc                    
+00:0X0010A0     _ISPPARTITION_CUSTOMER_DUMMY            ISPPartition.oc                         
+00:0X0010C2     EVENT_CH_TYPE_EVO                       ChannelTable.oc                         
+00:0X0010C5     EVENT_CH_TYPE_SP                        ChannelTable.oc                         
+00:0X0010CC     EVENT_CH_EVO                            ChannelTable.oc                         
+00:0X0010CF     GET_EVENT_CH_END                        ChannelTable.oc                         
+00:0X0010D7     CHK_HWE_IDLE_RTN_1                      ChannelTable.oc                         
+00:0X0010DA     CHK_HWE_IDLE_RTN_0                      ChannelTable.oc                         
+00:0X00115A     _@STOP_ALL_SP                           ChannelTable.oc                         
+00:0X00115A     _@STOP_MS                               ChannelTable.oc                         
+00:0X00115A     _@STOP_EVO1                             ChannelTable.oc                         
+00:0X00115A     _@STOP_EVO2                             ChannelTable.oc                         
+00:0X00115A     _@STOP_EVO3                             ChannelTable.oc                         
+00:0X001173     CHECK_HANDSHAKE                         ChannelTable.oc                         
+****************************************************************************************************
+/*Local symbols sorting by address
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X001184     CHK_SYS_HANDSHAKE_PROC                  ChannelTable.oc                         
+00:0X001189     CHECK_SYS_HANDSHAKE                     ChannelTable.oc                         
+00:0X00119D     CHK_HWENG                               ChannelTable.oc                         
+00:0X0011AB     CHK_HWE_STATUS                          ChannelTable.oc                         
+00:0X0011BD     HWE_READY_END                           ChannelTable.oc                         
+00:0X0011BE     SYNTHESISER_BOOT_UP_PROC                ChannelTable.oc                         
+00:0X0011CE     HEAT_ENGINE                             ChannelTable.oc                         
+00:0X0011F1     NON_INIT_SYS_TABLE                      ChannelTable.oc                         
+00:0X0011F9     INIT_SYS_TABLE                          ChannelTable.oc                         
+00:0X001209     SYNTHESISER_BOOT_UP_PROC_END            ChannelTable.oc                         
+00:0X00120F     HWE_INIT_SYS_PROC                       ChannelTable.oc                         
+00:0X00121E     HWE_LOGIC_BA_PROC                       ChannelTable.oc                         
+00:0X001283     REFRESH_STATUS_END                      ChannelTable.oc                         
+00:0X001303     PLAY_BACK_CH2                           ChannelTable.oc                         
+00:0X001304     RES_CPUIF                               ReservedAddrRange.oc                    
+00:0X001304     SPIVDD_FROM_LDO                         ReservedAddrRange.oc                    
+00:0X001304     LVREN                                   ReservedAddrRange.oc                    
+00:0X001304     PHR_150                                 ReservedAddrRange.oc                    
+00:0X001304     WDTIMER                                 ReservedAddrRange.oc                    
+00:0X001304     PHR_150                                 ChannelTable.oc                         
+00:0X001304     WDTIMER                                 ChannelTable.oc                         
+00:0X001304     LVREN                                   ChannelTable.oc                         
+00:0X001304     RES_CPUIF                               ChannelTable.oc                         
+00:0X001304     SPIVDD_FROM_LDO                         ChannelTable.oc                         
+00:0X001304     WDTIMER                                 CapSensorCmd.oc                         
+00:0X001304     SPIVDD_FROM_LDO                         CapSensorCmd.oc                         
+00:0X001304     PHR_150                                 CapSensorCmd.oc                         
+00:0X001304     LVREN                                   CapSensorCmd.oc                         
+00:0X001304     RES_CPUIF                               CapSensorCmd.oc                         
+00:0X001305     PORT_ISR                                Main.oc                                 
+00:0X001306     WDTIMER                                 Main.oc                                 
+00:0X001306     SPIVDD_FROM_LDO                         Main.oc                                 
+00:0X001306     PHR_150                                 Main.oc                                 
+00:0X001306     LVREN                                   Main.oc                                 
+00:0X001306     RES_CPUIF                               Main.oc                                 
+00:0X00130D     FXF10_ISR                               Main.oc                                 
+00:0X00132E     FXF10_LVD_NEXT                          Main.oc                                 
+00:0X00133C     LVD_DONE                                Main.oc                                 
+00:0X001354     FXF10_ISR_END                           Main.oc                                 
+00:0X001356     FXF13_ISR                               Main.oc                                 
+****************************************************************************************************
+/*Local symbols sorting by address
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X00135E     FXF15_ISR                               Main.oc                                 
+00:0X0013CC     FXF15_ISR_INC_GAP                       Main.oc                                 
+00:0X0013D1     FXF15_ISR_CHK_STANDBY                   Main.oc                                 
+00:0X0013D1     FXF15_ISR_CHK_DIS                       Main.oc                                 
+00:0X0013E2     FXF15_ISR_QUIT                          Main.oc                                 
+00:0X0013E4     TMA_ISR                                 Main.oc                                 
+00:0X0013EC     TMG_ISR                                 Main.oc                                 
+00:0X0013F4     LRCT_ISR                                Main.oc                                 
+00:0X0013FC     ADC_ISR                                 Main.oc                                 
+00:0X001405     DO_CHECKSUM_PROCESS                     Main.oc                                 
+00:0X00143E     CHECKSUM_OK                             Main.oc                                 
+00:0X001443     CHECKSUM_FAIL                           Main.oc                                 
+00:0X001448     CHECKSUM_END                            Main.oc                                 
+00:0X001455     MAIN_START                              Main.oc                                 
+00:0X00146C     CHECK_CFGULK0035                        Main.oc                                 
+00:0X0014BB     CLEAR_LOOP0040                          Main.oc                                 
+00:0X0014CB     DEC_ADDR0040                            Main.oc                                 
+00:0X0014D8     NOT_IN_010040                           Main.oc                                 
+00:0X0014DB     END_CLEAR0040                           Main.oc                                 
+00:0X0014F5     CLEAR_RAM_END0038                       Main.oc                                 
+00:0X001512     MAIN_START_INIT                         Main.oc                                 
+00:0X001515     MAIN_START_INIT_NEXT                    Main.oc                                 
+00:0X0015F7     MAIN_START_INIT_NEXT1                   Main.oc                                 
+00:0X001646     WAKE_UP_FROM_SLEEP                      Main.oc                                 
+00:0X00169F     MAIN_LOOP                               Main.oc                                 
+00:0X0016A5     CHECK_START                             Main.oc                                 
+00:0X0016B7     POLLING_SDA_CHANGE                      Main.oc                                 
+00:0X0016CA     PARSE_SDA                               Main.oc                                 
+00:0X0016EB     MAIN_LOOP_NEXT                          Main.oc                                 
+00:0X0016F5     END_CHK_CH1_SENTENCE_BUSY0079           Main.oc                                 
+00:0X001705     CHECK_PLAY_SIL_TODO                     Main.oc                                 
+00:0X001710     PLAY_SILENCE                            Main.oc                                 
+00:0X00173B     END_SET_SPEECH_BUSY_RT0081              Main.oc                                 
+00:0X00173F     CHECK_SIL_DOING                         Main.oc                                 
+00:0X001758     SIL_PLAY_FINISH                         Main.oc                                 
+00:0X001760     GET_SPEECH_SENTENCE_LIST                Main.oc                                 
+00:0X001766     SIL_FINISH_CHECK_MULTI_PLAY             Main.oc                                 
+00:0X00177D     MAIN_LOOP_RELOAD_PLAYLIST_INDEX         Main.oc                                 
+00:0X001789     MULTI_PLAY_NEXT_INDEX                   Main.oc                                 
+00:0X0017A2     MAIN_LOOP_RELOAD_MULTI_PLAYLIST_INDEX   Main.oc                                 
+****************************************************************************************************
+/*Local symbols sorting by address
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X0017AE     MULTI_PLAY_NEXT_INDEX_TODO              Main.oc                                 
+00:0X0017CE     MULTI_PLAY_CHK_INDEX_CHK0082            Main.oc                                 
+00:0X0017D8     MULTI_PLAY_CHK_INDEX_NEXT0082           Main.oc                                 
+00:0X0017DA     MULTI_PLAY_NEXT0082                     Main.oc                                 
+00:0X0017E5     MULTI_PLAY_NEXT_INDEX_TODO1             Main.oc                                 
+00:0X0017F1     MULTI_PLAY_FINISH                       Main.oc                                 
+00:0X0017F1     ALL_PLAY_FINISH                         Main.oc                                 
+00:0X00180A     MAIN_LOOP_PRE                           Main.oc                                 
+00:0X00181A     MAIN_LOOP_CHECK                         Main.oc                                 
+00:0X00182C     END_SET_IDLE_FLAG0087                   Main.oc                                 
+00:0X00182F     POLLING_RX_START                        Main.oc                                 
+00:0X001850     POLLING_RX                              Main.oc                                 
+00:0X00185C     PARSE_SCLK_RX                           Main.oc                                 
+00:0X001872     READ_0_FROM_SDA_PIN                     Main.oc                                 
+00:0X001875     READ_1_FROM_SDA_PIN                     Main.oc                                 
+00:0X001876     READ_FROM_SDA_PIN                       Main.oc                                 
+00:0X00187F     READ_FROM_SDA_PIN_NEXT_BYTE             Main.oc                                 
+00:0X0018B1     READ_SDA_CHECK_1BCMD                    Main.oc                                 
+00:0X0018BE     READ_SDA_CHECK_1BCMD_ISPW               Main.oc                                 
+00:0X0018C5     READ_NEXT_BYTE_MULTI_PLAY               Main.oc                                 
+00:0X0018D6     READ_NEXT_BYTE_MULTI_PLAY_2B            Main.oc                                 
+00:0X0018DC     READ_NEXT_BYTE_MULTI_PLAY_NEXT          Main.oc                                 
+00:0X0018F5     READ_NEXT_BYTE_MULTI_PLAY_QUIT          Main.oc                                 
+00:0X0018FD     READ_NEXT_BYTE_MULTI_PLAY_CHECKSUM      Main.oc                                 
+00:0X00191D     READ_NEXT_BYTE_ISPW                     Main.oc                                 
+00:0X001923     READ_NEXT_BYTE_ISPW_WRITE_PARTIAL       Main.oc                                 
+00:0X001932     READ_NEXT_BYTE_ISPW_WRITE_PARTIAL_5B    Main.oc                                 
+00:0X001963     READ_NEXT_BYTE_ISPW_WRITE_PAGE          Main.oc                                 
+00:0X001972     READ_NEXT_BYTE_ISPW_WRITE_PAGE_3B       Main.oc                                 
+00:0X001990     READ_NEXT_BYTE_ISPW_WRITE_6B            Main.oc                                 
+00:0X00199C     READ_NEXT_BYTE_ISPW_WRITE_6B_NEXT       Main.oc                                 
+00:0X0019AA     READ_NEXT_BYTE_ISPW_LESS_THAN_256       Main.oc                                 
+00:0X0019B1     READ_NEXT_BYTE_ISPW_MORE_THAN_256       Main.oc                                 
+00:0X0019B6     READ_NEXT_BYTE_ISPW_INC                 Main.oc                                 
+00:0X0019BC     READ_NEXT_BYTE_ISPW_ADD                 Main.oc                                 
+00:0X0019BF     READ_NEXT_BYTE_ISPW_CHECKSUM            Main.oc                                 
+00:0X0019F1     READ_NEXT_BYTE_ISPW_CHECK               Main.oc                                 
+00:0X001A06     READ_NEXT_BYTE_ISPW_CHECK_ERROR         Main.oc                                 
+00:0X001A0B     READ_SDA_CHECK_2BCMD                    Main.oc                                 
+00:0X001A3B     READ_SDA_DO_LVD_2B                      Main.oc                                 
+****************************************************************************************************
+/*Local symbols sorting by address
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X001A4F     READ_SDA_DO_CHECKSUM_2B                 Main.oc                                 
+00:0X001A63     READ_SDA_PAUSE_2B                       Main.oc                                 
+00:0X001A66     READ_SDA_RESUME_2B                      Main.oc                                 
+00:0X001A69     READ_SDA_STOP_EQU_2B                    Main.oc                                 
+00:0X001A7D     READ_SDA_PWR_RESET_2B                   Main.oc                                 
+00:0X001A91     READ_SDA_PWR_DOWN_2B                    Main.oc                                 
+00:0X001AA5     READ_SDA_SPBZOUT_EN_2B                  Main.oc                                 
+00:0X001AB9     READ_SDA_SPBZOUT_DIS_2B                 Main.oc                                 
+00:0X001ACD     READ_SDA_ISP_WRITE_PARTIAL_START_2B     Main.oc                                 
+00:0X001AE5     READ_SDA_ISP_WRITE_END_2B               Main.oc                                 
+00:0X001AFD     READ_SDA_CHECK_CMD_MULTI_PLAY           Main.oc                                 
+00:0X001B0C     READ_SDA_READ_ID                        Main.oc                                 
+00:0X001B3D     READ_SDA_READ_STATUS                    Main.oc                                 
+00:0X001B4D     READ_SDA_READ_IO_TYPE                   Main.oc                                 
+00:0X001B5D     READ_SDA_READ_GET_INOUT                 Main.oc                                 
+00:0X001B79     READ_SDA_GET_INDEX_RCOUNT               Main.oc                                 
+00:0X001B8A     READ_SDA_READ_GET_VOL                   Main.oc                                 
+00:0X001B9A     READ_SDA_GET_LVD                        Main.oc                                 
+00:0X001BAA     READ_SDA_CHECKSUM_RIGHT                 Main.oc                                 
+00:0X001BBB     READ_SDA_GET_CHECKSUM                   Main.oc                                 
+00:0X001BCE     READ_SDA_GET_CHECKSUM_NEXT              Main.oc                                 
+00:0X001BE0     READ_SDA_ISP_CHECKSUM                   Main.oc                                 
+00:0X001BF3     READ_SDA_GET_FW_VERSION                 Main.oc                                 
+00:0X001C1D     READ_SDA_READ_STOP_REPEAT               Main.oc                                 
+00:0X001C41     READ_SDA_AUTO_SLEEP_EN                  Main.oc                                 
+00:0X001C44     READ_SDA_AUTO_SLEEP_DIS                 Main.oc                                 
+00:0X001C47     CHANGE_TO_2B_TX                         Main.oc                                 
+00:0X001C56     READ_SDA_CHECK_3BCMD                    Main.oc                                 
+00:0X001C82     READ_SDA_CHECK_3BCMD_NEXT               Main.oc                                 
+00:0X001CD0     READ_SDA_CHECK_4BCMD_NEXT               Main.oc                                 
+00:0X001CDE     READ_SDA_CHECK_5BCMD_NEXT               Main.oc                                 
+00:0X001CE5     READ_SDA_CHECK_7BCMD_NEXT               Main.oc                                 
+00:0X001CEC     READ_SDA_CHECK_8BCMD_NEXT               Main.oc                                 
+00:0X001D0B     READ_SDA_REPEAT                         Main.oc                                 
+00:0X001D28     READ_SDA_CHECK_4BCMD                    Main.oc                                 
+00:0X001D31     READ_4BCMD_ISP_READ_RES_INDEX           Main.oc                                 
+00:0X001D5B     READ_SDA_CHECK_4BCMD_RES_CHK            Main.oc                                 
+00:0X001D63     ISP_READ_RES_INDEX_OUT_RANGE            Main.oc                                 
+00:0X001D65     ISP_READ_RES_INDEX_OUT_RANGE_LOOP       Main.oc                                 
+00:0X001D79     READ_SDA_CHECK_4BCMD_RES_NEXT           Main.oc                                 
+****************************************************************************************************
+/*Local symbols sorting by address
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X001D88     READ_SDA_READ_PLAY                      Main.oc                                 
+00:0X001D9B     READ_SDA_READ_PLAY2                     Main.oc                                 
+00:0X001D9E     READ_SDA_READ_PLAY1                     Main.oc                                 
+00:0X001DBB     READ_SDA_CHECK_4BCMD_CHK                Main.oc                                 
+00:0X001DC6     READ_SDA_READ_PLAY1_NEXT                Main.oc                                 
+00:0X001DD7     READ_4BCMD_CHECK_INDEX_RCOUNT           Main.oc                                 
+00:0X001DDD     READ_SDA_SLEEP_AFTER_PLAY               Main.oc                                 
+00:0X001DE3     READ_SDA_PLAY_NOT_SLEEP                 Main.oc                                 
+00:0X001DE5     READ_SDA_CHECK_4BCMD_PLAY               Main.oc                                 
+00:0X001DF0     READ_SDA_CHECK_5BCMD                    Main.oc                                 
+00:0X001E15     READ_SDA_READ_ISP_READ_PAGE             Main.oc                                 
+00:0X001E97     READ_SDA_CHECK_7BCMD                    Main.oc                                 
+00:0X001EB2     READ_SDA_READ_ISP_READ_PARTIAL          Main.oc                                 
+00:0X001EDD     ISP_READ_PARTIAL_GT4                    Main.oc                                 
+00:0X001F18     READ_SDA_ISP_READ_PARTIAL_START0        Main.oc                                 
+00:0X001F2A     READ_SDA_ISP_READ_PARTIAL_START1        Main.oc                                 
+00:0X001F3B     READ_SDA_ISP_READ_PARTIAL_START2        Main.oc                                 
+00:0X001F49     READ_SDA_ISP_READ_PARTIAL_START3        Main.oc                                 
+00:0X001F54     READ_SDA_ISP_READ_PARTIAL_NEXT          Main.oc                                 
+00:0X001F72     READ_SDA_CHECK_8BCMD                    Main.oc                                 
+00:0X001FCD     READ_SDA_SUCCESS_UNDO                   Main.oc                                 
+00:0X001FD1     READ_SDA_SUCCESS_DONE                   Main.oc                                 
+00:0X001FD9     READ_SDA_UNSUPPORTED                    Main.oc                                 
+00:0X001FE1     READ_SDA_NOT_VALID                      Main.oc                                 
+00:0X001FE7     READ_SDA_TO_TX                          Main.oc                                 
+00:0X001FED     CHANGE_TO_TX                            Main.oc                                 
+00:0X001FF1     CHANGE_TO_TX_NEXT                       Main.oc                                 
+00:0X002002     POLLING_TX                              Main.oc                                 
+00:0X00200E     PARSE_SCLK_TX                           Main.oc                                 
+00:0X002026     SEND_0_TO_SDA_PIN                       Main.oc                                 
+00:0X00202F     SEND_1_TO_SDA_PIN                       Main.oc                                 
+00:0X002036     SEND_TO_SDA_PIN_CONST                   Main.oc                                 
+00:0X002043     SEND_TO_SDA_PIN_CONST_NEXT              Main.oc                                 
+00:0X002049     SEND_TO_SDA_PIN_NEXT_BYTE               Main.oc                                 
+00:0X00205A     SEND_TO_SDA_PIN_NEXT_BYTE_ISP_READ      Main.oc                                 
+00:0X00207B     SEND_TO_SDA_PIN_NEXT_BYTE_ISPR_CHECK    Main.oc                                 
+00:0X002092     SEND_TX_NEXT_BYTE_ISPR_GT4              Main.oc                                 
+00:0X0020D2     SEND_TX_NEXT_BYTE_ISPR_GT4_LOOP         Main.oc                                 
+00:0X0020E0     SEND_TX_NEXT_BYTE_ISPR_END              Main.oc                                 
+00:0X0020E7     SEND_TO_SDA_PIN_FINISH                  Main.oc                                 
+****************************************************************************************************
+/*Local symbols sorting by address
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X0020F2     SEND_TO_SDA_PIN_FINISH_NEXT             Main.oc                                 
+00:0X002100     POLLING_TX_STOP                         Main.oc                                 
+00:0X00210E     POLLING_TX_STOP_NEXT                    Main.oc                                 
+00:0X002149     CMD_FINISH                              Main.oc                                 
+00:0X00216D     CMD_PROCESS                             Main.oc                                 
+00:0X002176     WAIT_STOP_SCL1                          Main.oc                                 
+00:0X002184     WAIT_STOP_SDA1                          Main.oc                                 
+00:0X002190     SET_SDA_OUT0                            Main.oc                                 
+00:0X00219C     WAIT_AND_SET_SDA_OUT0_QUIT              Main.oc                                 
+00:0X00219F     CMD_PROCESS_DONE                        Main.oc                                 
+00:0X0021AD     NOT_RELOAD_SDA_INPUT                    Main.oc                                 
+00:0X0021C2     READ_SDA_SET_VOL                        Main.oc                                 
+00:0X0021E7     READ_SDA_PAUSE                          Main.oc                                 
+00:0X0021E7     READ_SDA_STOP_EQU                       Main.oc                                 
+00:0X0021E7     READ_SDA_RESUME                         Main.oc                                 
+00:0X002209     STOP_PLAY_SP_CHANNEL_NEXT0156           Main.oc                                 
+00:0X002225     READ_SDA_PWR_DOWN                       Main.oc                                 
+00:0X002227     READ_SDA_PWR_DOWN_NEXT                  Main.oc                                 
+00:0X00223F     GOTO_ENTER_SLEEP                        Main.oc                                 
+00:0X002272     READ_SDA_PWR_RESET                      Main.oc                                 
+00:0X00227E     GOTO_ENTER_RESET                        Main.oc                                 
+00:0X00228A     READ_SDA_DO_LVD                         Main.oc                                 
+00:0X0022AA     READ_SDA_DO_CHECKSUM                    Main.oc                                 
+00:0X0022E4     READ_SDA_SPBZOUT_EN                     Main.oc                                 
+00:0X0022F5     READ_SDA_SPBZOUT_EN_DOING               Main.oc                                 
+00:0X0022FA     READ_SDA_SPBZOUT_EN_NEXT                Main.oc                                 
+00:0X002306     READ_SDA_SPBZOUT_DIS                    Main.oc                                 
+00:0X002316     READ_SDA_SET_IO_CONFIG                  Main.oc                                 
+00:0X00231A     SET_CONFIG_JMP0173                      Main.oc                                 
+00:0X00232C     SET_CONFIG_JMP0174                      Main.oc                                 
+00:0X00232C     NEXT_CONFIG_JMP0173                     Main.oc                                 
+00:0X00233E     SET_CONFIG_JMP0175                      Main.oc                                 
+00:0X00233E     NEXT_CONFIG_JMP0174                     Main.oc                                 
+00:0X002350     NEXT_CONFIG_JMP0175                     Main.oc                                 
+00:0X00235C     SET_CONFIG_JMP0176                      Main.oc                                 
+00:0X00236E     READ_SDA_SET_IO_CONFIG_END              Main.oc                                 
+00:0X00236E     NEXT_CONFIG_JMP0176                     Main.oc                                 
+00:0X002371     SET_OUT_VALUE_JMP0177                   Main.oc                                 
+00:0X002371     READ_SDA_SET_OUT                        Main.oc                                 
+00:0X00238A     SET_OUT_VALUE_JMP0178                   Main.oc                                 
+****************************************************************************************************
+/*Local symbols sorting by address
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X00238A     NEXT_SET_OUT_VALUE_JMP0177              Main.oc                                 
+00:0X0023A3     SET_OUT_VALUE_JMP0179                   Main.oc                                 
+00:0X0023A3     NEXT_SET_OUT_VALUE_JMP0178              Main.oc                                 
+00:0X0023BC     NEXT_SET_OUT_VALUE_JMP0179              Main.oc                                 
+00:0X0023C2     SET_OUT_VALUE_JMP0180                   Main.oc                                 
+00:0X0023DB     NEXT_SET_OUT_VALUE_JMP0180              Main.oc                                 
+00:0X0023DB     READ_SDA_SET_OUT_END                    Main.oc                                 
+00:0X0023DE     READ_SDA_PLAY                           Main.oc                                 
+00:0X0023E8     READ_SDA_PLAY_NEXT                      Main.oc                                 
+00:0X002400     READ_SDA_SLEEP_AFTER_PLAY1              Main.oc                                 
+00:0X002407     READ_SDA_PLAY_NOT_SLEEP1                Main.oc                                 
+00:0X00240E     READ_SDA_MULTI_PLAY                     Main.oc                                 
+00:0X00241B     READ_SDA_MULTI_PLAY_LOAD                Main.oc                                 
+00:0X00242E     READ_SDA_MULTI_PLAY_TODO                Main.oc                                 
+00:0X00244E     MULTI_PLAY_CHK_INDEX_CHK0181            Main.oc                                 
+00:0X002458     MULTI_PLAY_CHK_INDEX_NEXT0181           Main.oc                                 
+00:0X00245A     MULTI_PLAY_NEXT0181                     Main.oc                                 
+00:0X002465     READ_SDA_MULTI_PLAY_TODO1               Main.oc                                 
+00:0X00247C     READ_SDA_ISP_WRITE_START                Main.oc                                 
+00:0X002491     READ_SDA_ISP_WRITE_END                  Main.oc                                 
+00:0X002494     UPDATE_STARTADDR_AFTER_ISP_WRITE        Main.oc                                 
+00:0X002539     UPDATE_CHECKSUM_AFTER_ISP_WRITE         Main.oc                                 
+00:0X002575     READ_SDA_ISP_WRITE_PAGE                 Main.oc                                 
+00:0X002584     READ_SDA_ISP_WRITE_PAGE_NEXT            Main.oc                                 
+00:0X0025C1     READ_SDA_ISP_WRITE_PARTIAL_START        Main.oc                                 
+00:0X0025C4     READ_SDA_ISP_WRITE_PARTIAL_BAK          Main.oc                                 
+00:0X0026AF     READ_SDA_ISP_WRITE_PARTIAL              Main.oc                                 
+00:0X0026C8     READ_SDA_ISP_WRITE_PARTIAL_NEXT         Main.oc                                 
+00:0X00273D     GET_ISP_START_END_ADDR                  Main.oc                                 
+00:0X00275E     GET_ISP_ADDR_CMP                        Main.oc                                 
+00:0X00277A     GET_ISP_STA_START_ADDR                  Main.oc                                 
+00:0X002786     GET_ISP_ADDR_CMP_END                    Main.oc                                 
+00:0X0027A2     GET_ISP_STA_END_ADDR                    Main.oc                                 
+00:0X0027AE     GET_ISP_START_END_ADDR_END              Main.oc                                 
+00:0X0027AF     ISP_CHECKSUM_LIB                        Main.oc                                 
+00:0X0027EF     CHECKSUM_LOOP_ISP_H                     Main.oc                                 
+00:0X002807     ISP_CHECKSUM_LIB_NEXT                   Main.oc                                 
+00:0X00280D     CHECKSUM_LOOP_ISP                       Main.oc                                 
+00:0X002817     POLLING_ISP_TRG_ISP                     Main.oc                                 
+00:0X002826     POLLING_ISP_TRG_ISP_1                   Main.oc                                 
+****************************************************************************************************
+/*Local symbols sorting by address
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X002830     SET_X_NOT_H                             Main.oc                                 
+00:0X002832     CHECKSUM_ACC_ISP                        Main.oc                                 
+00:0X00284C     CMP_X_NOT_T                             Main.oc                                 
+00:0X002850     ROM_ADDR_INC_ISP                        Main.oc                                 
+00:0X002865     ROM_ADDR_CHECK_ISP                      Main.oc                                 
+00:0X00287D     CHECKSUM_ISP_CHK_T                      Main.oc                                 
+00:0X002886     END_CHECKSUM_ISP                        Main.oc                                 
+00:0X002894     GET_ISP_SWAPPING_RAM                    Main.oc                                 
+00:0X0028A9     GET_ISP_SWAPPING_RAM_NEXT               Main.oc                                 
+00:0X0028AF     CHECK_ISP_PARTIAL_ERROR_DOUBLE          Main.oc                                 
+00:0X0028BD     CHECK_ISP_PARTIAL_ERROR                 Main.oc                                 
+00:0X00291D     ISP_SWAP_ADDR_ERROR_GOTO                Main.oc                                 
+00:0X002920     ISP_PARTIAL_ERROR_RELOAD                Main.oc                                 
+00:0X0029BA     ISP_SWAP_ADDR_ERROR                     Main.oc                                 
+00:0X0029CA     CHECK_ISP_PARTIAL_ERROR_END             Main.oc                                 
+00:0X0029D0     NSP_CHK_SYS_HANDSHAKE_PROC              Main.oc                                 
+00:0X0029DE     CHK_HWENGINE_POWERDOWN                  Main.oc                                 
+00:0X0029EE     READ_SDA_ISP_READ_RES_INDEX             Main.oc                                 
+00:0X002A3E     CHK_HWE_STATUS                          Main.oc                                 
+00:0X002A96     READ_SDA_ISP_READ_RES_INDEX_LOOP        Main.oc                                 
+00:0X002B2E     READ_SDA_ISP_GET_RES_INFO               Main.oc                                 
+00:0X002B73     READ_SDA_ISP_GET_RES_INFO_NEXT          Main.oc                                 
+00:0X002B77     READ_SDA_ISP_GET_RES_INFO_LOOP          Main.oc                                 
+00:0X002B92     READ_SDA_ISP_GET_USER_SPACE_INFO        Main.oc                                 
+00:0X002BFB     READ_SDA_ISP_GET_USER_SPACE_INFO_1      Main.oc                                 
+00:0X002C08     READ_SDA_ISP_GET_USER_SPACE_INFO_NEXT   Main.oc                                 
+00:0X002C28     GET_SPEECH_SENTENCE_PLAYLIST            Main.oc                                 
+00:0X002C7D     END_SET_SPEECH_BUSY_RT0300              Main.oc                                 
+00:0X002CAD     PLAY_CMD_PROCESS                        Main.oc                                 
+00:0X002CCC     GET_SPEECH_TABLE_PLAYLIST               Main.oc                                 
+00:0X002D3E     READ_SDA_CHECK_INDEX_RCOUNT             Main.oc                                 
+00:0X002D46     GET_SPEECH_TABLE_PLAYLIST_GO            Main.oc                                 
+00:0X002D60     PLAY_CMD_PROCESS_INVALID                Main.oc                                 
+00:0X002D63     GET_PLAYLIST_PLAY_REPEAT                Main.oc                                 
+00:0X002D72     RELOAD_PLAYLIST_INDEX                   Main.oc                                 
+00:0X002D7F     GET_PLAYLIST_MULTI_PLAY                 Main.oc                                 
+00:0X002D9A     GET_PLAYLIST_MULTI_PLAY_REPEAT          Main.oc                                 
+00:0X002DA9     RELOAD_MULTI_PLAYLIST_INDEX             Main.oc                                 
+00:0X002DAB     GET_PLAYLIST_MULTI_PLAY_NEXT            Main.oc                                 
+00:0X002DBE     GET_SPEECH_TABLE_PLAYLIST_NEXT          Main.oc                                 
+****************************************************************************************************
+/*Local symbols sorting by address
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X002DDB     STOP_PLAYING_PROC                       Main.oc                                 
+00:0X002DE6     PWR_DOWN_LOOP                           Main.oc                                 
+00:0X002DE8     PWR_DOWN_LOOP1                          Main.oc                                 
+00:0X002DF7     STOP_PLAYING_PROC_NEXT                  Main.oc                                 
+00:0X002E19     STOP_PLAY_SP_CHANNEL_NEXT0316           Main.oc                                 
+00:0X002E19     STOP_PLAYING_PROC_WAIT_HWENG_OFF        Main.oc                                 
+00:0X002E1C     WAIT_HWENG_OFF_LOOP0317                 Main.oc                                 
+00:0X002E27     STOP_PLAY_CLEAR_RAM_PROC                Main.oc                                 
+00:0X002E46     RESET_SLEEP_PROC                        Main.oc                                 
+00:0X002E7B     NSP_EXPAN_RAM                           Main.oc                                 
+00:0X002E91     NSP_EXPAN_RAM_CHK_CFGULK                Main.oc                                 
+00:0X002EA0     NSP_EXPAN_RAM_END                       Main.oc                                 
+00:0X002EA1     NSP_RELOAD_RAM                          Main.oc                                 
+00:0X002EB0     NSP_RELOAD_RAM_CHK_CFGULK               Main.oc                                 
+00:0X002EC0     SAVE_LIB_DPD_RAM                        Main.oc                                 
+00:0X002EC2     SAVE_LIB_DPD_RAM_LOOP                   Main.oc                                 
+00:0X002EF7     RESTORE_LIB_DPD_RAM                     Main.oc                                 
+00:0X002EF9     RESTORE_LIB_DPD_RAM_LOOP                Main.oc                                 
+00:0X002F2E     READ_SDA_CHECK_TABLE                    Main.oc                                 
+00:0X002F40     TWO_WIRE_CMD_TABLE_2B_1                 Main.oc                                 
+00:0X002F60     TWO_WIRE_CMD_TABLE_2B_7                 Main.oc                                 
+00:0X002F80     TWO_WIRE_CMD_TABLE_2B_8                 Main.oc                                 
+00:0X002FA0     TWO_WIRE_CMD_TABLE_2B_D                 Main.oc                                 
+00:0X002FC0     TWO_WIRE_CMD_TABLE_2B_F                 Main.oc                                 
+00:0X002FE0     LVDC_SETTNG_TABLE                       Main.oc                                 
+00:0X002FE6     LVDC_VALUE_TABLE                        Main.oc                                 
+00:0X002FEC     CMD00                                   UserCmd.oc                              
+00:0X002FEC     CMD01                                   UserCmd.oc                              
+00:0X002FEC     CMD02                                   UserCmd.oc                              
+00:0X002FEC     CMD03                                   UserCmd.oc                              
+00:0X002FEC     CMD04                                   UserCmd.oc                              
+00:0X002FEC     CMD05                                   UserCmd.oc                              
+00:0X002FEC     CMD06                                   UserCmd.oc                              
+00:0X002FEC     CMD07                                   UserCmd.oc                              
+00:0X002FEC     CMD08                                   UserCmd.oc                              
+00:0X002FEC     CMD09                                   UserCmd.oc                              
+00:0X002FEC     CMD10                                   UserCmd.oc                              
+00:0X002FEC     CMD11                                   UserCmd.oc                              
+00:0X002FEC     CMD12                                   UserCmd.oc                              
+00:0X002FEC     CMD13                                   UserCmd.oc                              
+****************************************************************************************************
+/*Local symbols sorting by address
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X002FEC     CMD14                                   UserCmd.oc                              
+00:0X002FEC     CMD15                                   UserCmd.oc                              
+00:0X002FEC     CMD16                                   UserCmd.oc                              
+00:0X002FEC     CMD17                                   UserCmd.oc                              
+00:0X002FEC     CMD18                                   UserCmd.oc                              
+00:0X002FEC     CMD19                                   UserCmd.oc                              
+00:0X002FEC     CMD20                                   UserCmd.oc                              
+00:0X002FEC     CMD21                                   UserCmd.oc                              
+00:0X002FEC     CMD22                                   UserCmd.oc                              
+00:0X002FEC     CMD23                                   UserCmd.oc                              
+00:0X002FEC     CMD24                                   UserCmd.oc                              
+00:0X002FEC     CMD25                                   UserCmd.oc                              
+00:0X002FEC     CMD26                                   UserCmd.oc                              
+00:0X002FEC     CMD27                                   UserCmd.oc                              
+00:0X002FEC     CMD28                                   UserCmd.oc                              
+00:0X002FEC     CMD29                                   UserCmd.oc                              
+00:0X002FEC     CMD30                                   UserCmd.oc                              
+00:0X002FEC     CMD31                                   UserCmd.oc                              
+00:0X002FED     WDTIMER                                 UserCmd.oc                              
+00:0X002FED     SPIVDD_FROM_LDO                         UserCmd.oc                              
+00:0X002FED     PHR_150                                 UserCmd.oc                              
+00:0X002FED     LVREN                                   UserCmd.oc                              
+00:0X002FED     RES_CPUIF                               UserCmd.oc                              
+00:0X00302E     WDTIMER                                 UIO_SR.oc                               
+00:0X00302E     SPIVDD_FROM_LDO                         UIO_SR.oc                               
+00:0X00302E     PHR_150                                 UIO_SR.oc                               
+00:0X00302E     LVREN                                   UIO_SR.oc                               
+00:0X00302E     RES_CPUIF                               UIO_SR.oc                               
+00:0X003033     SLD_VALUE                               UIO_SR.oc                               
+00:0X003033     SLD_START                               UIO_SR.oc                               
+00:0X003035     SLD_STOP_KEEP_LEVEL_PIN                 UIO_SR.oc                               
+00:0X003038     LVREN                                   SysClk.oc                               
+00:0X003038     PHR_150                                 SysClk.oc                               
+00:0X003038     RES_CPUIF                               SysClk.oc                               
+00:0X003038     SPIVDD_FROM_LDO                         SysClk.oc                               
+00:0X003038     WDTIMER                                 SysClk.oc                               
+00:0X003038     RES_CPUIF                               PlayListTable_Segment0000.oc            
+00:0X003038     SPIVDD_FROM_LDO                         PlayListTable_Segment0000.oc            
+00:0X003038     LVREN                                   PlayListTable_Segment0000.oc            
+00:0X003038     PHR_150                                 PlayListTable_Segment0000.oc            
+****************************************************************************************************
+/*Local symbols sorting by address
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X003038     WDTIMER                                 PlayListTable_Segment0000.oc            
+00:0X003038     RES_CPUIF                               InitTable.oc                            
+00:0X003038     SPIVDD_FROM_LDO                         InitTable.oc                            
+00:0X003038     LVREN                                   InitTable.oc                            
+00:0X003038     PHR_150                                 InitTable.oc                            
+00:0X003038     WDTIMER                                 InitTable.oc                            
+00:0X003038     RES_CPUIF                               ISPSwappingPage.oc                      
+00:0X003038     SPIVDD_FROM_LDO                         ISPSwappingPage.oc                      
+00:0X003038     LVREN                                   ISPSwappingPage.oc                      
+00:0X003038     PHR_150                                 ISPSwappingPage.oc                      
+00:0X003038     WDTIMER                                 ISPSwappingPage.oc                      
+00:0X003038     RES_CPUIF                               ISPLib.oc                               
+00:0X003038     SPIVDD_FROM_LDO                         ISPLib.oc                               
+00:0X003038     LVREN                                   ISPLib.oc                               
+00:0X003038     PHR_150                                 ISPLib.oc                               
+00:0X003038     WDTIMER                                 ISPLib.oc                               
+00:0X003038     RES_CPUIF                               ISPPartition.oc                         
+00:0X003038     SPIVDD_FROM_LDO                         ISPPartition.oc                         
+00:0X003038     LVREN                                   ISPPartition.oc                         
+00:0X003038     PHR_150                                 ISPPartition.oc                         
+00:0X003038     WDTIMER                                 ISPPartition.oc                         
+00:0X003038     RES_CPUIF                               NAPP.oc                                 
+00:0X003038     SPIVDD_FROM_LDO                         NAPP.oc                                 
+00:0X003038     LVREN                                   NAPP.oc                                 
+00:0X003038     PHR_150                                 NAPP.oc                                 
+00:0X003038     WDTIMER                                 NAPP.oc                                 
+00:0X003038     LVREN                                   VP_CpuIf_NSP960_SOP14_equ.oc            
+00:0X003038     PHR_150                                 VP_CpuIf_NSP960_SOP14_equ.oc            
+00:0X003038     RES_CPUIF                               VP_CpuIf_NSP960_SOP14_equ.oc            
+00:0X003038     SPIVDD_FROM_LDO                         VP_CpuIf_NSP960_SOP14_equ.oc            
+00:0X003038     WDTIMER                                 VP_CpuIf_NSP960_SOP14_equ.oc            
+00:0X003038     PULL_HIGH                               ICEBRK.oc                               
+00:0X003038     LVR_18V                                 ICEBRK.oc                               
+00:0X003038     PHR_150                                 ICEBRK.oc                               
+00:0X003038     RES_123344                              ICEBRK.oc                               
+00:0X003038     WDTIMER                                 ICEBRK.oc                               
+00:0X003038     ROSC_6M                                 ICEBRK.oc                               
+00:0X003038     WDTIMER                                 SYNTHESIS.oc                            
+00:0X003038     RES_N589_V0_SYNTHESIS                   SYNTHESIS.oc                            
+00:0X003038     PHR_150                                 SYNTHESIS.oc                            
+****************************************************************************************************
+/*Local symbols sorting by address
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X003038     LVREN                                   SYNTHESIS.oc                            
+00:0X00307E     HWE_EVENT                               SYNTHESIS.oc                            
+00:0X0030AE     COUNT_LOOP                              SYNTHESIS.oc                            
+00:0X0030B9     GET_EVENT_CHUNK                         SYNTHESIS.oc                            
+00:0X0030C3     CHECK_COMMAND_PROC                      SYNTHESIS.oc                            
+00:0X0030DA     CHECK_COUNTS                            SYNTHESIS.oc                            
+00:0X0030EA     CH_ISR_ACTION_END                       SYNTHESIS.oc                            
+00:0X0030ED     USER_COMMAND                            SYNTHESIS.oc                            
+00:0X0030F8     RETURN_ADDR_0020                        SYNTHESIS.oc                            
+00:0X0030FC     UIO_COMMAND                             SYNTHESIS.oc                            
+00:0X00312F     RETURN_ADDR_0021                        SYNTHESIS.oc                            
+00:0X003133     DIS_UIO_EVENT                           SYNTHESIS.oc                            
+00:0X003137     UIO_START_COMMAND                       SYNTHESIS.oc                            
+00:0X003153     RETURN_ADDR_0022                        SYNTHESIS.oc                            
+00:0X003157     UIO_STOP_COMMAND                        SYNTHESIS.oc                            
+00:0X003173     RETURN_ADDR_0023                        SYNTHESIS.oc                            
+00:0X003177     SKIP_COMMAND                            SYNTHESIS.oc                            
+00:0X00317A     SLD_COMMAND                             SYNTHESIS.oc                            
+00:0X00318B     SLD_START_COMMAND                       SYNTHESIS.oc                            
+00:0X00319A     RETURN_ADDR_0024                        SYNTHESIS.oc                            
+00:0X00319E     SLD_END_COMMAND                         SYNTHESIS.oc                            
+00:0X0031AD     RETURN_ADDR_0025                        SYNTHESIS.oc                            
+00:0X0031B1     NOTE_ON_SYNC_NOTIFY_PROC                SYNTHESIS.oc                            
+00:0X0031BD     NOTE_OFF_SYNC_NOTIFY_PROC               SYNTHESIS.oc                            
+00:0X0031C9     NRPN_PROC                               SYNTHESIS.oc                            
+00:0X0031F0     RETURN_ADDR_0026                        SYNTHESIS.oc                            
+00:0X0031F1     NRPN_NEXT                               SYNTHESIS.oc                            
+00:0X0031F4     COLOR_FLY_PROC                          SYNTHESIS.oc                            
+00:0X00320B     COLOR_FLY_LOOP                          SYNTHESIS.oc                            
+00:0X00321B     CHK_COLOR_FLY_STOP                      SYNTHESIS.oc                            
+00:0X003221     END_CHK_COLOR_FLY_STOP                  SYNTHESIS.oc                            
+00:0X003232     RETURN_ADDR_0027                        SYNTHESIS.oc                            
+00:0X00324A     COLOR_FLY_NEXT                          SYNTHESIS.oc                            
+00:0X00324D     SLD_PROC                                SYNTHESIS.oc                            
+00:0X003262     RETURN_ADDR_0028                        SYNTHESIS.oc                            
+00:0X003266     HWE_IDLE_NOTIFY                         SYNTHESIS.oc                            
+00:0X003276     HWE_IDLE_NOTIFY_END                     SYNTHESIS.oc                            
+00:0X003279     FLASH_ERASE_PAGE_HANDLE                 ChannelTable.oc                         
+00:0X0032B9     POLLING_ISP_ERASE_TRG0020               ChannelTable.oc                         
+00:0X0032C0     ERASE_OK0020                            ChannelTable.oc                         
+****************************************************************************************************
+/*Local symbols sorting by address
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X0032C2     ISP_ERASE_PAGE_END0020                  ChannelTable.oc                         
+00:0X0032CF     END_FLASH_ERASE_PAGE_OK                 ChannelTable.oc                         
+00:0X0032D1     END_FLASH_ERASE_PAGE                    ChannelTable.oc                         
+00:0X0032D3     FLASH_READ_PAGE_HANDLE                  ChannelTable.oc                         
+00:0X0032D5     READ_FLASH_LOOP                         ChannelTable.oc                         
+00:0X0032E3     READ_FLASH_PROC_1                       ChannelTable.oc                         
+00:0X003323     POLLING_ISP_READ_TRG0026                ChannelTable.oc                         
+00:0X00332C     ISP_GET_DATA_DP_ILI_X_LOOP0030          ChannelTable.oc                         
+00:0X003339     READ_OK0026                             ChannelTable.oc                         
+00:0X003339     ISP_GET_DATA_DP_ILI_X_LOOP_END0030      ChannelTable.oc                         
+00:0X00333B     ISP_READ_DATA_END0026                   ChannelTable.oc                         
+00:0X003348     READ_FLASH_PROC_2                       ChannelTable.oc                         
+00:0X003381     POLLING_ISP_READ_TRG0033                ChannelTable.oc                         
+00:0X0033A4     READ_OK0033                             ChannelTable.oc                         
+00:0X0033A6     ISP_READ_DATA_END0033                   ChannelTable.oc                         
+00:0X0033B0     DNLOAD_ADDR_INC                         ChannelTable.oc                         
+00:0X0033E0     END_FLAGH_READ_PAGE_DP_OK               ChannelTable.oc                         
+00:0X0033E2     END_FLASH_READ_PAGE_DP                  ChannelTable.oc                         
+00:0X0033E4     FLASH_WRITE_PAGE_HANDLE                 ChannelTable.oc                         
+00:0X0033E6     WRITE_FLASH_LOOP                        ChannelTable.oc                         
+00:0X0033F4     WRITE_FLASH_PROC_1                      ChannelTable.oc                         
+00:0X00341A     ISP_SET_DATA_DP_ILI_X_LOOP0046          ChannelTable.oc                         
+00:0X003427     ISP_SET_DATA_DP_ILI_X_LOOP_END0046      ChannelTable.oc                         
+00:0X003451     POLLING_ISP_WRITE_TRG0043               ChannelTable.oc                         
+00:0X003458     WRITE_OK0043                            ChannelTable.oc                         
+00:0X00345A     ISP_WRITE_DATA_END0043                  ChannelTable.oc                         
+00:0X003467     WRITE_FLASH_PROC_2                      ChannelTable.oc                         
+00:0X0034BC     POLLING_ISP_WRITE_TRG0050               ChannelTable.oc                         
+00:0X0034C3     WRITE_OK0050                            ChannelTable.oc                         
+00:0X0034C5     ISP_WRITE_DATA_END0050                  ChannelTable.oc                         
+00:0X0034CF     DNLOAD_ADDR_INC0019                     ChannelTable.oc                         
+00:0X0034FF     END_FLASH_WRITE_PAGE_DP_OK              ChannelTable.oc                         
+00:0X003501     END_FLASH_WRITE_PAGE_DP                 ChannelTable.oc                         
+00:0X003503     FLASH_COPY_PAGE_HANDLE                  ChannelTable.oc                         
+00:0X00353E     POLLING_ISP_ERASE_TRG0060               ChannelTable.oc                         
+00:0X003545     ERASE_OK0060                            ChannelTable.oc                         
+00:0X003547     ISP_ERASE_PAGE_END0060                  ChannelTable.oc                         
+00:0X003551     COPY_LOOP                               ChannelTable.oc                         
+00:0X00358A     POLLING_ISP_READ_TRG0066                ChannelTable.oc                         
+00:0X0035A5     READ_OK0066                             ChannelTable.oc                         
+****************************************************************************************************
+/*Local symbols sorting by address
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X0035A7     ISP_READ_DATA_END0066                   ChannelTable.oc                         
+00:0X0035FE     POLLING_ISP_WRITE_TRG0073               ChannelTable.oc                         
+00:0X003605     WRITE_OK0073                            ChannelTable.oc                         
+00:0X003607     ISP_WRITE_DATA_END0073                  ChannelTable.oc                         
+00:0X00364A     POLLING_ISP_READ_TRG0080                ChannelTable.oc                         
+00:0X003654     VERIFY_DAT_LOOP0080                     ChannelTable.oc                         
+00:0X003666     VERIFY_OK0080                           ChannelTable.oc                         
+00:0X00366B     VERIFY_NG0080                           ChannelTable.oc                         
+00:0X00366D     VERIFY_DATA_END0080                     ChannelTable.oc                         
+00:0X00366E     ISP_VERIFY_DATA_DP_END0080              ChannelTable.oc                         
+00:0X0036AB     LAST_CHECK                              ChannelTable.oc                         
+00:0X0036C2     END_COPY_FLASH_PAGE_OK                  ChannelTable.oc                         
+00:0X0036C4     END_COPY_FLASH_PAGE                     ChannelTable.oc                         
+00:0X0036C6     FLASH_BLANK_CHECK_PAGE_HANDLE           ChannelTable.oc                         
+00:0X0036C8     BLANK_CHECK_FLASH_LOOP                  ChannelTable.oc                         
+00:0X0036D6     BLANK_CHECK_FLASH_PROC_1                ChannelTable.oc                         
+00:0X003716     POLLING_ISP_READ_TRG0089                ChannelTable.oc                         
+00:0X00371F     ISP_GET_DATA_DP_X_LOOP0093              ChannelTable.oc                         
+00:0X00372D     ISP_GET_DATA_DP_X_LOOP_END0093          ChannelTable.oc                         
+00:0X00372D     READ_OK0089                             ChannelTable.oc                         
+00:0X00372F     ISP_READ_DATA_END0089                   ChannelTable.oc                         
+00:0X00373B     BLANK_CMP_LOOP1                         ChannelTable.oc                         
+00:0X00374C     BLANK_CHECK_FLASH_PROC_2                ChannelTable.oc                         
+00:0X003785     POLLING_ISP_READ_TRG0096                ChannelTable.oc                         
+00:0X0037A0     READ_OK0096                             ChannelTable.oc                         
+00:0X0037A2     ISP_READ_DATA_END0096                   ChannelTable.oc                         
+00:0X0037AE     BLANK_CMP_LOOP2                         ChannelTable.oc                         
+00:0X0037BF     BLANK_CHECK_ADDR_INC                    ChannelTable.oc                         
+00:0X0037EF     END_FLASH_BLANK_CHECK_PAGE_ERROR        ChannelTable.oc                         
+00:0X0037F4     END_FLASH_BLANK_CHECK_PAGE_OK           ChannelTable.oc                         
+00:0X0037F6     END_FLASH_BLANK_CHECK_PAGE              ChannelTable.oc                         
+00:0X0037F8     FLASH_VERIFY_PAGE_HANDLE                ChannelTable.oc                         
+00:0X0037FA     VERIFY_FLASH_LOOP                       ChannelTable.oc                         
+00:0X003808     VERIFY_FLASH_PROC_1                     ChannelTable.oc                         
+00:0X003848     POLLING_ISP_READ_TRG0106                ChannelTable.oc                         
+00:0X003852     VERIFY_DAT_LOOP0106                     ChannelTable.oc                         
+00:0X003864     VERIFY_OK0106                           ChannelTable.oc                         
+00:0X003869     VERIFY_NG0106                           ChannelTable.oc                         
+00:0X00386B     VERIFY_DATA_END0106                     ChannelTable.oc                         
+00:0X00386C     ISP_VERIFY_DATA_DP_ILI_X_END0106        ChannelTable.oc                         
+****************************************************************************************************
+/*Local symbols sorting by address
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X003879     VERIFY_FLASH_PROC_2                     ChannelTable.oc                         
+00:0X0038B2     POLLING_ISP_READ_TRG0112                ChannelTable.oc                         
+00:0X0038BC     VERIFY_DAT_LOOP0112                     ChannelTable.oc                         
+00:0X0038CE     VERIFY_OK0112                           ChannelTable.oc                         
+00:0X0038D3     VERIFY_NG0112                           ChannelTable.oc                         
+00:0X0038D5     VERIFY_DATA_END0112                     ChannelTable.oc                         
+00:0X0038D6     ISP_VERIFY_DATA_DP_ILI_END0112          ChannelTable.oc                         
+00:0X0038E0     VERIFY_ADDR_INC0019                     ChannelTable.oc                         
+00:0X003910     END_FLASH_VERIFY_PAGE_DP_OK             ChannelTable.oc                         
+00:0X003912     END_FLASH_VERIFY_PAGE_DP                ChannelTable.oc                         
+00:0X003940     CHECKSUM_LOOP_LIB0003                   ISPLib.oc                               
+00:0X00394A     POLLING_ISP_TRG_LIB0003                 ISPLib.oc                               
+00:0X003953     CHECKSUM_ACC_LIB0003                    ISPLib.oc                               
+00:0X003966     ROM_ADDR_INC_LIB0003                    ISPLib.oc                               
+00:0X00397B     ROM_ADDR_CHECK_LIB0003                  ISPLib.oc                               
+00:0X003993     END_CHECKSUM_LIB0003                    ISPLib.oc                               
+****************************************************************************************************
+****************************************************************************************************
+
+
+****************************************************************************************************
+/*Local symbols sorting by name
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X00115A     _@STOP_ALL_SP                           ChannelTable.oc                         
+00:0X00115A     _@STOP_EVO1                             ChannelTable.oc                         
+00:0X00115A     _@STOP_EVO2                             ChannelTable.oc                         
+00:0X00115A     _@STOP_EVO3                             ChannelTable.oc                         
+00:0X00115A     _@STOP_MS                               ChannelTable.oc                         
+****************************************************************************************************
+/*Local symbols sorting by name
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X0010A0     _ISPPARTITION_CUSTOMER_DUMMY            ISPPartition.oc                         
+00:0X0013FC     ADC_ISR                                 Main.oc                                 
+00:0X0017F1     ALL_PLAY_FINISH                         Main.oc                                 
+00:0X0037BF     BLANK_CHECK_ADDR_INC                    ChannelTable.oc                         
+00:0X0036C8     BLANK_CHECK_FLASH_LOOP                  ChannelTable.oc                         
+00:0X0036D6     BLANK_CHECK_FLASH_PROC_1                ChannelTable.oc                         
+00:0X00374C     BLANK_CHECK_FLASH_PROC_2                ChannelTable.oc                         
+00:0X00373B     BLANK_CMP_LOOP1                         ChannelTable.oc                         
+00:0X0037AE     BLANK_CMP_LOOP2                         ChannelTable.oc                         
+00:0X0030EA     CH_ISR_ACTION_END                       SYNTHESIS.oc                            
+00:0X001C47     CHANGE_TO_2B_TX                         Main.oc                                 
+00:0X001FED     CHANGE_TO_TX                            Main.oc                                 
+00:0X001FF1     CHANGE_TO_TX_NEXT                       Main.oc                                 
+00:0X00146C     CHECK_CFGULK0035                        Main.oc                                 
+00:0X0030C3     CHECK_COMMAND_PROC                      SYNTHESIS.oc                            
+00:0X0030DA     CHECK_COUNTS                            SYNTHESIS.oc                            
+00:0X001173     CHECK_HANDSHAKE                         ChannelTable.oc                         
+00:0X0028BD     CHECK_ISP_PARTIAL_ERROR                 Main.oc                                 
+00:0X0028AF     CHECK_ISP_PARTIAL_ERROR_DOUBLE          Main.oc                                 
+00:0X0029CA     CHECK_ISP_PARTIAL_ERROR_END             Main.oc                                 
+00:0X001705     CHECK_PLAY_SIL_TODO                     Main.oc                                 
+00:0X00173F     CHECK_SIL_DOING                         Main.oc                                 
+00:0X0016A5     CHECK_START                             Main.oc                                 
+00:0X001189     CHECK_SYS_HANDSHAKE                     ChannelTable.oc                         
+00:0X002832     CHECKSUM_ACC_ISP                        Main.oc                                 
+00:0X003953     CHECKSUM_ACC_LIB0003                    ISPLib.oc                               
+00:0X000F00     CHECKSUM_BYTE                           Main.oc                                 
+00:0X001448     CHECKSUM_END                            Main.oc                                 
+00:0X001443     CHECKSUM_FAIL                           Main.oc                                 
+00:0X00287D     CHECKSUM_ISP_CHK_T                      Main.oc                                 
+00:0X00280D     CHECKSUM_LOOP_ISP                       Main.oc                                 
+00:0X0027EF     CHECKSUM_LOOP_ISP_H                     Main.oc                                 
+****************************************************************************************************
+/*Local symbols sorting by name
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X003940     CHECKSUM_LOOP_LIB0003                   ISPLib.oc                               
+00:0X00143E     CHECKSUM_OK                             Main.oc                                 
+00:0X00321B     CHK_COLOR_FLY_STOP                      SYNTHESIS.oc                            
+00:0X0010DA     CHK_HWE_IDLE_RTN_0                      ChannelTable.oc                         
+00:0X0010D7     CHK_HWE_IDLE_RTN_1                      ChannelTable.oc                         
+00:0X0011AB     CHK_HWE_STATUS                          ChannelTable.oc                         
+00:0X002A3E     CHK_HWE_STATUS                          Main.oc                                 
+00:0X00119D     CHK_HWENG                               ChannelTable.oc                         
+00:0X0029DE     CHK_HWENGINE_POWERDOWN                  Main.oc                                 
+00:0X001184     CHK_SYS_HANDSHAKE_PROC                  ChannelTable.oc                         
+00:0X0014BB     CLEAR_LOOP0040                          Main.oc                                 
+00:0X0014F5     CLEAR_RAM_END0038                       Main.oc                                 
+00:0X002FEC     CMD00                                   UserCmd.oc                              
+00:0X002FEC     CMD01                                   UserCmd.oc                              
+00:0X002FEC     CMD02                                   UserCmd.oc                              
+00:0X002FEC     CMD03                                   UserCmd.oc                              
+00:0X002FEC     CMD04                                   UserCmd.oc                              
+00:0X002FEC     CMD05                                   UserCmd.oc                              
+00:0X002FEC     CMD06                                   UserCmd.oc                              
+00:0X002FEC     CMD07                                   UserCmd.oc                              
+00:0X002FEC     CMD08                                   UserCmd.oc                              
+00:0X002FEC     CMD09                                   UserCmd.oc                              
+00:0X002FEC     CMD10                                   UserCmd.oc                              
+00:0X002FEC     CMD11                                   UserCmd.oc                              
+00:0X002FEC     CMD12                                   UserCmd.oc                              
+00:0X002FEC     CMD13                                   UserCmd.oc                              
+00:0X002FEC     CMD14                                   UserCmd.oc                              
+00:0X002FEC     CMD15                                   UserCmd.oc                              
+00:0X002FEC     CMD16                                   UserCmd.oc                              
+00:0X002FEC     CMD17                                   UserCmd.oc                              
+00:0X002FEC     CMD18                                   UserCmd.oc                              
+00:0X002FEC     CMD19                                   UserCmd.oc                              
+00:0X002FEC     CMD20                                   UserCmd.oc                              
+00:0X002FEC     CMD21                                   UserCmd.oc                              
+00:0X002FEC     CMD22                                   UserCmd.oc                              
+00:0X002FEC     CMD23                                   UserCmd.oc                              
+00:0X002FEC     CMD24                                   UserCmd.oc                              
+00:0X002FEC     CMD25                                   UserCmd.oc                              
+00:0X002FEC     CMD26                                   UserCmd.oc                              
+00:0X002FEC     CMD27                                   UserCmd.oc                              
+****************************************************************************************************
+/*Local symbols sorting by name
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X002FEC     CMD28                                   UserCmd.oc                              
+00:0X002FEC     CMD29                                   UserCmd.oc                              
+00:0X002FEC     CMD30                                   UserCmd.oc                              
+00:0X002FEC     CMD31                                   UserCmd.oc                              
+00:0X002149     CMD_FINISH                              Main.oc                                 
+00:0X000065     CMD_JUMP                                Main.oc                                 
+00:0X00216D     CMD_PROCESS                             Main.oc                                 
+00:0X00219F     CMD_PROCESS_DONE                        Main.oc                                 
+00:0X00284C     CMP_X_NOT_T                             Main.oc                                 
+00:0X00320B     COLOR_FLY_LOOP                          SYNTHESIS.oc                            
+00:0X00324A     COLOR_FLY_NEXT                          SYNTHESIS.oc                            
+00:0X0031F4     COLOR_FLY_PROC                          SYNTHESIS.oc                            
+00:0X003551     COPY_LOOP                               ChannelTable.oc                         
+00:0X0030AE     COUNT_LOOP                              SYNTHESIS.oc                            
+00:0X0014CB     DEC_ADDR0040                            Main.oc                                 
+00:0X003133     DIS_UIO_EVENT                           SYNTHESIS.oc                            
+00:0X0033B0     DNLOAD_ADDR_INC                         ChannelTable.oc                         
+00:0X0034CF     DNLOAD_ADDR_INC0019                     ChannelTable.oc                         
+00:0X001405     DO_CHECKSUM_PROCESS                     Main.oc                                 
+00:0X002886     END_CHECKSUM_ISP                        Main.oc                                 
+00:0X003993     END_CHECKSUM_LIB0003                    ISPLib.oc                               
+00:0X0016F5     END_CHK_CH1_SENTENCE_BUSY0079           Main.oc                                 
+00:0X003221     END_CHK_COLOR_FLY_STOP                  SYNTHESIS.oc                            
+00:0X0014DB     END_CLEAR0040                           Main.oc                                 
+00:0X0036C4     END_COPY_FLASH_PAGE                     ChannelTable.oc                         
+00:0X0036C2     END_COPY_FLASH_PAGE_OK                  ChannelTable.oc                         
+00:0X0033E0     END_FLAGH_READ_PAGE_DP_OK               ChannelTable.oc                         
+00:0X0037F6     END_FLASH_BLANK_CHECK_PAGE              ChannelTable.oc                         
+00:0X0037EF     END_FLASH_BLANK_CHECK_PAGE_ERROR        ChannelTable.oc                         
+00:0X0037F4     END_FLASH_BLANK_CHECK_PAGE_OK           ChannelTable.oc                         
+00:0X0032D1     END_FLASH_ERASE_PAGE                    ChannelTable.oc                         
+00:0X0032CF     END_FLASH_ERASE_PAGE_OK                 ChannelTable.oc                         
+00:0X0033E2     END_FLASH_READ_PAGE_DP                  ChannelTable.oc                         
+00:0X003912     END_FLASH_VERIFY_PAGE_DP                ChannelTable.oc                         
+00:0X003910     END_FLASH_VERIFY_PAGE_DP_OK             ChannelTable.oc                         
+00:0X003501     END_FLASH_WRITE_PAGE_DP                 ChannelTable.oc                         
+00:0X0034FF     END_FLASH_WRITE_PAGE_DP_OK              ChannelTable.oc                         
+00:0X00182C     END_SET_IDLE_FLAG0087                   Main.oc                                 
+00:0X00173B     END_SET_SPEECH_BUSY_RT0081              Main.oc                                 
+00:0X002C7D     END_SET_SPEECH_BUSY_RT0300              Main.oc                                 
+****************************************************************************************************
+/*Local symbols sorting by name
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X00005D     EQU_ADDR                                Main.oc                                 
+00:0X00005A     EQU_COUNTER                             Main.oc                                 
+00:0X00005B     EQU_INDEX                               Main.oc                                 
+00:0X0032C0     ERASE_OK0020                            ChannelTable.oc                         
+00:0X003545     ERASE_OK0060                            ChannelTable.oc                         
+00:0X0010CC     EVENT_CH_EVO                            ChannelTable.oc                         
+00:0X0010C2     EVENT_CH_TYPE_EVO                       ChannelTable.oc                         
+00:0X0010C5     EVENT_CH_TYPE_SP                        ChannelTable.oc                         
+00:0X0036C6     FLASH_BLANK_CHECK_PAGE_HANDLE           ChannelTable.oc                         
+00:0X003503     FLASH_COPY_PAGE_HANDLE                  ChannelTable.oc                         
+00:0X003279     FLASH_ERASE_PAGE_HANDLE                 ChannelTable.oc                         
+00:0X0032D3     FLASH_READ_PAGE_HANDLE                  ChannelTable.oc                         
+00:0X0037F8     FLASH_VERIFY_PAGE_HANDLE                ChannelTable.oc                         
+00:0X0033E4     FLASH_WRITE_PAGE_HANDLE                 ChannelTable.oc                         
+00:0X00130D     FXF10_ISR                               Main.oc                                 
+00:0X001354     FXF10_ISR_END                           Main.oc                                 
+00:0X00132E     FXF10_LVD_NEXT                          Main.oc                                 
+00:0X001356     FXF13_ISR                               Main.oc                                 
+00:0X00135E     FXF15_ISR                               Main.oc                                 
+00:0X0013D1     FXF15_ISR_CHK_DIS                       Main.oc                                 
+00:0X0013D1     FXF15_ISR_CHK_STANDBY                   Main.oc                                 
+00:0X0013CC     FXF15_ISR_INC_GAP                       Main.oc                                 
+00:0X0013E2     FXF15_ISR_QUIT                          Main.oc                                 
+00:0X0010CF     GET_EVENT_CH_END                        ChannelTable.oc                         
+00:0X0030B9     GET_EVENT_CHUNK                         SYNTHESIS.oc                            
+00:0X00275E     GET_ISP_ADDR_CMP                        Main.oc                                 
+00:0X002786     GET_ISP_ADDR_CMP_END                    Main.oc                                 
+00:0X0027A2     GET_ISP_STA_END_ADDR                    Main.oc                                 
+00:0X00277A     GET_ISP_STA_START_ADDR                  Main.oc                                 
+00:0X00273D     GET_ISP_START_END_ADDR                  Main.oc                                 
+00:0X0027AE     GET_ISP_START_END_ADDR_END              Main.oc                                 
+00:0X002894     GET_ISP_SWAPPING_RAM                    Main.oc                                 
+00:0X0028A9     GET_ISP_SWAPPING_RAM_NEXT               Main.oc                                 
+00:0X002D7F     GET_PLAYLIST_MULTI_PLAY                 Main.oc                                 
+00:0X002DAB     GET_PLAYLIST_MULTI_PLAY_NEXT            Main.oc                                 
+00:0X002D9A     GET_PLAYLIST_MULTI_PLAY_REPEAT          Main.oc                                 
+00:0X002D63     GET_PLAYLIST_PLAY_REPEAT                Main.oc                                 
+00:0X001760     GET_SPEECH_SENTENCE_LIST                Main.oc                                 
+00:0X002C28     GET_SPEECH_SENTENCE_PLAYLIST            Main.oc                                 
+00:0X002CCC     GET_SPEECH_TABLE_PLAYLIST               Main.oc                                 
+****************************************************************************************************
+/*Local symbols sorting by name
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X002D46     GET_SPEECH_TABLE_PLAYLIST_GO            Main.oc                                 
+00:0X002DBE     GET_SPEECH_TABLE_PLAYLIST_NEXT          Main.oc                                 
+00:0X00227E     GOTO_ENTER_RESET                        Main.oc                                 
+00:0X00223F     GOTO_ENTER_SLEEP                        Main.oc                                 
+00:0X0011CE     HEAT_ENGINE                             ChannelTable.oc                         
+00:0X00307E     HWE_EVENT                               SYNTHESIS.oc                            
+00:0X003266     HWE_IDLE_NOTIFY                         SYNTHESIS.oc                            
+00:0X003276     HWE_IDLE_NOTIFY_END                     SYNTHESIS.oc                            
+00:0X00120F     HWE_INIT_SYS_PROC                       ChannelTable.oc                         
+00:0X00121E     HWE_LOGIC_BA_PROC                       ChannelTable.oc                         
+00:0X0011BD     HWE_READY_END                           ChannelTable.oc                         
+00:0X000200     HWENGINE_USED_SHARED_RAM                ChannelTable.oc                         
+00:0X00002B     ID_RAM                                  Main.oc                                 
+00:0X000F08     ID_RAM_BAK                              Main.oc                                 
+00:0X0011F9     INIT_SYS_TABLE                          ChannelTable.oc                         
+00:0X000029     IO_FLAG                                 Main.oc                                 
+00:0X000F06     IO_FLAG_BAK                             Main.oc                                 
+00:0X000075     ISP_ADDR_RAM                            Main.oc                                 
+00:0X000073     ISP_CHECKSUM_BYTE                       Main.oc                                 
+00:0X0027AF     ISP_CHECKSUM_LIB                        Main.oc                                 
+00:0X002807     ISP_CHECKSUM_LIB_NEXT                   Main.oc                                 
+00:0X000070     ISP_END_ADDR_RAM                        Main.oc                                 
+00:0X0032C2     ISP_ERASE_PAGE_END0020                  ChannelTable.oc                         
+00:0X003547     ISP_ERASE_PAGE_END0060                  ChannelTable.oc                         
+00:0X00332C     ISP_GET_DATA_DP_ILI_X_LOOP0030          ChannelTable.oc                         
+00:0X003339     ISP_GET_DATA_DP_ILI_X_LOOP_END0030      ChannelTable.oc                         
+00:0X00371F     ISP_GET_DATA_DP_X_LOOP0093              ChannelTable.oc                         
+00:0X00372D     ISP_GET_DATA_DP_X_LOOP_END0093          ChannelTable.oc                         
+00:0X00007A     ISP_LEN                                 Main.oc                                 
+00:0X000078     ISP_LEN_COUNT                           Main.oc                                 
+00:0X00007C     ISP_LEN_READ                            Main.oc                                 
+00:0X002920     ISP_PARTIAL_ERROR_RELOAD                Main.oc                                 
+00:0X0000C5     ISP_PARTIAL_REAL_SIZE_RAM               Main.oc                                 
+00:0X0000C8     ISP_RAM_BUFFER                          Main.oc                                 
+00:0X00333B     ISP_READ_DATA_END0026                   ChannelTable.oc                         
+00:0X0033A6     ISP_READ_DATA_END0033                   ChannelTable.oc                         
+00:0X0035A7     ISP_READ_DATA_END0066                   ChannelTable.oc                         
+00:0X00372F     ISP_READ_DATA_END0089                   ChannelTable.oc                         
+00:0X0037A2     ISP_READ_DATA_END0096                   ChannelTable.oc                         
+00:0X001EDD     ISP_READ_PARTIAL_GT4                    Main.oc                                 
+****************************************************************************************************
+/*Local symbols sorting by name
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X001D63     ISP_READ_RES_INDEX_OUT_RANGE            Main.oc                                 
+00:0X001D65     ISP_READ_RES_INDEX_OUT_RANGE_LOOP       Main.oc                                 
+00:0X00341A     ISP_SET_DATA_DP_ILI_X_LOOP0046          ChannelTable.oc                         
+00:0X003427     ISP_SET_DATA_DP_ILI_X_LOOP_END0046      ChannelTable.oc                         
+00:0X00006D     ISP_START_ADDR_RAM                      Main.oc                                 
+00:0X0029BA     ISP_SWAP_ADDR_ERROR                     Main.oc                                 
+00:0X00291D     ISP_SWAP_ADDR_ERROR_GOTO                Main.oc                                 
+00:0X0000C2     ISP_SWAP_RAM                            Main.oc                                 
+00:0X00366E     ISP_VERIFY_DATA_DP_END0080              ChannelTable.oc                         
+00:0X0038D6     ISP_VERIFY_DATA_DP_ILI_END0112          ChannelTable.oc                         
+00:0X00386C     ISP_VERIFY_DATA_DP_ILI_X_END0106        ChannelTable.oc                         
+00:0X00345A     ISP_WRITE_DATA_END0043                  ChannelTable.oc                         
+00:0X0034C5     ISP_WRITE_DATA_END0050                  ChannelTable.oc                         
+00:0X003607     ISP_WRITE_DATA_END0073                  ChannelTable.oc                         
+00:0X0036AB     LAST_CHECK                              ChannelTable.oc                         
+00:0X000000     LIBRARY_RAM                             ChannelTable.oc                         
+00:0X0013F4     LRCT_ISR                                Main.oc                                 
+00:0X000069     LVD_COUNT                               Main.oc                                 
+00:0X00133C     LVD_DONE                                Main.oc                                 
+00:0X000068     LVD_INDEX                               Main.oc                                 
+00:0X000067     LVD_VALUE                               Main.oc                                 
+00:0X002FE0     LVDC_SETTNG_TABLE                       Main.oc                                 
+00:0X002FE6     LVDC_VALUE_TABLE                        Main.oc                                 
+00:0X003038     LVR_18V                                 ICEBRK.oc                               
+00:0X001304     LVREN                                   ReservedAddrRange.oc                    
+00:0X001304     LVREN                                   ChannelTable.oc                         
+00:0X001304     LVREN                                   CapSensorCmd.oc                         
+00:0X001306     LVREN                                   Main.oc                                 
+00:0X002FED     LVREN                                   UserCmd.oc                              
+00:0X00302E     LVREN                                   UIO_SR.oc                               
+00:0X003038     LVREN                                   SysClk.oc                               
+00:0X003038     LVREN                                   PlayListTable_Segment0000.oc            
+00:0X003038     LVREN                                   InitTable.oc                            
+00:0X003038     LVREN                                   ISPSwappingPage.oc                      
+00:0X003038     LVREN                                   ISPLib.oc                               
+00:0X003038     LVREN                                   ISPPartition.oc                         
+00:0X003038     LVREN                                   NAPP.oc                                 
+00:0X003038     LVREN                                   VP_CpuIf_NSP960_SOP14_equ.oc            
+00:0X003038     LVREN                                   SYNTHESIS.oc                            
+00:0X00169F     MAIN_LOOP                               Main.oc                                 
+****************************************************************************************************
+/*Local symbols sorting by name
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X00181A     MAIN_LOOP_CHECK                         Main.oc                                 
+00:0X0016EB     MAIN_LOOP_NEXT                          Main.oc                                 
+00:0X00180A     MAIN_LOOP_PRE                           Main.oc                                 
+00:0X0017A2     MAIN_LOOP_RELOAD_MULTI_PLAYLIST_INDEX   Main.oc                                 
+00:0X00177D     MAIN_LOOP_RELOAD_PLAYLIST_INDEX         Main.oc                                 
+00:0X001455     MAIN_START                              Main.oc                                 
+00:0X001512     MAIN_START_INIT                         Main.oc                                 
+00:0X001515     MAIN_START_INIT_NEXT                    Main.oc                                 
+00:0X0015F7     MAIN_START_INIT_NEXT1                   Main.oc                                 
+00:0X000082     MULTI_PLAY_BUFFER                       Main.oc                                 
+00:0X0017CE     MULTI_PLAY_CHK_INDEX_CHK0082            Main.oc                                 
+00:0X00244E     MULTI_PLAY_CHK_INDEX_CHK0181            Main.oc                                 
+00:0X0017D8     MULTI_PLAY_CHK_INDEX_NEXT0082           Main.oc                                 
+00:0X002458     MULTI_PLAY_CHK_INDEX_NEXT0181           Main.oc                                 
+00:0X0017F1     MULTI_PLAY_FINISH                       Main.oc                                 
+00:0X000080     MULTI_PLAY_INDEX                        Main.oc                                 
+00:0X0017DA     MULTI_PLAY_NEXT0082                     Main.oc                                 
+00:0X00245A     MULTI_PLAY_NEXT0181                     Main.oc                                 
+00:0X001789     MULTI_PLAY_NEXT_INDEX                   Main.oc                                 
+00:0X0017AE     MULTI_PLAY_NEXT_INDEX_TODO              Main.oc                                 
+00:0X0017E5     MULTI_PLAY_NEXT_INDEX_TODO1             Main.oc                                 
+00:0X000081     MULTI_PLAY_NUMBER                       Main.oc                                 
+00:0X00232C     NEXT_CONFIG_JMP0173                     Main.oc                                 
+00:0X00233E     NEXT_CONFIG_JMP0174                     Main.oc                                 
+00:0X002350     NEXT_CONFIG_JMP0175                     Main.oc                                 
+00:0X00236E     NEXT_CONFIG_JMP0176                     Main.oc                                 
+00:0X00238A     NEXT_SET_OUT_VALUE_JMP0177              Main.oc                                 
+00:0X0023A3     NEXT_SET_OUT_VALUE_JMP0178              Main.oc                                 
+00:0X0023BC     NEXT_SET_OUT_VALUE_JMP0179              Main.oc                                 
+00:0X0023DB     NEXT_SET_OUT_VALUE_JMP0180              Main.oc                                 
+00:0X0011F1     NON_INIT_SYS_TABLE                      ChannelTable.oc                         
+00:0X0014D8     NOT_IN_010040                           Main.oc                                 
+00:0X0021AD     NOT_RELOAD_SDA_INPUT                    Main.oc                                 
+00:0X0031BD     NOTE_OFF_SYNC_NOTIFY_PROC               SYNTHESIS.oc                            
+00:0X0031B1     NOTE_ON_SYNC_NOTIFY_PROC                SYNTHESIS.oc                            
+00:0X0031F1     NRPN_NEXT                               SYNTHESIS.oc                            
+00:0X0031C9     NRPN_PROC                               SYNTHESIS.oc                            
+00:0X0029D0     NSP_CHK_SYS_HANDSHAKE_PROC              Main.oc                                 
+00:0X002E7B     NSP_EXPAN_RAM                           Main.oc                                 
+00:0X002E91     NSP_EXPAN_RAM_CHK_CFGULK                Main.oc                                 
+****************************************************************************************************
+/*Local symbols sorting by name
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X002EA0     NSP_EXPAN_RAM_END                       Main.oc                                 
+00:0X002EA1     NSP_RELOAD_RAM                          Main.oc                                 
+00:0X002EB0     NSP_RELOAD_RAM_CHK_CFGULK               Main.oc                                 
+00:0X000026     NUSP_FLAG                               Main.oc                                 
+00:0X000027     NUSP_FLAG1                              Main.oc                                 
+00:0X000F04     NUSP_FLAG1_BAK                          Main.oc                                 
+00:0X000F03     NUSP_FLAG_BAK                           Main.oc                                 
+00:0X00185C     PARSE_SCLK_RX                           Main.oc                                 
+00:0X00200E     PARSE_SCLK_TX                           Main.oc                                 
+00:0X0016CA     PARSE_SDA                               Main.oc                                 
+00:0X001304     PHR_150                                 ReservedAddrRange.oc                    
+00:0X001304     PHR_150                                 ChannelTable.oc                         
+00:0X001304     PHR_150                                 CapSensorCmd.oc                         
+00:0X001306     PHR_150                                 Main.oc                                 
+00:0X002FED     PHR_150                                 UserCmd.oc                              
+00:0X00302E     PHR_150                                 UIO_SR.oc                               
+00:0X003038     PHR_150                                 SysClk.oc                               
+00:0X003038     PHR_150                                 PlayListTable_Segment0000.oc            
+00:0X003038     PHR_150                                 InitTable.oc                            
+00:0X003038     PHR_150                                 ISPSwappingPage.oc                      
+00:0X003038     PHR_150                                 ISPLib.oc                               
+00:0X003038     PHR_150                                 ISPPartition.oc                         
+00:0X003038     PHR_150                                 NAPP.oc                                 
+00:0X003038     PHR_150                                 VP_CpuIf_NSP960_SOP14_equ.oc            
+00:0X003038     PHR_150                                 ICEBRK.oc                               
+00:0X003038     PHR_150                                 SYNTHESIS.oc                            
+00:0X001303     PLAY_BACK_CH2                           ChannelTable.oc                         
+00:0X002CAD     PLAY_CMD_PROCESS                        Main.oc                                 
+00:0X002D60     PLAY_CMD_PROCESS_INVALID                Main.oc                                 
+00:0X000031     PLAY_LIST_ADDR                          Main.oc                                 
+00:0X000F0E     PLAY_LIST_ADDR_BAK                      Main.oc                                 
+00:0X00002F     PLAY_LIST_COUNT                         Main.oc                                 
+00:0X000F0C     PLAY_LIST_COUNT_BAK                     Main.oc                                 
+00:0X000062     PLAY_LIST_INDEX                         Main.oc                                 
+00:0X000064     PLAY_REPEAT_COUNT                       Main.oc                                 
+00:0X001710     PLAY_SILENCE                            Main.oc                                 
+00:0X000061     PLAY_TYPE                               Main.oc                                 
+00:0X0032B9     POLLING_ISP_ERASE_TRG0020               ChannelTable.oc                         
+00:0X00353E     POLLING_ISP_ERASE_TRG0060               ChannelTable.oc                         
+00:0X003323     POLLING_ISP_READ_TRG0026                ChannelTable.oc                         
+****************************************************************************************************
+/*Local symbols sorting by name
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X003381     POLLING_ISP_READ_TRG0033                ChannelTable.oc                         
+00:0X00358A     POLLING_ISP_READ_TRG0066                ChannelTable.oc                         
+00:0X00364A     POLLING_ISP_READ_TRG0080                ChannelTable.oc                         
+00:0X003716     POLLING_ISP_READ_TRG0089                ChannelTable.oc                         
+00:0X003785     POLLING_ISP_READ_TRG0096                ChannelTable.oc                         
+00:0X003848     POLLING_ISP_READ_TRG0106                ChannelTable.oc                         
+00:0X0038B2     POLLING_ISP_READ_TRG0112                ChannelTable.oc                         
+00:0X002817     POLLING_ISP_TRG_ISP                     Main.oc                                 
+00:0X002826     POLLING_ISP_TRG_ISP_1                   Main.oc                                 
+00:0X00394A     POLLING_ISP_TRG_LIB0003                 ISPLib.oc                               
+00:0X003451     POLLING_ISP_WRITE_TRG0043               ChannelTable.oc                         
+00:0X0034BC     POLLING_ISP_WRITE_TRG0050               ChannelTable.oc                         
+00:0X0035FE     POLLING_ISP_WRITE_TRG0073               ChannelTable.oc                         
+00:0X001850     POLLING_RX                              Main.oc                                 
+00:0X00182F     POLLING_RX_START                        Main.oc                                 
+00:0X0016B7     POLLING_SDA_CHANGE                      Main.oc                                 
+00:0X002002     POLLING_TX                              Main.oc                                 
+00:0X002100     POLLING_TX_STOP                         Main.oc                                 
+00:0X00210E     POLLING_TX_STOP_NEXT                    Main.oc                                 
+00:0X001305     PORT_ISR                                Main.oc                                 
+00:0X003038     PULL_HIGH                               ICEBRK.oc                               
+00:0X002DE6     PWR_DOWN_LOOP                           Main.oc                                 
+00:0X002DE8     PWR_DOWN_LOOP1                          Main.oc                                 
+00:0X000039     RAM_BUFFER                              Main.oc                                 
+00:0X0000D7     RAM_BUFFER2                             Main.oc                                 
+00:0X001872     READ_0_FROM_SDA_PIN                     Main.oc                                 
+00:0X001875     READ_1_FROM_SDA_PIN                     Main.oc                                 
+00:0X001DD7     READ_4BCMD_CHECK_INDEX_RCOUNT           Main.oc                                 
+00:0X001D31     READ_4BCMD_ISP_READ_RES_INDEX           Main.oc                                 
+00:0X0032D5     READ_FLASH_LOOP                         ChannelTable.oc                         
+00:0X0032E3     READ_FLASH_PROC_1                       ChannelTable.oc                         
+00:0X003348     READ_FLASH_PROC_2                       ChannelTable.oc                         
+00:0X001876     READ_FROM_SDA_PIN                       Main.oc                                 
+00:0X00187F     READ_FROM_SDA_PIN_NEXT_BYTE             Main.oc                                 
+00:0X00191D     READ_NEXT_BYTE_ISPW                     Main.oc                                 
+00:0X0019BC     READ_NEXT_BYTE_ISPW_ADD                 Main.oc                                 
+00:0X0019F1     READ_NEXT_BYTE_ISPW_CHECK               Main.oc                                 
+00:0X001A06     READ_NEXT_BYTE_ISPW_CHECK_ERROR         Main.oc                                 
+00:0X0019BF     READ_NEXT_BYTE_ISPW_CHECKSUM            Main.oc                                 
+00:0X0019B6     READ_NEXT_BYTE_ISPW_INC                 Main.oc                                 
+****************************************************************************************************
+/*Local symbols sorting by name
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X0019AA     READ_NEXT_BYTE_ISPW_LESS_THAN_256       Main.oc                                 
+00:0X0019B1     READ_NEXT_BYTE_ISPW_MORE_THAN_256       Main.oc                                 
+00:0X001990     READ_NEXT_BYTE_ISPW_WRITE_6B            Main.oc                                 
+00:0X00199C     READ_NEXT_BYTE_ISPW_WRITE_6B_NEXT       Main.oc                                 
+00:0X001963     READ_NEXT_BYTE_ISPW_WRITE_PAGE          Main.oc                                 
+00:0X001972     READ_NEXT_BYTE_ISPW_WRITE_PAGE_3B       Main.oc                                 
+00:0X001923     READ_NEXT_BYTE_ISPW_WRITE_PARTIAL       Main.oc                                 
+00:0X001932     READ_NEXT_BYTE_ISPW_WRITE_PARTIAL_5B    Main.oc                                 
+00:0X0018C5     READ_NEXT_BYTE_MULTI_PLAY               Main.oc                                 
+00:0X0018D6     READ_NEXT_BYTE_MULTI_PLAY_2B            Main.oc                                 
+00:0X0018FD     READ_NEXT_BYTE_MULTI_PLAY_CHECKSUM      Main.oc                                 
+00:0X0018DC     READ_NEXT_BYTE_MULTI_PLAY_NEXT          Main.oc                                 
+00:0X0018F5     READ_NEXT_BYTE_MULTI_PLAY_QUIT          Main.oc                                 
+00:0X003339     READ_OK0026                             ChannelTable.oc                         
+00:0X0033A4     READ_OK0033                             ChannelTable.oc                         
+00:0X0035A5     READ_OK0066                             ChannelTable.oc                         
+00:0X00372D     READ_OK0089                             ChannelTable.oc                         
+00:0X0037A0     READ_OK0096                             ChannelTable.oc                         
+00:0X001C44     READ_SDA_AUTO_SLEEP_DIS                 Main.oc                                 
+00:0X001C41     READ_SDA_AUTO_SLEEP_EN                  Main.oc                                 
+00:0X0018B1     READ_SDA_CHECK_1BCMD                    Main.oc                                 
+00:0X0018BE     READ_SDA_CHECK_1BCMD_ISPW               Main.oc                                 
+00:0X001A0B     READ_SDA_CHECK_2BCMD                    Main.oc                                 
+00:0X001C56     READ_SDA_CHECK_3BCMD                    Main.oc                                 
+00:0X001C82     READ_SDA_CHECK_3BCMD_NEXT               Main.oc                                 
+00:0X001D28     READ_SDA_CHECK_4BCMD                    Main.oc                                 
+00:0X001DBB     READ_SDA_CHECK_4BCMD_CHK                Main.oc                                 
+00:0X001CD0     READ_SDA_CHECK_4BCMD_NEXT               Main.oc                                 
+00:0X001DE5     READ_SDA_CHECK_4BCMD_PLAY               Main.oc                                 
+00:0X001D5B     READ_SDA_CHECK_4BCMD_RES_CHK            Main.oc                                 
+00:0X001D79     READ_SDA_CHECK_4BCMD_RES_NEXT           Main.oc                                 
+00:0X001DF0     READ_SDA_CHECK_5BCMD                    Main.oc                                 
+00:0X001CDE     READ_SDA_CHECK_5BCMD_NEXT               Main.oc                                 
+00:0X001E97     READ_SDA_CHECK_7BCMD                    Main.oc                                 
+00:0X001CE5     READ_SDA_CHECK_7BCMD_NEXT               Main.oc                                 
+00:0X001F72     READ_SDA_CHECK_8BCMD                    Main.oc                                 
+00:0X001CEC     READ_SDA_CHECK_8BCMD_NEXT               Main.oc                                 
+00:0X001AFD     READ_SDA_CHECK_CMD_MULTI_PLAY           Main.oc                                 
+00:0X002D3E     READ_SDA_CHECK_INDEX_RCOUNT             Main.oc                                 
+00:0X002F2E     READ_SDA_CHECK_TABLE                    Main.oc                                 
+****************************************************************************************************
+/*Local symbols sorting by name
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X001BAA     READ_SDA_CHECKSUM_RIGHT                 Main.oc                                 
+00:0X0022AA     READ_SDA_DO_CHECKSUM                    Main.oc                                 
+00:0X001A4F     READ_SDA_DO_CHECKSUM_2B                 Main.oc                                 
+00:0X00228A     READ_SDA_DO_LVD                         Main.oc                                 
+00:0X001A3B     READ_SDA_DO_LVD_2B                      Main.oc                                 
+00:0X001BBB     READ_SDA_GET_CHECKSUM                   Main.oc                                 
+00:0X001BCE     READ_SDA_GET_CHECKSUM_NEXT              Main.oc                                 
+00:0X001BF3     READ_SDA_GET_FW_VERSION                 Main.oc                                 
+00:0X001B79     READ_SDA_GET_INDEX_RCOUNT               Main.oc                                 
+00:0X001B9A     READ_SDA_GET_LVD                        Main.oc                                 
+00:0X001BE0     READ_SDA_ISP_CHECKSUM                   Main.oc                                 
+00:0X002B2E     READ_SDA_ISP_GET_RES_INFO               Main.oc                                 
+00:0X002B77     READ_SDA_ISP_GET_RES_INFO_LOOP          Main.oc                                 
+00:0X002B73     READ_SDA_ISP_GET_RES_INFO_NEXT          Main.oc                                 
+00:0X002B92     READ_SDA_ISP_GET_USER_SPACE_INFO        Main.oc                                 
+00:0X002BFB     READ_SDA_ISP_GET_USER_SPACE_INFO_1      Main.oc                                 
+00:0X002C08     READ_SDA_ISP_GET_USER_SPACE_INFO_NEXT   Main.oc                                 
+00:0X001F54     READ_SDA_ISP_READ_PARTIAL_NEXT          Main.oc                                 
+00:0X001F18     READ_SDA_ISP_READ_PARTIAL_START0        Main.oc                                 
+00:0X001F2A     READ_SDA_ISP_READ_PARTIAL_START1        Main.oc                                 
+00:0X001F3B     READ_SDA_ISP_READ_PARTIAL_START2        Main.oc                                 
+00:0X001F49     READ_SDA_ISP_READ_PARTIAL_START3        Main.oc                                 
+00:0X0029EE     READ_SDA_ISP_READ_RES_INDEX             Main.oc                                 
+00:0X002A96     READ_SDA_ISP_READ_RES_INDEX_LOOP        Main.oc                                 
+00:0X002491     READ_SDA_ISP_WRITE_END                  Main.oc                                 
+00:0X001AE5     READ_SDA_ISP_WRITE_END_2B               Main.oc                                 
+00:0X002575     READ_SDA_ISP_WRITE_PAGE                 Main.oc                                 
+00:0X002584     READ_SDA_ISP_WRITE_PAGE_NEXT            Main.oc                                 
+00:0X0026AF     READ_SDA_ISP_WRITE_PARTIAL              Main.oc                                 
+00:0X0025C4     READ_SDA_ISP_WRITE_PARTIAL_BAK          Main.oc                                 
+00:0X0026C8     READ_SDA_ISP_WRITE_PARTIAL_NEXT         Main.oc                                 
+00:0X0025C1     READ_SDA_ISP_WRITE_PARTIAL_START        Main.oc                                 
+00:0X001ACD     READ_SDA_ISP_WRITE_PARTIAL_START_2B     Main.oc                                 
+00:0X00247C     READ_SDA_ISP_WRITE_START                Main.oc                                 
+00:0X00240E     READ_SDA_MULTI_PLAY                     Main.oc                                 
+00:0X00241B     READ_SDA_MULTI_PLAY_LOAD                Main.oc                                 
+00:0X00242E     READ_SDA_MULTI_PLAY_TODO                Main.oc                                 
+00:0X002465     READ_SDA_MULTI_PLAY_TODO1               Main.oc                                 
+00:0X001FE1     READ_SDA_NOT_VALID                      Main.oc                                 
+00:0X0021E7     READ_SDA_PAUSE                          Main.oc                                 
+****************************************************************************************************
+/*Local symbols sorting by name
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X001A63     READ_SDA_PAUSE_2B                       Main.oc                                 
+00:0X0023DE     READ_SDA_PLAY                           Main.oc                                 
+00:0X0023E8     READ_SDA_PLAY_NEXT                      Main.oc                                 
+00:0X001DE3     READ_SDA_PLAY_NOT_SLEEP                 Main.oc                                 
+00:0X002407     READ_SDA_PLAY_NOT_SLEEP1                Main.oc                                 
+00:0X002225     READ_SDA_PWR_DOWN                       Main.oc                                 
+00:0X001A91     READ_SDA_PWR_DOWN_2B                    Main.oc                                 
+00:0X002227     READ_SDA_PWR_DOWN_NEXT                  Main.oc                                 
+00:0X002272     READ_SDA_PWR_RESET                      Main.oc                                 
+00:0X001A7D     READ_SDA_PWR_RESET_2B                   Main.oc                                 
+00:0X001B5D     READ_SDA_READ_GET_INOUT                 Main.oc                                 
+00:0X001B8A     READ_SDA_READ_GET_VOL                   Main.oc                                 
+00:0X001B0C     READ_SDA_READ_ID                        Main.oc                                 
+00:0X001B4D     READ_SDA_READ_IO_TYPE                   Main.oc                                 
+00:0X001E15     READ_SDA_READ_ISP_READ_PAGE             Main.oc                                 
+00:0X001EB2     READ_SDA_READ_ISP_READ_PARTIAL          Main.oc                                 
+00:0X001D88     READ_SDA_READ_PLAY                      Main.oc                                 
+00:0X001D9E     READ_SDA_READ_PLAY1                     Main.oc                                 
+00:0X001DC6     READ_SDA_READ_PLAY1_NEXT                Main.oc                                 
+00:0X001D9B     READ_SDA_READ_PLAY2                     Main.oc                                 
+00:0X001B3D     READ_SDA_READ_STATUS                    Main.oc                                 
+00:0X001C1D     READ_SDA_READ_STOP_REPEAT               Main.oc                                 
+00:0X001D0B     READ_SDA_REPEAT                         Main.oc                                 
+00:0X0021E7     READ_SDA_RESUME                         Main.oc                                 
+00:0X001A66     READ_SDA_RESUME_2B                      Main.oc                                 
+00:0X002316     READ_SDA_SET_IO_CONFIG                  Main.oc                                 
+00:0X00236E     READ_SDA_SET_IO_CONFIG_END              Main.oc                                 
+00:0X002371     READ_SDA_SET_OUT                        Main.oc                                 
+00:0X0023DB     READ_SDA_SET_OUT_END                    Main.oc                                 
+00:0X0021C2     READ_SDA_SET_VOL                        Main.oc                                 
+00:0X001DDD     READ_SDA_SLEEP_AFTER_PLAY               Main.oc                                 
+00:0X002400     READ_SDA_SLEEP_AFTER_PLAY1              Main.oc                                 
+00:0X002306     READ_SDA_SPBZOUT_DIS                    Main.oc                                 
+00:0X001AB9     READ_SDA_SPBZOUT_DIS_2B                 Main.oc                                 
+00:0X0022E4     READ_SDA_SPBZOUT_EN                     Main.oc                                 
+00:0X001AA5     READ_SDA_SPBZOUT_EN_2B                  Main.oc                                 
+00:0X0022F5     READ_SDA_SPBZOUT_EN_DOING               Main.oc                                 
+00:0X0022FA     READ_SDA_SPBZOUT_EN_NEXT                Main.oc                                 
+00:0X0021E7     READ_SDA_STOP_EQU                       Main.oc                                 
+00:0X001A69     READ_SDA_STOP_EQU_2B                    Main.oc                                 
+****************************************************************************************************
+/*Local symbols sorting by name
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X001FD1     READ_SDA_SUCCESS_DONE                   Main.oc                                 
+00:0X001FCD     READ_SDA_SUCCESS_UNDO                   Main.oc                                 
+00:0X001FE7     READ_SDA_TO_TX                          Main.oc                                 
+00:0X001FD9     READ_SDA_UNSUPPORTED                    Main.oc                                 
+00:0X001283     REFRESH_STATUS_END                      ChannelTable.oc                         
+00:0X002DA9     RELOAD_MULTI_PLAYLIST_INDEX             Main.oc                                 
+00:0X002D72     RELOAD_PLAYLIST_INDEX                   Main.oc                                 
+00:0X003038     RES_123344                              ICEBRK.oc                               
+00:0X001304     RES_CPUIF                               ReservedAddrRange.oc                    
+00:0X001304     RES_CPUIF                               ChannelTable.oc                         
+00:0X001304     RES_CPUIF                               CapSensorCmd.oc                         
+00:0X001306     RES_CPUIF                               Main.oc                                 
+00:0X002FED     RES_CPUIF                               UserCmd.oc                              
+00:0X00302E     RES_CPUIF                               UIO_SR.oc                               
+00:0X003038     RES_CPUIF                               SysClk.oc                               
+00:0X003038     RES_CPUIF                               PlayListTable_Segment0000.oc            
+00:0X003038     RES_CPUIF                               InitTable.oc                            
+00:0X003038     RES_CPUIF                               ISPSwappingPage.oc                      
+00:0X003038     RES_CPUIF                               ISPLib.oc                               
+00:0X003038     RES_CPUIF                               ISPPartition.oc                         
+00:0X003038     RES_CPUIF                               NAPP.oc                                 
+00:0X003038     RES_CPUIF                               VP_CpuIf_NSP960_SOP14_equ.oc            
+00:0X003038     RES_N589_V0_SYNTHESIS                   SYNTHESIS.oc                            
+00:0X002E46     RESET_SLEEP_PROC                        Main.oc                                 
+00:0X000119     RESOURCE_COUNT                          Main.oc                                 
+00:0X002EF7     RESTORE_LIB_DPD_RAM                     Main.oc                                 
+00:0X002EF9     RESTORE_LIB_DPD_RAM_LOOP                Main.oc                                 
+00:0X0030F8     RETURN_ADDR_0020                        SYNTHESIS.oc                            
+00:0X00312F     RETURN_ADDR_0021                        SYNTHESIS.oc                            
+00:0X003153     RETURN_ADDR_0022                        SYNTHESIS.oc                            
+00:0X003173     RETURN_ADDR_0023                        SYNTHESIS.oc                            
+00:0X00319A     RETURN_ADDR_0024                        SYNTHESIS.oc                            
+00:0X0031AD     RETURN_ADDR_0025                        SYNTHESIS.oc                            
+00:0X0031F0     RETURN_ADDR_0026                        SYNTHESIS.oc                            
+00:0X003232     RETURN_ADDR_0027                        SYNTHESIS.oc                            
+00:0X003262     RETURN_ADDR_0028                        SYNTHESIS.oc                            
+00:0X002865     ROM_ADDR_CHECK_ISP                      Main.oc                                 
+00:0X00397B     ROM_ADDR_CHECK_LIB0003                  ISPLib.oc                               
+00:0X002850     ROM_ADDR_INC_ISP                        Main.oc                                 
+00:0X003966     ROM_ADDR_INC_LIB0003                    ISPLib.oc                               
+****************************************************************************************************
+/*Local symbols sorting by name
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X003038     ROSC_6M                                 ICEBRK.oc                               
+00:0X000059     RX_BIT_INDEX                            Main.oc                                 
+00:0X000057     RX_BYTE_COUNTER                         Main.oc                                 
+00:0X000058     RX_BYTE_INDEX                           Main.oc                                 
+00:0X00007F     RX_CHKSUM                               Main.oc                                 
+00:0X00004F     RX_DATA                                 Main.oc                                 
+00:0X00007E     RX_DATA_CMD                             Main.oc                                 
+00:0X002EC0     SAVE_LIB_DPD_RAM                        Main.oc                                 
+00:0X002EC2     SAVE_LIB_DPD_RAM_LOOP                   Main.oc                                 
+00:0X000038     SCLK_PREV                               Main.oc                                 
+00:0X000F15     SCLK_PREV_BAK                           Main.oc                                 
+00:0X000037     SDA_PREV                                Main.oc                                 
+00:0X000F14     SDA_PREV_BAK                            Main.oc                                 
+00:0X002026     SEND_0_TO_SDA_PIN                       Main.oc                                 
+00:0X00202F     SEND_1_TO_SDA_PIN                       Main.oc                                 
+00:0X002036     SEND_TO_SDA_PIN_CONST                   Main.oc                                 
+00:0X002043     SEND_TO_SDA_PIN_CONST_NEXT              Main.oc                                 
+00:0X0020E7     SEND_TO_SDA_PIN_FINISH                  Main.oc                                 
+00:0X0020F2     SEND_TO_SDA_PIN_FINISH_NEXT             Main.oc                                 
+00:0X002049     SEND_TO_SDA_PIN_NEXT_BYTE               Main.oc                                 
+00:0X00205A     SEND_TO_SDA_PIN_NEXT_BYTE_ISP_READ      Main.oc                                 
+00:0X00207B     SEND_TO_SDA_PIN_NEXT_BYTE_ISPR_CHECK    Main.oc                                 
+00:0X0020E0     SEND_TX_NEXT_BYTE_ISPR_END              Main.oc                                 
+00:0X002092     SEND_TX_NEXT_BYTE_ISPR_GT4              Main.oc                                 
+00:0X0020D2     SEND_TX_NEXT_BYTE_ISPR_GT4_LOOP         Main.oc                                 
+00:0X00231A     SET_CONFIG_JMP0173                      Main.oc                                 
+00:0X00232C     SET_CONFIG_JMP0174                      Main.oc                                 
+00:0X00233E     SET_CONFIG_JMP0175                      Main.oc                                 
+00:0X00235C     SET_CONFIG_JMP0176                      Main.oc                                 
+00:0X002371     SET_OUT_VALUE_JMP0177                   Main.oc                                 
+00:0X00238A     SET_OUT_VALUE_JMP0178                   Main.oc                                 
+00:0X0023A3     SET_OUT_VALUE_JMP0179                   Main.oc                                 
+00:0X0023C2     SET_OUT_VALUE_JMP0180                   Main.oc                                 
+00:0X002190     SET_SDA_OUT0                            Main.oc                                 
+00:0X002830     SET_X_NOT_H                             Main.oc                                 
+00:0X000060     SIL_COUNT                               Main.oc                                 
+00:0X001766     SIL_FINISH_CHECK_MULTI_PLAY             Main.oc                                 
+00:0X001758     SIL_PLAY_FINISH                         Main.oc                                 
+****************************************************************************************************
+/*Local symbols sorting by name
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X003177     SKIP_COMMAND                            SYNTHESIS.oc                            
+00:0X00317A     SLD_COMMAND                             SYNTHESIS.oc                            
+00:0X00319E     SLD_END_COMMAND                         SYNTHESIS.oc                            
+00:0X00324D     SLD_PROC                                SYNTHESIS.oc                            
+00:0X003033     SLD_START                               UIO_SR.oc                               
+00:0X00318B     SLD_START_COMMAND                       SYNTHESIS.oc                            
+00:0X003035     SLD_STOP_KEEP_LEVEL_PIN                 UIO_SR.oc                               
+00:0X003033     SLD_VALUE                               UIO_SR.oc                               
+00:0X00002A     SP_VOLUME                               Main.oc                                 
+00:0X000F07     SP_VOLUME_BAK                           Main.oc                                 
+00:0X001304     SPIVDD_FROM_LDO                         ReservedAddrRange.oc                    
+00:0X001304     SPIVDD_FROM_LDO                         ChannelTable.oc                         
+00:0X001304     SPIVDD_FROM_LDO                         CapSensorCmd.oc                         
+00:0X001306     SPIVDD_FROM_LDO                         Main.oc                                 
+00:0X002FED     SPIVDD_FROM_LDO                         UserCmd.oc                              
+00:0X00302E     SPIVDD_FROM_LDO                         UIO_SR.oc                               
+00:0X003038     SPIVDD_FROM_LDO                         SysClk.oc                               
+00:0X003038     SPIVDD_FROM_LDO                         PlayListTable_Segment0000.oc            
+00:0X003038     SPIVDD_FROM_LDO                         InitTable.oc                            
+00:0X003038     SPIVDD_FROM_LDO                         ISPSwappingPage.oc                      
+00:0X003038     SPIVDD_FROM_LDO                         ISPLib.oc                               
+00:0X003038     SPIVDD_FROM_LDO                         ISPPartition.oc                         
+00:0X003038     SPIVDD_FROM_LDO                         NAPP.oc                                 
+00:0X003038     SPIVDD_FROM_LDO                         VP_CpuIf_NSP960_SOP14_equ.oc            
+00:0X0001E0     STACK_USED_RAM                          ChannelTable.oc                         
+00:0X00006B     STANDBY_COUNT                           Main.oc                                 
+00:0X000034     STARTADDR_PLAYLIST                      Main.oc                                 
+00:0X000F11     STARTADDR_PLAYLIST_BAK                  Main.oc                                 
+00:0X000028     STATUS_FLAG                             Main.oc                                 
+00:0X000F05     STATUS_FLAG_BAK                         Main.oc                                 
+00:0X002E27     STOP_PLAY_CLEAR_RAM_PROC                Main.oc                                 
+00:0X002209     STOP_PLAY_SP_CHANNEL_NEXT0156           Main.oc                                 
+00:0X002E19     STOP_PLAY_SP_CHANNEL_NEXT0316           Main.oc                                 
+00:0X002DDB     STOP_PLAYING_PROC                       Main.oc                                 
+00:0X002DF7     STOP_PLAYING_PROC_NEXT                  Main.oc                                 
+00:0X002E19     STOP_PLAYING_PROC_WAIT_HWENG_OFF        Main.oc                                 
+00:0X0011BE     SYNTHESISER_BOOT_UP_PROC                ChannelTable.oc                         
+00:0X001209     SYNTHESISER_BOOT_UP_PROC_END            ChannelTable.oc                         
+00:0X00007C     TEMP_USED                               Main.oc                                 
+00:0X0013E4     TMA_ISR                                 Main.oc                                 
+****************************************************************************************************
+/*Local symbols sorting by name
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X0013EC     TMG_ISR                                 Main.oc                                 
+00:0X002F40     TWO_WIRE_CMD_TABLE_2B_1                 Main.oc                                 
+00:0X002F60     TWO_WIRE_CMD_TABLE_2B_7                 Main.oc                                 
+00:0X002F80     TWO_WIRE_CMD_TABLE_2B_8                 Main.oc                                 
+00:0X002FA0     TWO_WIRE_CMD_TABLE_2B_D                 Main.oc                                 
+00:0X002FC0     TWO_WIRE_CMD_TABLE_2B_F                 Main.oc                                 
+00:0X00004D     TX_BYTE_COUNTER                         Main.oc                                 
+00:0X00004E     TX_BYTE_INDEX                           Main.oc                                 
+00:0X000040     TX_DATA                                 Main.oc                                 
+00:0X00006A     TXRX_GAP                                Main.oc                                 
+00:0X0030FC     UIO_COMMAND                             SYNTHESIS.oc                            
+00:0X003137     UIO_START_COMMAND                       SYNTHESIS.oc                            
+00:0X003157     UIO_STOP_COMMAND                        SYNTHESIS.oc                            
+00:0X002539     UPDATE_CHECKSUM_AFTER_ISP_WRITE         Main.oc                                 
+00:0X002494     UPDATE_STARTADDR_AFTER_ISP_WRITE        Main.oc                                 
+00:0X0030ED     USER_COMMAND                            SYNTHESIS.oc                            
+00:0X000200     Var_ReservedAddrRange1                  ReservedAddrRange.oc                    
+00:0X000F20     Var_ReservedAddrRange2                  ReservedAddrRange.oc                    
+00:0X0038E0     VERIFY_ADDR_INC0019                     ChannelTable.oc                         
+00:0X003654     VERIFY_DAT_LOOP0080                     ChannelTable.oc                         
+00:0X003852     VERIFY_DAT_LOOP0106                     ChannelTable.oc                         
+00:0X0038BC     VERIFY_DAT_LOOP0112                     ChannelTable.oc                         
+00:0X00366D     VERIFY_DATA_END0080                     ChannelTable.oc                         
+00:0X00386B     VERIFY_DATA_END0106                     ChannelTable.oc                         
+00:0X0038D5     VERIFY_DATA_END0112                     ChannelTable.oc                         
+00:0X0037FA     VERIFY_FLASH_LOOP                       ChannelTable.oc                         
+00:0X003808     VERIFY_FLASH_PROC_1                     ChannelTable.oc                         
+00:0X003879     VERIFY_FLASH_PROC_2                     ChannelTable.oc                         
+00:0X00366B     VERIFY_NG0080                           ChannelTable.oc                         
+00:0X003869     VERIFY_NG0106                           ChannelTable.oc                         
+00:0X0038D3     VERIFY_NG0112                           ChannelTable.oc                         
+00:0X003666     VERIFY_OK0080                           ChannelTable.oc                         
+00:0X003864     VERIFY_OK0106                           ChannelTable.oc                         
+00:0X0038CE     VERIFY_OK0112                           ChannelTable.oc                         
+00:0X00219C     WAIT_AND_SET_SDA_OUT0_QUIT              Main.oc                                 
+00:0X002E1C     WAIT_HWENG_OFF_LOOP0317                 Main.oc                                 
+00:0X002176     WAIT_STOP_SCL1                          Main.oc                                 
+00:0X002184     WAIT_STOP_SDA1                          Main.oc                                 
+00:0X001646     WAKE_UP_FROM_SLEEP                      Main.oc                                 
+****************************************************************************************************
+/*Local symbols sorting by name
+****************************************************************************************************
+ADDRESS         NAME                                    MODULE                                  
+
+00:0X001304     WDTIMER                                 ReservedAddrRange.oc                    
+00:0X001304     WDTIMER                                 ChannelTable.oc                         
+00:0X001304     WDTIMER                                 CapSensorCmd.oc                         
+00:0X001306     WDTIMER                                 Main.oc                                 
+00:0X002FED     WDTIMER                                 UserCmd.oc                              
+00:0X00302E     WDTIMER                                 UIO_SR.oc                               
+00:0X003038     WDTIMER                                 SysClk.oc                               
+00:0X003038     WDTIMER                                 PlayListTable_Segment0000.oc            
+00:0X003038     WDTIMER                                 InitTable.oc                            
+00:0X003038     WDTIMER                                 ISPSwappingPage.oc                      
+00:0X003038     WDTIMER                                 ISPLib.oc                               
+00:0X003038     WDTIMER                                 ISPPartition.oc                         
+00:0X003038     WDTIMER                                 NAPP.oc                                 
+00:0X003038     WDTIMER                                 VP_CpuIf_NSP960_SOP14_equ.oc            
+00:0X003038     WDTIMER                                 ICEBRK.oc                               
+00:0X003038     WDTIMER                                 SYNTHESIS.oc                            
+00:0X0033E6     WRITE_FLASH_LOOP                        ChannelTable.oc                         
+00:0X0033F4     WRITE_FLASH_PROC_1                      ChannelTable.oc                         
+00:0X003467     WRITE_FLASH_PROC_2                      ChannelTable.oc                         
+00:0X003458     WRITE_OK0043                            ChannelTable.oc                         
+00:0X0034C3     WRITE_OK0050                            ChannelTable.oc                         
+00:0X003605     WRITE_OK0073                            ChannelTable.oc                         
+****************************************************************************************************
+****************************************************************************************************
+
+
+
+
+Entry point = 0x00000000
+

@@ -1,0 +1,56 @@
+Wed Sep 08 10:37:14 2021
+
+
+
+
+
+
+
+	Macro Assembler  -  Version 1.00.0
+		-----------------------------------------------
+
+		Input  Filename : D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING\CpuIf\NAPP.asm.app
+		Output Filename : D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING\CpuIf\Code_Release\NAPP.oc
+
+
+    1  0000000                   	SYMBOLS
+    2  0000000                   	LINKLIST
+    3  0000000                   	DEBUG ASM
+    4  0000000                   	LINEAR ON
+    5  0000000                   	LONGA OFF
+    6  0000000                   	LONGI OFF
+    7  0000000                   	EXTERN CAP_SENSOR_SENSITIVITY_THRESHOLD_TABLE
+    8  0000000                   	_NAPP_SECTION_: SECTION
+    9  0000000                   __NAPP_SECTION__:
+   10  0000000  FFFFFFFF        	DL FFFFFFFFH
+   11  0000004  00000000        	DL 00000000H
+   12  0000008  FFFFFFFF        	DL FFFFFFFFH
+   13  000000C  FFFFFFFF        	DL FFFFFFFFH
+   14  0000010                   	EXTERN _@STARTADDR_PLAYLIST_TABLE
+   15  0000010  00              	DB .LOW._@STARTADDR_PLAYLIST_TABLE
+   16  0000011  00              	DB .HIGH._@STARTADDR_PLAYLIST_TABLE
+   17  0000012  00              	DB .HIGH8._@STARTADDR_PLAYLIST_TABLE
+   18  0000013  00              	DB .SEGHIGH._@STARTADDR_PLAYLIST_TABLE
+   19  0000014  EE730000        	DL 000073EEH
+   20  0000018  EA6C0F00        	DL 000F6CEAH
+   21  000001C  FFFFFFFF        	DL FFFFFFFFH
+   22  0000020  00000000        	DL 00000000H
+   23  0000024  FFFFFFFF        	DL FFFFFFFFH
+   24  0000028  5443            	DW 4354H
+   25  000002A  00              	DB 00H
+   26  000002B  00000000        	DL 00000000H
+   27  000002F  0301            	DW 0103H
+   28  0000031  4E415050        	DL 5050414EH
+   29  0000035                   	ENDS
+   30  0000000                   ;**The following is audio external**
+   31  0000000                   ;**The following is sentence label**
+   32  0000000                   ;**The following is INIT_DECODE_SPEECH label**
+   33  0000000                   	EXT_PROGRAM: SECTION
+   34  0000000                   	ENDS
+   35  0000000                   
+		Line(s) Assembled : 35
+		Error(s): 0
+		Warn(s) : 0
+		Begin Assembling Time : Wed Sep 08 10:37:14 2021
+		End   Assembling Time : Wed Sep 08 10:37:14 2021
+

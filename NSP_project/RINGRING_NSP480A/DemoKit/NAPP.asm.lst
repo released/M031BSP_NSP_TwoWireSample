@@ -1,0 +1,52 @@
+Thu Sep 02 11:49:16 2021
+
+
+
+
+
+
+
+	Macro Assembler  -  Version 1.00.0
+		-----------------------------------------------
+
+		Input  Filename : D:\11101465\03_Nuvoton\00_Datasheet\#9_Audio Enhancement\NSP\sample code\NSP playlist project\RINGRING\DemoKit\NAPP.asm.app
+		Output Filename : D:\11101465\03_Nuvoton\00_Datasheet\#9_Audio Enhancement\NSP\sample code\NSP playlist project\RINGRING\DemoKit\Code_Release\NAPP.oc
+
+
+    1  0000000                   	SYMBOLS
+    2  0000000                   	LINKLIST
+    3  0000000                   	DEBUG ASM
+    4  0000000                   	LINEAR ON
+    5  0000000                   	LONGA OFF
+    6  0000000                   	LONGI OFF
+    7  0000000                   	EXTERN CAP_SENSOR_SENSITIVITY_THRESHOLD_TABLE
+    8  0000000                   	_NAPP_SECTION_: SECTION
+    9  0000000                   __NAPP_SECTION__:
+   10  0000000  FFFFFFFF        	DL FFFFFFFFH
+   11  0000004  00000000        	DL 00000000H
+   12  0000008  FFFFFFFF        	DL FFFFFFFFH
+   13  000000C  FFFFFFFF        	DL FFFFFFFFH
+   14  0000010  FFFFFFFF        	DL FFFFFFFFH
+   15  0000014  92130000        	DL 00001392H
+   16  0000018  92130000        	DL 00001392H
+   17  000001C  FFFFFFFF        	DL FFFFFFFFH
+   18  0000020  00000000        	DL 00000000H
+   19  0000024  FFFFFFFF        	DL FFFFFFFFH
+   20  0000028  5443            	DW 4354H
+   21  000002A  00              	DB 00H
+   22  000002B  00000000        	DL 00000000H
+   23  000002F  0301            	DW 0103H
+   24  0000031  4E415050        	DL 5050414EH
+   25  0000035                   	ENDS
+   26  0000000                   ;**The following is audio external**
+   27  0000000                   ;**The following is sentence label**
+   28  0000000                   ;**The following is INIT_DECODE_SPEECH label**
+   29  0000000                   	EXT_PROGRAM: SECTION
+   30  0000000                   	ENDS
+   31  0000000                   
+		Line(s) Assembled : 31
+		Error(s): 0
+		Warn(s) : 0
+		Begin Assembling Time : Thu Sep 02 11:49:16 2021
+		End   Assembling Time : Thu Sep 02 11:49:16 2021
+

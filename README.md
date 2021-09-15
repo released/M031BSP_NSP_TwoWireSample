@@ -1,6 +1,20 @@
 # M031BSP_NSP_TwoWireSample
  M031BSP_NSP_TwoWireSample
 
+update @ 2021/09/15
+
+1. Add define USE_NSP960B , to detect I/O status
+
+2. update play list index and scenario
+
+	by terminal , press digit Q , W , E to play wave file (however , NSP will entry power down after play finish , and data will lost)
+	
+	by terminal , press digit 1~7 to play wave file (NSP will not go into power down)
+
+		when under play index 7 wave file , press S/s , will stop playing immediately
+	
+	by terminal , press A or a , to increase volume and D or d , to decrease volume
+
 
 update @ 2021/09/03
 

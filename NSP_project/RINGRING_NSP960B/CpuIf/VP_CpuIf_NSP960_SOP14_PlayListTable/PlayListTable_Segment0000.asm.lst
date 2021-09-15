@@ -1,0 +1,147 @@
+Wed Sep 08 10:37:13 2021
+
+
+
+
+
+
+
+	Macro Assembler  -  Version 1.00.0
+		-----------------------------------------------
+
+		Input  Filename : D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING\CpuIf\VP_CpuIf_NSP960_SOP14_PlayListTable\PlayListTable_Segment0000.asm.app
+		Output Filename : D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING\CpuIf\Code_Release\PlayListTable_Segment0000.oc
+
+
+    1  0000000                   	_@PLAYLISTTABLE_SEGMENTINT00: SECTION
+    2  0000000                   _@PLAYLISTTABLE_SEGMENTINT00_label:
+    3  0000000                   	.PUBLIC _@STARTADDR_PLAYLIST_TABLE
+    4  0000000                   
+    5  0000000                   _@STARTADDR_PLAYLIST_TABLE:
+    6  0000000                   _@PROJECT_ID:
+    7  0000000  00              	DB 00H ; 1 --> _@PROJECT_ID:
+    8  0000001  00              	DB 00H ; 2 --> _@PROJECT_ID:
+    9  0000002  00              	DB 00H ; 3 --> _@PROJECT_ID:
+   10  0000003  00              	DB 00H ; 4 --> _@PROJECT_ID:
+   11  0000004                   _@CHIP_PDID:
+   12  0000004  89              	DB 89H ; 5 --> _@CHIP_PDID:
+   13  0000005  59              	DB 59H ; 6 --> _@CHIP_PDID:
+   14  0000006  60              	DB 60H ; 7 --> _@CHIP_PDID:
+   15  0000007  FF              	DB FFH ; 8 --> _@CHIP_PDID:
+   16  0000008                   _@INDEXTABLE:
+   17  0000008  06              	DB 06H ; 9 --> _@INDEXTABLE:IndexTableCount(Low)
+   18  0000009  00              	DB 00H ; 10 --> _@INDEXTABLE:IndexTableCount(Hign)
+   19  000000A  00              	DB 00H ; 11 --> _@INDEXTABLE:Redundant byte
+   20  000000B  00              	DB 00H ; 12 --> _@INDEXTABLE:Redundant byte
+   21  000000C  28              	DB 28H ; 13 --> _@TABLE_PLAYLIST1:
+   22  000000D  00              	DB 00H ; 14 --> _@TABLE_PLAYLIST1:
+   23  000000E  00              	DB 00H ; 15 --> _@TABLE_PLAYLIST1:
+   24  000000F  00              	DB 00H ; 16 --> _@TABLE_PLAYLIST1:
+   25  0000010  30              	DB 30H ; 17 --> _@TABLE_PLAYLIST2:
+   26  0000011  00              	DB 00H ; 18 --> _@TABLE_PLAYLIST2:
+   27  0000012  00              	DB 00H ; 19 --> _@TABLE_PLAYLIST2:
+   28  0000013  00              	DB 00H ; 20 --> _@TABLE_PLAYLIST2:
+   29  0000014  38              	DB 38H ; 21 --> _@TABLE_PLAYLIST3:
+   30  0000015  00              	DB 00H ; 22 --> _@TABLE_PLAYLIST3:
+   31  0000016  00              	DB 00H ; 23 --> _@TABLE_PLAYLIST3:
+   32  0000017  00              	DB 00H ; 24 --> _@TABLE_PLAYLIST3:
+   33  0000018  40              	DB 40H ; 25 --> _@TABLE_PLAYLIST4:
+   34  0000019  00              	DB 00H ; 26 --> _@TABLE_PLAYLIST4:
+   35  000001A  00              	DB 00H ; 27 --> _@TABLE_PLAYLIST4:
+   36  000001B  00              	DB 00H ; 28 --> _@TABLE_PLAYLIST4:
+   37  000001C  48              	DB 48H ; 29 --> _@TABLE_PLAYLIST5:
+   38  000001D  00              	DB 00H ; 30 --> _@TABLE_PLAYLIST5:
+   39  000001E  00              	DB 00H ; 31 --> _@TABLE_PLAYLIST5:
+   40  000001F  00              	DB 00H ; 32 --> _@TABLE_PLAYLIST5:
+   41  0000020  50              	DB 50H ; 33 --> _@TABLE_PLAYLIST6:
+   42  0000021  00              	DB 00H ; 34 --> _@TABLE_PLAYLIST6:
+   43  0000022  00              	DB 00H ; 35 --> _@TABLE_PLAYLIST6:
+   44  0000023  00              	DB 00H ; 36 --> _@TABLE_PLAYLIST6:
+   45  0000024                   _@TABLE_PLAYLIST_EMPTY:
+   46  0000024  00              	DB 00H ; 37 --> _@TABLE_PLAYLIST_EMPTY:ResCount
+
+
+
+
+
+   47  0000025  00              	DB 00H ; 38 --> _@TABLE_PLAYLIST_EMPTY:ResCount
+   48  0000026  00              	DB 00H ; 39 --> _@TABLE_PLAYLIST_EMPTY:ResCount
+   49  0000027  00              	DB 00H ; 40 --> _@TABLE_PLAYLIST_EMPTY:ResCount
+   50  0000028                   _@TABLE_PLAYLIST1:
+   51  0000028  01              	DB 01H ; 41 --> _@TABLE_PLAYLIST1:ResCount
+   52  0000029  00              	DB 00H ; 42 --> _@TABLE_PLAYLIST1:ResCount
+   53  000002A  00              	DB 00H ; 43 --> _@TABLE_PLAYLIST1:ResCount
+   54  000002B  00              	DB 00H ; 44 --> _@TABLE_PLAYLIST1:ResCount
+   55  000002C  00              	DB .LOW._ALIAS_EQU_1_128_16000_1 ; 45
+   56  000002D  00              	DB .HIGH._ALIAS_EQU_1_128_16000_1 ; 46
+   57  000002E  00              	DB .HIGH8._ALIAS_EQU_1_128_16000_1 ; 47
+   58  000002F  00              	DB 00H ; 48 --> _ALIAS_EQU_1_128_16000_1:Silence
+   59  0000030                   _@TABLE_PLAYLIST2:
+   60  0000030  01              	DB 01H ; 49 --> _@TABLE_PLAYLIST2:ResCount
+   61  0000031  00              	DB 00H ; 50 --> _@TABLE_PLAYLIST2:ResCount
+   62  0000032  00              	DB 00H ; 51 --> _@TABLE_PLAYLIST2:ResCount
+   63  0000033  00              	DB 00H ; 52 --> _@TABLE_PLAYLIST2:ResCount
+   64  0000034  00              	DB .LOW._ALIAS_EQU_1_128_16000_2 ; 53
+   65  0000035  00              	DB .HIGH._ALIAS_EQU_1_128_16000_2 ; 54
+   66  0000036  00              	DB .HIGH8._ALIAS_EQU_1_128_16000_2 ; 55
+   67  0000037  00              	DB 00H ; 56 --> _ALIAS_EQU_1_128_16000_2:Silence
+   68  0000038                   _@TABLE_PLAYLIST3:
+   69  0000038  01              	DB 01H ; 57 --> _@TABLE_PLAYLIST3:ResCount
+   70  0000039  00              	DB 00H ; 58 --> _@TABLE_PLAYLIST3:ResCount
+   71  000003A  00              	DB 00H ; 59 --> _@TABLE_PLAYLIST3:ResCount
+   72  000003B  00              	DB 00H ; 60 --> _@TABLE_PLAYLIST3:ResCount
+   73  000003C  00              	DB .LOW._ALIAS_EQU_1_128_16000_3 ; 61
+   74  000003D  00              	DB .HIGH._ALIAS_EQU_1_128_16000_3 ; 62
+   75  000003E  00              	DB .HIGH8._ALIAS_EQU_1_128_16000_3 ; 63
+   76  000003F  00              	DB 00H ; 64 --> _ALIAS_EQU_1_128_16000_3:Silence
+   77  0000040                   _@TABLE_PLAYLIST4:
+   78  0000040  01              	DB 01H ; 65 --> _@TABLE_PLAYLIST4:ResCount
+   79  0000041  00              	DB 00H ; 66 --> _@TABLE_PLAYLIST4:ResCount
+   80  0000042  00              	DB 00H ; 67 --> _@TABLE_PLAYLIST4:ResCount
+   81  0000043  00              	DB 00H ; 68 --> _@TABLE_PLAYLIST4:ResCount
+   82  0000044  00              	DB .LOW._ALIAS_EQU_1_128_16000_4 ; 69
+   83  0000045  00              	DB .HIGH._ALIAS_EQU_1_128_16000_4 ; 70
+   84  0000046  00              	DB .HIGH8._ALIAS_EQU_1_128_16000_4 ; 71
+   85  0000047  00              	DB 00H ; 72 --> _ALIAS_EQU_1_128_16000_4:Silence
+   86  0000048                   _@TABLE_PLAYLIST5:
+   87  0000048  01              	DB 01H ; 73 --> _@TABLE_PLAYLIST5:ResCount
+   88  0000049  00              	DB 00H ; 74 --> _@TABLE_PLAYLIST5:ResCount
+   89  000004A  00              	DB 00H ; 75 --> _@TABLE_PLAYLIST5:ResCount
+   90  000004B  00              	DB 00H ; 76 --> _@TABLE_PLAYLIST5:ResCount
+   91  000004C  00              	DB .LOW._ALIAS_EQU_1_128_16000_5 ; 77
+   92  000004D  00              	DB .HIGH._ALIAS_EQU_1_128_16000_5 ; 78
+   93  000004E  00              	DB .HIGH8._ALIAS_EQU_1_128_16000_5 ; 79
+   94  000004F  00              	DB 00H ; 80 --> _ALIAS_EQU_1_128_16000_5:Silence
+   95  0000050                   _@TABLE_PLAYLIST6:
+   96  0000050  01              	DB 01H ; 81 --> _@TABLE_PLAYLIST6:ResCount
+   97  0000051  00              	DB 00H ; 82 --> _@TABLE_PLAYLIST6:ResCount
+   98  0000052  00              	DB 00H ; 83 --> _@TABLE_PLAYLIST6:ResCount
+   99  0000053  00              	DB 00H ; 84 --> _@TABLE_PLAYLIST6:ResCount
+  100  0000054  00              	DB .LOW._ALIAS_EQU_1_128_16000_RESCRC2808FB41_151549 ; 85
+  101  0000055  00              	DB .HIGH._ALIAS_EQU_1_128_16000_RESCRC2808FB41_151549 ; 86
+  102  0000056  00              	DB .HIGH8._ALIAS_EQU_1_128_16000_RESCRC2808FB41_151549 ; 87
+  103  0000057  00              	DB 00H ; 88 --> _ALIAS_EQU_1_128_16000_RESCRC2808FB41_151549:Silence
+
+
+
+
+
+  104  0000058                   	ENDS
+  105  0000000                   	EXTERN _ALIAS_EQU_1_128_16000_1
+  106  0000000                   	EXTERN _ALIAS_EQU_1_128_16000_2
+  107  0000000                   	EXTERN _ALIAS_EQU_1_128_16000_3
+  108  0000000                   	EXTERN _ALIAS_EQU_1_128_16000_4
+  109  0000000                   	EXTERN _ALIAS_EQU_1_128_16000_5
+  110  0000000                   	EXTERN _ALIAS_EQU_1_128_16000_RESCRC2808FB41_151549
+  111  0000000                   ;**The following is audio external**
+  112  0000000                   ;**The following is sentence label**
+  113  0000000                   ;**The following is INIT_DECODE_SPEECH label**
+  114  0000000                   	EXT_PROGRAM: SECTION
+  115  0000000                   	ENDS
+  116  0000000                   
+		Line(s) Assembled : 116
+		Error(s): 0
+		Warn(s) : 0
+		Begin Assembling Time : Wed Sep 08 10:37:13 2021
+		End   Assembling Time : Wed Sep 08 10:37:13 2021
+

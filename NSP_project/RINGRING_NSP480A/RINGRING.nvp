@@ -1,0 +1,157 @@
+[NuVPProject]
+PlayListCfg1 = PlayList_CpuIf_NSP481_SOP8
+ChipID = -1990950529
+PlayListCfg2 = PlayList_DemoKit_NSP481_SOP8
+Version = 1.13.000
+Chipitem = NSP481_SOP8
+Config = {"AutoSleep":1,"BusyOutput":0,"BusyPin":"","CommandTimeout":"3.20","ContinuePlayback":0,"DebounceTime":"100","ISPWrite":1,"PORCheckSum":0,"PaSupport":0,"PullHighLowReg":0,"SilenceCompress":1,"SilenceConditionLimit":"10","SilenceConditionPCM":"0","SingleResUpdate":0,"SleepMode":0,"StandByTime":"1.00","TableGen":0,"UartBPS":7200,"UartDelay":0,"UartEnable":0,"UartParity":0,"UserDataSize":0,"WireMode":1}
+ChipType = NSP
+ProductID = 0
+
+[PlayList_CpuIf]
+NVPBuildSuccess = 1
+NVPPORIndex = 5
+NVPNeedRebuild = 0
+NVPSeqCount = 7
+
+[PlayList_DemoKit]
+NVPBuildSuccess = 0
+NVPPORIndex = 0
+NVPNeedRebuild = 1
+NVPSeqCount = 3
+
+[NotifyHostDriver]
+Enable = 1
+
+[SoundEditing]
+SendByteTwoWire0 = 10,X,EF
+LastHeight = 667
+SendByteTwoWire2 = 17,X,E8
+SendByteTwoWire1 = ,,
+SendByteTwoWire8 = 82,X,7D
+LastWidth = 1073
+SendByteTwoWire5 = 7C,01,82
+SendByteTwoWire7 = 81,X,7E
+SendByteTwoWire4 = 7F,00,01,7F
+DisplayName = 1
+SendByteTwoWire3 = F0,40,CF
+SendByteTwoWire6 = 80,X,7F
+
+[NVPSequence_DemoKit3]
+PlayRepeatCount = 0
+PlayMode = 0
+SeqName = BP12
+
+[NVPSequence_DemoKit4]
+PlayRepeatCount = 0
+PlayMode = 0
+SeqName = BP13
+
+[NVPSequence_DemoKit5]
+PlayRepeatCount = 0
+PlayMode = 0
+SeqName = BP20
+
+[NVPSequence_DemoKit6]
+PlayRepeatCount = 0
+PlayMode = 0
+SeqName = BP17
+
+[NVPSequence_CpuIf0]
+Volumn0 = 128
+PlayingRate0 = 0
+ResID0 = 1
+SequnceIdx0 = -1
+PlayRepeatCount = 1
+PlayMode = 0
+Repeat0 = 1
+Silence0 = 0
+SeqName = 1
+
+[NVPSequence_CpuIf1]
+Volumn0 = 128
+PlayingRate0 = 0
+ResID0 = 2
+SequnceIdx0 = -1
+PlayRepeatCount = 1
+PlayMode = 0
+Repeat0 = 1
+Silence0 = 0
+SeqName = 2
+
+[NVPSequence_CpuIf2]
+Volumn0 = 128
+PlayingRate0 = 0
+ResID0 = 3
+SequnceIdx0 = -1
+PlayRepeatCount = 1
+PlayMode = 0
+Repeat0 = 1
+Silence0 = 0
+SeqName = 3
+
+[NVPSequence_CpuIf3]
+Volumn0 = 128
+PlayingRate0 = 0
+ResID0 = 4
+SequnceIdx0 = -1
+PlayRepeatCount = 1
+PlayMode = 0
+Repeat0 = 1
+Silence0 = 0
+SeqName = 4
+
+[NVPSequence_CpuIf4]
+Volumn0 = 128
+PlayingRate0 = 0
+ResID0 = 5
+SequnceIdx0 = -1
+PlayRepeatCount = 1
+PlayMode = 0
+Repeat0 = 1
+Silence0 = 0
+SeqName = 5
+
+[NVPSequence_CpuIf5]
+Volumn0 = 128
+PlayingRate0 = 0
+ResID0 = 6
+SequnceIdx0 = -1
+PlayRepeatCount = 1
+PlayMode = 0
+Repeat0 = 1
+Silence0 = 0
+SeqName = 6
+
+[NVPSequence_CpuIf6]
+Volumn0 = 128
+PlayingRate0 = 0
+ResID0 = 7
+SequnceIdx0 = -1
+PlayRepeatCount = -1
+PlayMode = 0
+Repeat0 = 1
+Silence0 = 0
+SeqName = 7
+
+[NVPSequence_DemoKit0]
+Volumn0 = 128
+PlayingRate0 = 0
+ResID0 = 4
+SequnceIdx0 = -1
+PlayRepeatCount = 1
+PlayMode = 0
+Repeat0 = 1
+Silence0 = 0
+SeqName = POR
+
+[NVPSequence_DemoKit1]
+PlayRepeatCount = 0
+PlayMode = 0
+SeqName = BP00
+
+[NVPSequence_DemoKit2]
+PlayRepeatCount = 0
+PlayMode = 0
+SeqName = BP01
+

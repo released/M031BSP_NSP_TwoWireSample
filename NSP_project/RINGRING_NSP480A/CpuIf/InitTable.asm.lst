@@ -1,0 +1,263 @@
+Wed Sep 15 09:38:35 2021
+
+
+
+
+
+
+
+	Macro Assembler  -  Version 1.00.0
+		-----------------------------------------------
+
+		Input  Filename : D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING_NSP480A\CpuIf\InitTable.asm.app
+		Output Filename : D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING_NSP480A\CpuIf\Code_Release\InitTable.oc
+
+
+    1  0000000                   	SYMBOLS
+    2  0000000                   	LINKLIST
+    3  0000000                   	DEBUG ASM
+    4  0000000                   	LINEAR ON
+    5  0000000                   	LONGA OFF
+    6  0000000                   	LONGI OFF
+    7  0000000                   	EXTERN _TIMBRETABLE.BIN
+    8  0000000                   	PUBLIC _INITTABLE_
+    9  0000000                   	PUBLIC _INITTABLE_ALT1
+   10  0000000                   	INITTABLE: SECTION
+   11  0000000                   _INITTABLE_:
+   12  0000000                   _INITTABLE_ALT1:
+   13  0000000                   ; Temporary Buffer Size
+   14  0000000  88              	DB 88H
+   15  0000001  02              	DB 02H
+   16  0000002  00              	DB 00H
+   17  0000003  00              	DB 00H
+   18  0000004                   ; Speech CH1 Buffer Size
+   19  0000004  00              	DB 00H
+   20  0000005  04              	DB 04H
+   21  0000006  00              	DB 00H
+   22  0000007  00              	DB 00H
+   23  0000008                   ; Speech CH2 Buffer Size
+   24  0000008  00              	DB 00H
+   25  0000009  00              	DB 00H
+   26  000000A  00              	DB 00H
+   27  000000B  00              	DB 00H
+   28  000000C                   ; Melody CH  Buffer Size
+   29  000000C  00              	DB 00H
+   30  000000D  00              	DB 00H
+   31  000000E  00              	DB 00H
+   32  000000F  00              	DB 00H
+   33  0000010                   ; Polyphony Number
+   34  0000010  00              	DB 00H
+   35  0000011  00              	DB 00H
+   36  0000012  00              	DB 00H
+   37  0000013  00              	DB 00H
+   38  0000014                   ; Timbre Table Address
+   39  0000014  00              	DB .LOW._TIMBRETABLE.BIN
+   40  0000015  00              	DB .HIGH._TIMBRETABLE.BIN
+   41  0000016  00              	DB .HIGH8._TIMBRETABLE.BIN
+   42  0000017  00              	DB .SEGHIGH._TIMBRETABLE.BIN
+   43  0000018  00              	DB 00H
+   44  0000019  00              	DB 00H
+   45  000001A  00              	DB 00H
+   46  000001B  00              	DB 00H
+
+
+
+
+
+   47  000001C                   ; UltraIO Curve Table Address
+   48  000001C  40              	DB .LOW.UIO_CURVE_TABLE
+   49  000001D  40              	DB .HIGH.UIO_CURVE_TABLE
+   50  000001E  40              	DB .HIGH8.UIO_CURVE_TABLE
+   51  000001F  40              	DB .SEGHIGH.UIO_CURVE_TABLE
+   52  0000020                   ; MIDI fixed channel information
+   53  0000020  00              	DB 00H
+   54  0000021  00              	DB 00H
+   55  0000022  00              	DB 00H
+   56  0000023  00              	DB 00H
+   57  0000024  00              	DB 00H
+   58  0000025  00              	DB 00H
+   59  0000026  00              	DB 00H
+   60  0000027  00              	DB 00H
+   61  0000028  00              	DB 00H
+   62  0000029  00              	DB 00H
+   63  000002A  00              	DB 00H
+   64  000002B  00              	DB 00H
+   65  000002C  00              	DB 00H
+   66  000002D  00              	DB 00H
+   67  000002E  00              	DB 00H
+   68  000002F  00              	DB 00H
+   69  0000030                   ; Run-Time Color Flyer: Color Index Table Address
+   70  0000030  40              	DB .LOW.RUN_TIME_COLORFLY_COLOR_INDEX_TABLE
+   71  0000031  40              	DB .HIGH.RUN_TIME_COLORFLY_COLOR_INDEX_TABLE
+   72  0000032  40              	DB .HIGH8.RUN_TIME_COLORFLY_COLOR_INDEX_TABLE
+   73  0000033  40              	DB .SEGHIGH.RUN_TIME_COLORFLY_COLOR_INDEX_TABLE
+   74  0000034                   ; Run-Time Color Flyer: Delta Table Address
+   75  0000034  40              	DB .LOW.RUN_TIME_COLORFLY_DELTA_TABLE
+   76  0000035  40              	DB .HIGH.RUN_TIME_COLORFLY_DELTA_TABLE
+   77  0000036  40              	DB .HIGH8.RUN_TIME_COLORFLY_DELTA_TABLE
+   78  0000037  40              	DB .SEGHIGH.RUN_TIME_COLORFLY_DELTA_TABLE
+   79  0000038  01              	DB 01H
+   80  0000039  00              	DB 00H
+   81  000003A  00              	DB 00H
+   82  000003B  00              	DB 00H
+   83  000003C  0400            	DW 0004H
+   84  000003E  0000            	DW 0000H
+   85  0000040                   RUN_TIME_COLORFLY_COLOR_INDEX_TABLE:
+   86  0000040                   RUN_TIME_COLORFLY_DELTA_TABLE:
+   87  0000040                   UIO_CURVE_TABLE:
+   88  0000040  00              	DB 00H
+   89  0000041  00              	DB 00H
+   90  0000042  00              	DB 00H
+   91  0000043  FF              	DB FFH
+   92  0000044  00              	DB 00H
+   93  0000045  00              	DB 00H
+   94  0000046  00              	DB 00H
+   95  0000047  FF              	DB FFH
+   96  0000048  00              	DB 00H
+   97  0000049  00              	DB 00H
+   98  000004A  00              	DB 00H
+   99  000004B  FF              	DB FFH
+  100  000004C  00              	DB 00H
+  101  000004D  00              	DB 00H
+  102  000004E  00              	DB 00H
+  103  000004F  FF              	DB FFH
+
+
+
+
+
+  104  0000050  00              	DB 00H
+  105  0000051  00              	DB 00H
+  106  0000052  00              	DB 00H
+  107  0000053  FF              	DB FFH
+  108  0000054  00              	DB 00H
+  109  0000055  00              	DB 00H
+  110  0000056  00              	DB 00H
+  111  0000057  FF              	DB FFH
+  112  0000058  00              	DB 00H
+  113  0000059  00              	DB 00H
+  114  000005A  00              	DB 00H
+  115  000005B  FF              	DB FFH
+  116  000005C  00              	DB 00H
+  117  000005D  00              	DB 00H
+  118  000005E  00              	DB 00H
+  119  000005F  FF              	DB FFH
+  120  0000060  00              	DB 00H
+  121  0000061  00              	DB 00H
+  122  0000062  00              	DB 00H
+  123  0000063  FF              	DB FFH
+  124  0000064  00              	DB 00H
+  125  0000065  00              	DB 00H
+  126  0000066  00              	DB 00H
+  127  0000067  FF              	DB FFH
+  128  0000068  00              	DB 00H
+  129  0000069  00              	DB 00H
+  130  000006A  00              	DB 00H
+  131  000006B  FF              	DB FFH
+  132  000006C  00              	DB 00H
+  133  000006D  00              	DB 00H
+  134  000006E  00              	DB 00H
+  135  000006F  FF              	DB FFH
+  136  0000070  00              	DB 00H
+  137  0000071  00              	DB 00H
+  138  0000072  00              	DB 00H
+  139  0000073  FF              	DB FFH
+  140  0000074  00              	DB 00H
+  141  0000075  00              	DB 00H
+  142  0000076  00              	DB 00H
+  143  0000077  FF              	DB FFH
+  144  0000078  00              	DB 00H
+  145  0000079  00              	DB 00H
+  146  000007A  00              	DB 00H
+  147  000007B  FF              	DB FFH
+  148  000007C  00              	DB 00H
+  149  000007D  00              	DB 00H
+  150  000007E  00              	DB 00H
+  151  000007F  FF              	DB FFH
+  152  0000080  00              	DB 00H
+  153  0000081  00              	DB 00H
+  154  0000082  00              	DB 00H
+  155  0000083  FF              	DB FFH
+  156  0000084  00              	DB 00H
+  157  0000085  00              	DB 00H
+  158  0000086  00              	DB 00H
+  159  0000087  FF              	DB FFH
+  160  0000088  00              	DB 00H
+
+
+
+
+
+  161  0000089  00              	DB 00H
+  162  000008A  00              	DB 00H
+  163  000008B  FF              	DB FFH
+  164  000008C  00              	DB 00H
+  165  000008D  00              	DB 00H
+  166  000008E  00              	DB 00H
+  167  000008F  FF              	DB FFH
+  168  0000090  00              	DB 00H
+  169  0000091  00              	DB 00H
+  170  0000092  00              	DB 00H
+  171  0000093  FF              	DB FFH
+  172  0000094  00              	DB 00H
+  173  0000095  00              	DB 00H
+  174  0000096  00              	DB 00H
+  175  0000097  FF              	DB FFH
+  176  0000098  00              	DB 00H
+  177  0000099  00              	DB 00H
+  178  000009A  00              	DB 00H
+  179  000009B  FF              	DB FFH
+  180  000009C  00              	DB 00H
+  181  000009D  00              	DB 00H
+  182  000009E  00              	DB 00H
+  183  000009F  FF              	DB FFH
+  184  00000A0  00              	DB 00H
+  185  00000A1  00              	DB 00H
+  186  00000A2  00              	DB 00H
+  187  00000A3  FF              	DB FFH
+  188  00000A4  00              	DB 00H
+  189  00000A5  00              	DB 00H
+  190  00000A6  00              	DB 00H
+  191  00000A7  FF              	DB FFH
+  192  00000A8  00              	DB 00H
+  193  00000A9  00              	DB 00H
+  194  00000AA  00              	DB 00H
+  195  00000AB  FF              	DB FFH
+  196  00000AC  00              	DB 00H
+  197  00000AD  00              	DB 00H
+  198  00000AE  00              	DB 00H
+  199  00000AF  FF              	DB FFH
+  200  00000B0  00              	DB 00H
+  201  00000B1  00              	DB 00H
+  202  00000B2  00              	DB 00H
+  203  00000B3  FF              	DB FFH
+  204  00000B4  00              	DB 00H
+  205  00000B5  00              	DB 00H
+  206  00000B6  00              	DB 00H
+  207  00000B7  FF              	DB FFH
+  208  00000B8  00              	DB 00H
+  209  00000B9  00              	DB 00H
+  210  00000BA  00              	DB 00H
+  211  00000BB  FF              	DB FFH
+  212  00000BC  00              	DB 00H
+  213  00000BD  00              	DB 00H
+  214  00000BE  00              	DB 00H
+  215  00000BF  FF              	DB FFH
+  216  00000C0                   	ENDS
+  217  0000000                   ;**The following is audio external**
+
+
+
+
+
+  218  0000000                   ;**The following is sentence label**
+  219  0000000                   ;**The following is INIT_DECODE_SPEECH label**
+  220  0000000                   	EXT_PROGRAM: SECTION
+  221  0000000                   	ENDS
+  222  0000000                   
+		Line(s) Assembled : 222
+		Error(s): 0
+		Warn(s) : 0
+		Begin Assembling Time : Wed Sep 15 09:38:35 2021
+		End   Assembling Time : Wed Sep 15 09:38:35 2021
+

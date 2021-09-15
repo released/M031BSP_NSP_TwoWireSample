@@ -17,7 +17,15 @@ typedef enum{
 	flag_index5 ,
 
 	flag_index6 ,
+	flag_index7 ,
 
+	flag_indexQ ,
+	flag_indexW ,
+	flag_indexE ,
+	flag_indexR ,
+	flag_indexT ,
+
+	flag_indexS ,
 	
 	flag_error ,		
 	flag_DEFAULT	

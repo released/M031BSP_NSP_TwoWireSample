@@ -1,0 +1,38 @@
+Thu Sep 02 11:49:16 2021
+
+
+
+
+
+
+
+	Macro Assembler  -  Version 1.00.0
+		-----------------------------------------------
+
+		Input  Filename : D:\11101465\03_Nuvoton\00_Datasheet\#9_Audio Enhancement\NSP\sample code\NSP playlist project\RINGRING\DemoKit\ISPPartition.asm.app
+		Output Filename : D:\11101465\03_Nuvoton\00_Datasheet\#9_Audio Enhancement\NSP\sample code\NSP playlist project\RINGRING\DemoKit\Code_Release\ISPPartition.oc
+
+
+    1  0000000                   	SYMBOLS
+    2  0000000                   	LINKLIST
+    3  0000000                   	DEBUG ASM
+    4  0000000                   	LINEAR ON
+    5  0000000                   	LONGA OFF
+    6  0000000                   	LONGI OFF
+    7  0000000                   	PUBLIC _ISPPARTITION_CUSTOMER_
+    8  0000000                   	ISPPARTITION_CUSTOMER: SECTION
+    9  0000000                   _ISPPARTITION_CUSTOMER_DUMMY:
+   10  0000000                   _ISPPARTITION_CUSTOMER_:
+   11  0000000                   	ENDS
+   12  0000000                   ;**The following is audio external**
+   13  0000000                   ;**The following is sentence label**
+   14  0000000                   ;**The following is INIT_DECODE_SPEECH label**
+   15  0000000                   	EXT_PROGRAM: SECTION
+   16  0000000                   	ENDS
+   17  0000000                   
+		Line(s) Assembled : 17
+		Error(s): 0
+		Warn(s) : 0
+		Begin Assembling Time : Thu Sep 02 11:49:16 2021
+		End   Assembling Time : Thu Sep 02 11:49:16 2021
+

@@ -1,0 +1,34 @@
+Thu Sep 02 11:49:14 2021
+
+
+
+
+
+
+
+	Macro Assembler  -  Version 1.00.0
+		-----------------------------------------------
+
+		Input  Filename : D:\11101465\03_Nuvoton\00_Datasheet\#9_Audio Enhancement\NSP\sample code\NSP playlist project\RINGRING\DemoKit\ReservedAddrRange.asm.app
+		Output Filename : D:\11101465\03_Nuvoton\00_Datasheet\#9_Audio Enhancement\NSP\sample code\NSP playlist project\RINGRING\DemoKit\ReservedAddrRange.oc
+
+
+    1  0000000                   	CHIP	65C02
+    2  0000000                   	SECTION_ReservedAddrRange1: SECTION
+    3  0000000                   Var_ReservedAddrRange1                   DS D00H
+    4  0000D00                   	ENDS
+    5  0000000                   	SECTION_ReservedAddrRange2: SECTION
+    6  0000000                   Var_ReservedAddrRange2                   DS E0H
+    7  00000E0                   	ENDS
+    8  0000000                   ;**The following is audio external**
+    9  0000000                   ;**The following is sentence label**
+   10  0000000                   ;**The following is INIT_DECODE_SPEECH label**
+   11  0000000                   	EXT_PROGRAM: SECTION
+   12  0000000                   	ENDS
+   13  0000000                   
+		Line(s) Assembled : 13
+		Error(s): 0
+		Warn(s) : 0
+		Begin Assembling Time : Thu Sep 02 11:49:14 2021
+		End   Assembling Time : Thu Sep 02 11:49:14 2021
+

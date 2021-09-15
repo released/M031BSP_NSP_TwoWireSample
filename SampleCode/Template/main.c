@@ -13,6 +13,8 @@
 volatile uint32_t BitFlag = 0;
 volatile uint32_t counter_tick = 0;
 
+//#define USE_NSP960B
+
 /*_____ M A C R O S ________________________________________________________*/
 
 /*_____ F U N C T I O N S __________________________________________________*/
@@ -220,81 +222,165 @@ void NSP_IO_Init(void)
 
 void process_loop(void)
 {
+    UINT8 NSP_STATUS = 0;
 
-	if (is_flag_set(flag_index1))
+	
+	if (is_flag_set(flag_indexQ))
 	{
-		set_flag(flag_index1 , FALSE);
+		set_flag(flag_indexQ , FALSE);
+		
 		TwoWire_SleepWakeUpSample();		
 	}
-	else if (is_flag_set(flag_index2))
+	else if (is_flag_set(flag_indexW))
 	{
-		set_flag(flag_index2 , FALSE);
+		set_flag(flag_indexW , FALSE);
+		
 		N_WAKUP();
     	N_AUTO_SLEEP_DIS();		
 
 		N_SET_VOL(0x40);	// max : 0x80 (128)
 		N_PLAY(2);  
 		TwoWire_WaitPlayEND();
-		printf("TwoWire_WaitPlayEND\r\n");
+		printf("TwoWire_WaitPlayEND (W) \r\n");
 
 		// entry power down , volume data will lost
 		N_AUTO_SLEEP_EN();		
 		N_PWR_DOWN();
 	}
-	else if (is_flag_set(flag_index3))
+	else if (is_flag_set(flag_indexE))
 	{
-		set_flag(flag_index3 , FALSE);
+		set_flag(flag_indexE , FALSE);
+		
 		N_WAKUP();
     	N_AUTO_SLEEP_DIS();		
 
 //		N_SET_VOL(0x10);	// max : 0x80 (128)
 		N_PLAY(6);  
 		TwoWire_WaitPlayEND();
-		printf("TwoWire_WaitPlayEND\r\n");
+		printf("TwoWire_WaitPlayEND (E) \r\n");
 
 		// entry power down , volume data will lost
 		N_AUTO_SLEEP_EN();		
 		N_PWR_DOWN();
 	}
-	else if (is_flag_set(flag_index4))
+	else if (is_flag_set(flag_indexR))
 	{
-		set_flag(flag_index4 , FALSE);
+		set_flag(flag_indexR , FALSE);
+		
+
+	}		
+	else if (is_flag_set(flag_indexT))		// enable GPIO , to start play wave
+	{
+		set_flag(flag_indexT , FALSE);
+
+		#if defined (USE_NSP960B)
+		NSP_IO_Detect_loop();
+		#endif
+	}		
+	else if (is_flag_set(flag_index1))
+	{
+		set_flag(flag_index1 , FALSE);
+		
 		N_WAKUP();
     	N_AUTO_SLEEP_DIS();		
 
 		N_SET_VOL(0x40);	// max : 0x80 (128)
-		N_PLAY(3);  
+		N_PLAY(1);  
 		TwoWire_WaitPlayEND();
-		printf("TwoWire_WaitPlayEND\r\n");
-
- 		// entry power down , volume data will lost
-//		N_AUTO_SLEEP_EN();		
-//		N_PWR_DOWN();
+		printf("TwoWire_WaitPlayEND (1) \r\n");
 	}
-	else if (is_flag_set(flag_index5))
+	else if (is_flag_set(flag_index2))
 	{
-		set_flag(flag_index5 , FALSE);
+		set_flag(flag_index2 , FALSE);
+		
 		N_WAKUP();
     	N_AUTO_SLEEP_DIS();		
 
-		N_SET_VOL(0x20);	// max : 0x80 (128)
+//		N_SET_VOL(0x20);	// max : 0x80 (128)
+		N_PLAY(2);  
+		TwoWire_WaitPlayEND();
+		printf("TwoWire_WaitPlayEND (2)\r\n");
+	}	
+	else if (is_flag_set(flag_index3))
+	{
+		set_flag(flag_index3 , FALSE);
+		
+		N_WAKUP();
+    	N_AUTO_SLEEP_DIS();		
+
+//		N_SET_VOL(0x20);	// max : 0x80 (128)
+		N_PLAY(3);  
+		TwoWire_WaitPlayEND();
+		printf("TwoWire_WaitPlayEND (3)\r\n");
+	}	
+	else if (is_flag_set(flag_index4))
+	{
+		set_flag(flag_index4 , FALSE);
+		
+		N_WAKUP();
+    	N_AUTO_SLEEP_DIS();		
+
+//		N_SET_VOL(0x20);	// max : 0x80 (128)
 		N_PLAY(4);  
 		TwoWire_WaitPlayEND();
-		printf("TwoWire_WaitPlayEND\r\n");
-		
- 		// entry power down , volume data will lost
-//		N_AUTO_SLEEP_EN();		
-//		N_PWR_DOWN();
+		printf("TwoWire_WaitPlayEND (4)\r\n");
 	}	
-	else if (is_flag_set(flag_index6))		// enable GPIO , to start play wave
+	else if (is_flag_set(flag_index5))
+	{
+		set_flag(flag_index5 , FALSE);
+		
+		N_WAKUP();
+    	N_AUTO_SLEEP_DIS();		
+
+//		N_SET_VOL(0x20);	// max : 0x80 (128)
+		N_PLAY(5);  
+		TwoWire_WaitPlayEND();
+		printf("TwoWire_WaitPlayEND (5)\r\n");
+	}	
+	else if (is_flag_set(flag_index6))
 	{
 		set_flag(flag_index6 , FALSE);
 		
-		NSP_IO_Detect_loop();
-	}	
+		N_WAKUP();
+    	N_AUTO_SLEEP_DIS();		
 
-	
-	
+//		N_SET_VOL(0x20);	// max : 0x80 (128)
+		N_PLAY(6);  
+		TwoWire_WaitPlayEND();
+		printf("TwoWire_WaitPlayEND (6)\r\n");
+	}		
+	else if (is_flag_set(flag_index7))
+	{
+		set_flag(flag_index7 , FALSE);
+		
+		N_WAKUP();
+    	N_AUTO_SLEEP_DIS();		
+
+//		N_SET_VOL(0x20);	// max : 0x80 (128)
+		N_PLAY(7);  
+
+		#if 1	// force to stop playing , if press 'S'
+	    do
+	    {
+			HOST_Delay500uS();
+			
+			if(is_flag_set(flag_indexS))
+			{
+				printf("trigger stop playing\r\n");
+				set_flag(flag_indexS , FALSE);	
+				N_STOP();
+				printf("stop playing\r\n");
+				break;
+			}
+			
+	    }while(!TwoWire_AskStatus());
+		#else
+		TwoWire_WaitPlayEND();
+		#endif
+			
+		printf("TwoWire_WaitPlayEND (7)\r\n");
+	}	
+				
 }
 
 //void delay_ms(uint16_t ms)
@@ -327,6 +413,7 @@ void TMR1_IRQHandler(void)
 //        	printf("%s : %4d\r\n",__FUNCTION__,LOG++);
 			PB14 ^= 1;
 
+			#if defined (USE_NSP960B)
 			// detect IO state
 			N_GET_INOUT(&io_state);
         	printf("io_state : 0x%2X , BP17 = 0x%2X , BP13 = 0x%2X ,BP12 = 0x%2X ,BP20 = 0x%2X ,\r\n",
@@ -335,12 +422,14 @@ void TMR1_IRQHandler(void)
 					((io_state >> 3) & 0x01),
 					((io_state >> 2) & 0x01),
 					((io_state >> 0) & 0x01));
-			
+			#endif
 		}
 
 		if ((get_tick() % 50) == 0)
 		{
-			set_flag(flag_index6 , TRUE);		
+			#if defined (USE_NSP960B)			
+			set_flag(flag_indexT , TRUE);		
+			#endif
 		}	
     }
 }
@@ -391,10 +480,41 @@ void UARTx_Process(void)
 				set_flag(flag_index5 , TRUE);
 				break;
 			case '6':
-
+				set_flag(flag_index6 , TRUE);
+				break;
+			case '7':
+				set_flag(flag_index7 , TRUE);
 				break;
 
+			case 'Q':
+			case 'q':				
+				set_flag(flag_indexQ , TRUE);
+				break;
 
+			case 'W':
+			case 'w':				
+				set_flag(flag_indexW , TRUE);
+				break;
+
+			case 'E':
+			case 'e':				
+				set_flag(flag_indexE , TRUE);
+				break;
+			
+			case 'R':
+			case 'r':				
+				set_flag(flag_indexR , TRUE);
+				break;			
+
+			case 'T':
+			case 't':				
+				set_flag(flag_indexT , TRUE);
+				break;	
+
+			case 'S':
+			case 's':				
+				set_flag(flag_indexS , TRUE);			
+				break;	
 				
 			case 'A':
 			case 'a':
@@ -520,7 +640,15 @@ int main()
 	TIMER1_Init();
 
     HOST_BUS_Init();	// BP01 : DATA (PA11)  , BP00 : CLK (PA10)
+
+	N_WAKUP();
+	N_AUTO_SLEEP_DIS();		
+
+	N_SET_VOL(0x40);
+
+	#if defined (USE_NSP960B)	
     NSP_IO_Init();
+	#endif
 
 //	PlaySample_1();
 //	PlaySample_2();
@@ -530,8 +658,6 @@ int main()
 //	PlayNormalSample();
 
 //	TwoWirePlaySample();
-
-
 
     /* Got no where to go, just loop forever */
     while(1)

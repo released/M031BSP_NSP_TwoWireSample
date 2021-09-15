@@ -1,0 +1,177 @@
+Executable File = D:\11101465\03_Nuvoton\00_Datasheet\#9_Audio Enhancement\NSP\sample code\NSP playlist project\RINGRING\DemoKit\Code_Release\VP_DemoKit_NSP960_SOP14.ocd
+
+Timestamp is Thu Sep 02 11:49:16 2021
+
+
+Address		Length		Name		Class
+(i-word)	(byte)		
+
+255:0xffffff	         0		CODE(4.wav.oc)	Prgbit
+255:0xffffff	         0		DATA(4.wav.oc)	Prgbit
+255:0xffffff	         0		PAGE0(4.wav.oc)	Prgbit
+255:0xffffff	       968		_4.WAV_RES_@1@_(4.wav.oc)	Prgbit
+255:0xffffff	      4012		_4.WAV_RES_@2@_(4.wav.oc)	Prgbit
+Module : 4.wav.oc 	 Size :       4980	 Prgbit
+
+255:0xffffff	         2		CODE(CapSensorCmd.oc)	Prgbit
+255:0xffffff	         0		DATA(CapSensorCmd.oc)	Prgbit
+255:0xffffff	         0		PAGE0(CapSensorCmd.oc)	Prgbit
+255:0xffffff	         0		USER_RAM(CapSensorCmd.oc)	Prgbit
+255:0xffffff	         0		EXT_PROGRAM(CapSensorCmd.oc)	Prgbit
+Module : CapSensorCmd.oc 	 Size :          2	 Prgbit
+
+255:0xffffff	         0		CODE(ChannelTable.oc)	Prgbit
+255:0xffffff	         0		DATA(ChannelTable.oc)	Prgbit
+255:0xffffff	         0		PAGE0(ChannelTable.oc)	Prgbit
+255:0xffffff	         0		LIBRARY_USED_RAM(ChannelTable.oc)	Prgbit
+255:0xffffff	        27		LIBRARY_USED_RAM(ChannelTable.oc)	Prgbit
+255:0xffffff	        32		STACK_RAM(ChannelTable.oc)	Prgbit
+255:0xffffff	         0		LIBRARY_USED_DPD_RAM(ChannelTable.oc)	Prgbit
+255:0xffffff	         0		LIBRARY_CODE(ChannelTable.oc)	Prgbit
+255:0xffffff	       560		LIBRARY_CODE(ChannelTable.oc)	Prgbit
+255:0xffffff	       650		LIBRARY_CODE_NOCROSSING(ChannelTable.oc)	Prgbit
+255:0xffffff	         0		EXT_PROGRAM(ChannelTable.oc)	Prgbit
+Module : ChannelTable.oc 	 Size :       1269	 Prgbit
+
+255:0xffffff	         0		CODE(ICEBRK.oc)	Prgbit
+255:0xffffff	         0		DATA(ICEBRK.oc)	Prgbit
+255:0xffffff	         0		PAGE0(ICEBRK.oc)	Prgbit
+255:0xffffff	         0		WINBOND_TEST_CODE(ICEBRK.oc)	Prgbit
+ 0:0x001000	       105		WINBOND_TEST_CODE(ICEBRK.oc)	Prgbit
+255:0xffffff	         0		EXT_PROGRAM(ICEBRK.oc)	Prgbit
+Module : ICEBRK.oc 	 Size :        105	 Prgbit
+
+255:0xffffff	         0		CODE(ISPLib.oc)	Prgbit
+255:0xffffff	         0		DATA(ISPLib.oc)	Prgbit
+255:0xffffff	         0		PAGE0(ISPLib.oc)	Prgbit
+255:0xffffff	       141		LIBRARY_CODE_NOCROSSING(ISPLib.oc)	Prgbit
+255:0xffffff	         0		EXT_PROGRAM(ISPLib.oc)	Prgbit
+Module : ISPLib.oc 	 Size :        141	 Prgbit
+
+255:0xffffff	         0		CODE(ISPPartition.oc)	Prgbit
+255:0xffffff	         0		DATA(ISPPartition.oc)	Prgbit
+255:0xffffff	         0		PAGE0(ISPPartition.oc)	Prgbit
+255:0xffffff	         0		ISPPARTITION_CUSTOMER(ISPPartition.oc)	Prgbit
+255:0xffffff	         0		EXT_PROGRAM(ISPPartition.oc)	Prgbit
+Module : ISPPartition.oc 	 Size :          0	 Prgbit
+
+255:0xffffff	         0		CODE(InitTable.oc)	Prgbit
+255:0xffffff	         0		DATA(InitTable.oc)	Prgbit
+255:0xffffff	         0		PAGE0(InitTable.oc)	Prgbit
+255:0xffffff	       192		INITTABLE(InitTable.oc)	Prgbit
+255:0xffffff	         0		EXT_PROGRAM(InitTable.oc)	Prgbit
+Module : InitTable.oc 	 Size :        192	 Prgbit
+
+255:0xffffff	      1505		CODE(Main.oc)	Prgbit
+255:0xffffff	         0		DATA(Main.oc)	Prgbit
+255:0xffffff	         0		PAGE0(Main.oc)	Prgbit
+255:0xffffff	        27		USER_RAM(Main.oc)	Prgbit
+255:0xffffff	        17		USER_DPD_RAM(Main.oc)	Prgbit
+255:0xffffff	         0		VECTOR(Main.oc)	Prgbit
+ 0:0x001080	         6		VECTOR(Main.oc)	Prgbit
+ 0:0x001086	         8		VECTOR(Main.oc)	Prgbit
+ 0:0x00108e	         6		VECTOR(Main.oc)	Prgbit
+ 0:0x001098	         2		VECTOR(Main.oc)	Prgbit
+ 0:0x00109c	         2		VECTOR(Main.oc)	Prgbit
+Module : Main.oc 	 Size :       1573	 Prgbit
+
+255:0xffffff	         0		CODE(NAPP.oc)	Prgbit
+255:0xffffff	         0		DATA(NAPP.oc)	Prgbit
+255:0xffffff	         0		PAGE0(NAPP.oc)	Prgbit
+255:0xffffff	        53		_NAPP_SECTION_(NAPP.oc)	Prgbit
+255:0xffffff	         0		EXT_PROGRAM(NAPP.oc)	Prgbit
+Module : NAPP.oc 	 Size :         53	 Prgbit
+
+255:0xffffff	         0		CODE(ProgBoundary.oc)	Prgbit
+255:0xffffff	         0		DATA(ProgBoundary.oc)	Prgbit
+255:0xffffff	         0		PAGE0(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY0(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY1(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY2(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY3(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY4(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY5(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY6(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY7(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY8(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY9(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY10(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY11(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY12(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY13(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY14(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY15(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY16(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY17(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY18(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY19(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY20(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY21(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY22(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY23(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY24(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY25(ProgBoundary.oc)	Prgbit
+255:0xffffff	     32768		PROG_BOUNDARY26(ProgBoundary.oc)	Prgbit
+255:0xffffff	      4096		PROG_BOUNDARY27(ProgBoundary.oc)	Prgbit
+255:0xffffff	         0		EXT_PROGRAM(ProgBoundary.oc)	Prgbit
+Module : ProgBoundary.oc 	 Size :     888832	 Prgbit
+
+255:0xffffff	         0		CODE(ReservedAddrRange.oc)	Prgbit
+255:0xffffff	         0		DATA(ReservedAddrRange.oc)	Prgbit
+255:0xffffff	         0		PAGE0(ReservedAddrRange.oc)	Prgbit
+255:0xffffff	      3328		SECTION_ReservedAddrRange1(ReservedAddrRange.oc)	Prgbit
+255:0xffffff	       224		SECTION_ReservedAddrRange2(ReservedAddrRange.oc)	Prgbit
+255:0xffffff	         0		EXT_PROGRAM(ReservedAddrRange.oc)	Prgbit
+Module : ReservedAddrRange.oc 	 Size :       3552	 Prgbit
+
+255:0xffffff	       578		CODE(SYNTHESIS.oc)	Prgbit
+255:0xffffff	         0		DATA(SYNTHESIS.oc)	Prgbit
+255:0xffffff	         0		PAGE0(SYNTHESIS.oc)	Prgbit
+255:0xffffff	         0		EXT_PROGRAM(SYNTHESIS.oc)	Prgbit
+Module : SYNTHESIS.oc 	 Size :        578	 Prgbit
+
+255:0xffffff	         0		CODE(SysClk.oc)	Prgbit
+255:0xffffff	         0		DATA(SysClk.oc)	Prgbit
+255:0xffffff	         0		PAGE0(SysClk.oc)	Prgbit
+255:0xffffff	         0		LIBRARY_CODE(SysClk.oc)	Prgbit
+Module : SysClk.oc 	 Size :          0	 Prgbit
+
+255:0xffffff	         0		CODE(Table.bin.oc)	Prgbit
+255:0xffffff	         0		DATA(Table.bin.oc)	Prgbit
+255:0xffffff	         0		PAGE0(Table.bin.oc)	Prgbit
+255:0xffffff	     23572		_TABLE_@1@_(Table.bin.oc)	Prgbit
+Module : Table.bin.oc 	 Size :      23572	 Prgbit
+
+255:0xffffff	         0		CODE(TimbreTable.bin.oc)	Prgbit
+255:0xffffff	         0		DATA(TimbreTable.bin.oc)	Prgbit
+255:0xffffff	         0		PAGE0(TimbreTable.bin.oc)	Prgbit
+255:0xffffff	        32		_TIMBRETABLE_@1@_(TimbreTable.bin.oc)	Prgbit
+Module : TimbreTable.bin.oc 	 Size :         32	 Prgbit
+
+255:0xffffff	        10		CODE(UIO_SR.oc)	Prgbit
+255:0xffffff	         0		DATA(UIO_SR.oc)	Prgbit
+255:0xffffff	         0		PAGE0(UIO_SR.oc)	Prgbit
+255:0xffffff	         0		UIO_USED_RAM(UIO_SR.oc)	Prgbit
+255:0xffffff	         0		UIO_TABLE(UIO_SR.oc)	Prgbit
+255:0xffffff	         0		EXT_PROGRAM(UIO_SR.oc)	Prgbit
+Module : UIO_SR.oc 	 Size :         10	 Prgbit
+
+255:0xffffff	        65		CODE(UserCmd.oc)	Prgbit
+255:0xffffff	         0		DATA(UserCmd.oc)	Prgbit
+255:0xffffff	         0		PAGE0(UserCmd.oc)	Prgbit
+255:0xffffff	         0		USER_RAM(UserCmd.oc)	Prgbit
+255:0xffffff	         0		USER_RAM(UserCmd.oc)	Prgbit
+255:0xffffff	         0		EXT_PROGRAM(UserCmd.oc)	Prgbit
+Module : UserCmd.oc 	 Size :         65	 Prgbit
+
+255:0xffffff	         0		CODE(VP_DemoKit_NSP960_SOP14_equ.oc)	Prgbit
+255:0xffffff	         0		DATA(VP_DemoKit_NSP960_SOP14_equ.oc)	Prgbit
+255:0xffffff	         0		PAGE0(VP_DemoKit_NSP960_SOP14_equ.oc)	Prgbit
+255:0xffffff	        15		__@SIL_EQU_EQU_@1@_(VP_DemoKit_NSP960_SOP14_equ.oc)	Prgbit
+255:0xffffff	        15		__ALIAS_EQU_1_128_16000_4_EQU_@1@_(VP_DemoKit_NSP960_SOP14_equ.oc)	Prgbit
+Module : VP_DemoKit_NSP960_SOP14_equ.oc 	 Size :         30
+
+
+
+Entry point = 0x00000000
+

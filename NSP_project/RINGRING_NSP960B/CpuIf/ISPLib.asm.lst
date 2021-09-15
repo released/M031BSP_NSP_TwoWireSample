@@ -1,0 +1,928 @@
+Wed Sep 08 10:37:09 2021
+
+
+
+
+
+
+
+	Macro Assembler  -  Version 1.00.0
+		-----------------------------------------------
+
+		Input  Filename : D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING\CpuIf\ISPLib.asm.app
+		Output Filename : D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING\CpuIf\Code_Release\ISPLib.oc
+
+
+    1  0000000                   	CHIP	65C02
+    2  0000000                   	SYMBOLS
+    3  0000000                   	LINKLIST
+    4  0000000                   	DEBUG  	ASM
+    5  0000000                   	LINEAR	ON
+    6  0000000                   	LONGA	OFF
+    7  0000000                   	LONGI	OFF
+    8  0000000                   
+    9  0000000                   	INCLUDE	"C:\NUVOTON\NSPPLAYLISTEDITOR\V1.13.000\NSP_SDS\SDS_NSP\INCLUDE\SYS_DEF_EQU.INI.APP"
+   10  0000000                   	SYMBOLS
+   11  0000000                   	LINKLIST
+   12  0000000                   	DEBUG  	ASM
+   13  0000000                   	LINEAR	ON
+   14  0000000                   	LONGA	OFF
+   15  0000000                   	LONGI	OFF
+   16  0000000                   
+   17  0000000                   ;====================================================
+   18  0000000                   ;====================================================
+   19  0000000                   CHECKSUM_ADDR		EQU 00H
+   20  0000000                   CHECKSUM_ADDR1		EQU 01H
+   21  0000000                   CHECK_RESULT		EQU	02H
+   22  0000000                   CHECKSUM_33TH		EQU 107EH
+   23  0000000                   CHECKSUM_34TH		EQU 107FH
+   24  0000000                   
+   25  0000000                   ;====================================================
+   26  0000000                   INT0_PORT	EQU 		01H
+   27  0000000                   INT0_TMA	EQU 		02H
+   28  0000000                   INT0_RESUME	EQU			04H
+   29  0000000                   INT0_INTRF	EQU			08H		
+   30  0000000                   INT0_TMG	EQU 		10H
+   31  0000000                   INT0_FXF10	EQU 		20H
+   32  0000000                   INT0_FXF13	EQU 		40H
+   33  0000000                   INT0_FXF15	EQU 		80H
+   34  0000000                   
+   35  0000000                   INT1_SLD	EQU 		01H
+   36  0000000                   INT1_ADC	EQU 		04H
+   37  0000000                   INT1_LRCT	EQU 		08H
+   38  0000000                   
+   39  0000000                   TMA_IR_TX		EQU		80H
+   40  0000000                   TMG_TOUCH		EQU		10H
+   41  0000000                   
+   42  0000000                   SYNF_ABANDON	EQU		01H
+   43  0000000                   SYNF_END		EQU		08H
+   44  0000000                   SYNF_PCM		EQU		10H
+   45  0000000                   SYNF_SILENCE	EQU		20H
+   46  0000000                   SYNF_EVENT		EQU		40H
+
+
+
+
+
+   47  0000000                   SYNF_GAIN		EQU		80H
+   48  0000000                   SYNV_VOL_BYPASS	EQU		80H
+   49  0000000                   
+   50  0000000                   PWMC_BP0_DIV1	EQU		00H
+   51  0000000                   PWMC_BP0_DIV2	EQU		01H
+   52  0000000                   PWMC_BP0_DIV4	EQU		02H
+   53  0000000                   PWMC_BP0_DIV32	EQU		03H
+   54  0000000                   PWMC_BP0_DIV64	EQU		04H
+   55  0000000                   PWMC_BP0_DIV128	EQU		05H
+   56  0000000                   PWMC_BP0_DIV256	EQU		06H
+   57  0000000                   PWMC_BP0_DIV512	EQU		07H
+   58  0000000                   PWMC_BP1_DIV1	EQU		00H
+   59  0000000                   PWMC_BP1_DIV2	EQU		10H
+   60  0000000                   PWMC_BP1_DIV4	EQU		20H
+   61  0000000                   PWMC_BP1_DIV32	EQU		30H
+   62  0000000                   PWMC_BP1_DIV64	EQU		40H
+   63  0000000                   PWMC_BP1_DIV128	EQU		50H
+   64  0000000                   PWMC_BP1_DIV256	EQU		60H
+   65  0000000                   PWMC_BP1_DIV512	EQU		70H
+   66  0000000                   
+   67  0000000                   ;BP00_PWM	EQU		01H
+   68  0000000                   ;BP01_PWM	EQU		02H
+   69  0000000                   ;BP02_PWM	EQU		04H
+   70  0000000                   ;BP03_PWM	EQU		08H
+   71  0000000                   ;BP04_PWM	EQU		10H
+   72  0000000                   ;BP05_PWM	EQU		20H
+   73  0000000                   ;BP10_PWM	EQU		01H
+   74  0000000                   ;BP11_PWM	EQU		02H
+   75  0000000                   ;BP12_PWM	EQU		04H
+   76  0000000                   
+   77  0000000                   RSTF_WDT	EQU		02H
+   78  0000000                   
+   79  0000000                   WAKEF_PORT	EQU		01H
+   80  0000000                   WAKEF_LRC	EQU		02H
+   81  0000000                   WAKEF_IRWU	EQU		04H
+   82  0000000                   WAKEF_RESETB	EQU		08H
+   83  0000000                   WAKEF_LVR	EQU		10H
+   84  0000000                   WAKEF_POR	EQU		20H
+   85  0000000                   WAKEF_RST_SRC	EQU		80H
+   86  0000000                   
+   87  0000000                   STOP_FLAG	EQU		5AH
+   88  0000000                   WDTC_CLR	EQU		01H
+   89  0000000                   
+   90  0000000                   LVDC_EN		EQU		01H
+   91  0000000                   LDVC_21V	EQU		01H
+   92  0000000                   LDVC_24V	EQU		03H
+   93  0000000                   LDVC_27V	EQU		05H
+   94  0000000                   LDVC_30V	EQU		07H
+   95  0000000                   LDVC_33V	EQU		09H
+   96  0000000                   LDVC_EXT	EQU		0BH
+   97  0000000                   LDVC_DETECT	EQU		80H
+   98  0000000                   
+   99  0000000                   CAPS_SINK	EQU		08H
+  100  0000000                   CAPS_2UA	EQU		00H
+  101  0000000                   CAPS_4UA	EQU		10H	
+  102  0000000                   CAPS_6UA	EQU		20H
+  103  0000000                   CAPS_8UA	EQU		30H
+
+
+
+
+
+  104  0000000                   CAPS_EN		EQU		40H
+  105  0000000                   
+  106  0000000                   LRCC_EN		EQU		01H
+  107  0000000                   LRCC_IR_WAKEUP	EQU		02H
+  108  0000000                   LRCC_IR_DHI	EQU		40H
+  109  0000000                   LRCC_IR_RX	EQU		80H
+  110  0000000                   
+  111  0000000                   IRWD_DIV8	EQU		00H
+  112  0000000                   IRWD_DIV32	EQU		01H
+  113  0000000                   IRWD_DIV128	EQU		02H
+  114  0000000                   IRWD_DIV512	EQU		03H
+  115  0000000                   
+  116  0000000                   SPIC_EN		EQU		01H
+  117  0000000                   SPIC_DIV1	EQU		00H
+  118  0000000                   SPIC_DIV2	EQU		20H
+  119  0000000                   SPIC_DIV4	EQU		40H
+  120  0000000                   SPIC_DIV8	EQU		60H
+  121  0000000                   SPIC_DONE	EQU		80H
+  122  0000000                   
+  123  0000000                   ADRC_EN		EQU		01H
+  124  0000000                   ADRC_START	EQU		02H
+  125  0000000                   ADRC_BP14	EQU		00H
+  126  0000000                   ADRC_BP15	EQU		04H
+  127  0000000                   ADRC_BP16	EQU		08H
+  128  0000000                   ADRC_BP17	EQU		0CH
+  129  0000000                   ADRC_BP14_AN	EQU		10H
+  130  0000000                   ADRC_BP15_AN	EQU		24H
+  131  0000000                   ADRC_BP16_AN	EQU		48H
+  132  0000000                   ADRC_BP17_AN	EQU		8CH
+  133  0000000                   
+  134  0000000                   LDOEN_EN	EQU		01H
+  135  0000000                   
+  136  0000000                   ISP_EN				EQU	01H
+  137  0000000                   ISP_EN_PP			EQU 02H
+  138  0000000                   ISP_EN_USRCFG		EQU 04H
+  139  0000000                   ISP_ERR_FLAG		EQU 08H
+  140  0000000                   ISP_DONE			EQU 01H
+  141  0000000                   ISP_CMD_STAND		EQU	30H
+  142  0000000                   ISP_CMD_READ		EQU	00H
+  143  0000000                   ISP_CMD_PROGRAM		EQU 21H
+  144  0000000                   ISP_CMD_ERASE_PAGE	EQU	22H
+  145  0000000                   ISP_CMD_CID			EQU 0BH
+  146  0000000                   ISP_CMD_DID			EQU 0CH
+  147  0000000                   
+  148  0000000                   ; 
+  149  0000000                   ;
+  150  0000000                   ; |----------------------|
+  151  0000000                   ; |         Stack        |
+  152  0000000                   ; |----------------------| SHM_RAM_BEGIN
+  153  0000000                   ; | HW Engine Shared RAM |  
+  154  0000000                   ; |----------------------| RAM_END (SHM_RAM_END)
+  155  0000000                   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  156  0000000                   
+  157  0000000                   .IF	 (PARTNO='N589B080').OR.(PARTNO='N589C080').OR.(PARTNO='N589D080').OR.(PARTNO='N589D081')
+  158  0000000                   SYS_PQ				EQU (1FH << 1)
+  159  0000000                   .ENDIF
+  160  0000000                   .IF	 (PARTNO='N589B120').OR.(PARTNO='N589C120').OR.(PARTNO='N589D120').OR.(PARTNO='N589D121')
+
+
+
+
+
+  161  0000000                   SYS_PQ				EQU (27H << 1)
+  162  0000000                   .ENDIF
+  163  0000000                   .IF	 (PARTNO='N589A080').OR.(PARTNO='N589B170').OR.(PARTNO='N589C170').OR.(PARTNO='N589D170').OR.(PARTNO='N589D171')
+  164  0000000                   SYS_PQ				EQU (2FH << 1)
+  165  0000000                   .ENDIF
+  166  0000000                   .IF	 (PARTNO='N589A150').OR.(PARTNO='N589B200').OR.(PARTNO='N589C200').OR.(PARTNO='N589D200').OR.(PARTNO='N589D201')
+  167  0000000                   SYS_PQ				EQU (3FH << 1)
+  168  0000000                   .ENDIF
+  169  0000000                   .IF	 (PARTNO='N589A200').OR.(PARTNO='N589B250').OR.(PARTNO='N589C250').OR.(PARTNO='N589D250').OR.(PARTNO='N589D251')
+  170  0000000                   SYS_PQ				EQU (4FH << 1)
+  171  0000000                   .ENDIF
+  172  0000000                   .IF	 (PARTNO='N589A280').OR.(PARTNO='N589B340').OR.(PARTNO='N589C340').OR.(PARTNO='N589D340').OR.(PARTNO='N589D341')
+  173  0000000                   SYS_PQ				EQU (5FH << 1)
+  174  0000000                   .ENDIF
+  175  0000000                   .IF	 (PARTNO='N589D481')
+  176  0000000                   SYS_PQ				EQU (7FH << 1)
+  177  0000000                   .ENDIF
+  178  0000000                   
+  179  0000000                   .IF	 (PARTNO='N589A400').OR.(PARTNO='N589B480').OR.(PARTNO='N589B480N').OR.(PARTNO='N589C480')
+  180  0000000                   SYS_PQ				EQU 07FH
+  181  0000000                   .ENDIF
+  182  0000000                   .IF	 (PARTNO='N589A600').OR.(PARTNO='N589B650').OR.(PARTNO='N589C650').OR.(PARTNO='N589D650').OR.(PARTNO='N589D650N')
+  183  0000000                   SYS_PQ				EQU 0BFH
+  184  0000000                   .ENDIF
+  185  0000000                   .IF	 (PARTNO='N589A900').OR.(PARTNO='N589B960').OR.(PARTNO='N589C960').OR.(PARTNO='N589D960').OR.(PARTNO='N589D960N')
+  186  0000000                   SYS_PQ				EQU 0FFH
+  187  0000000                   .ENDIF
+  188  0000000                   
+  189  0000000                   RAM_BEGIN		EQU 00H
+  190  0000000                   
+  191  0000000                   .IF (CHIPSERIES = 'N589A').OR.(CHIPSERIES = 'N589B').OR.(CHIPSERIES = 'N589C')
+  192  0000000                   RAM_END			EQU 1FFH
+  193  0000000                   .ENDIF
+  194  0000000                   
+  195  0000000                   .IF (CHIPSERIES = 'N589D')
+  196  0000000                   	.IF	(MAINBODY='A340').OR.(MAINBODY='D171').OR.(MAINBODY='D481')
+  197  0000000                   RAM_END			EQU 17FH
+  198  0000000                   	.ENDIF
+  199  0000000                   	.IF	(MAINBODY='A960')
+  200  0000000                   RAM_END			EQU 1FFH
+  201  0000000                   	.ENDIF
+  202  0000000                   .ENDIF
+  203  0000000                   
+  204  0000000                   DPD_RAM_BEGIN	EQU 0F00H		
+  205  0000000                   DPD_RAM_END		EQU 0F1FH
+  206  0000000                   
+  207  0000000                   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  208  0000000                   
+  209  0000000                   ;====================================================
+  210  0000000                   ; A340 & D171 & D481 series
+  211  0000000                   ;====================================================
+  212  0000000                   .IF	(MAINBODY='A340').OR.(MAINBODY='D171').OR.(MAINBODY='D481')
+  213  0000000                   SFR_BASE	EQU 	0F80H
+  214  0000000                   
+  215  0000000                   INTRF		EQU		0FB8H
+  216  0000000                   HWENG		EQU		0FBAH
+  217  0000000                   CFGULK		EQU		0FBBH
+
+
+
+
+
+  218  0000000                   SYSCFG0		EQU		0FBCH
+  219  0000000                   SYSCFG1		EQU		0FBDH
+  220  0000000                   SYSCFG2		EQU		0FBEH
+  221  0000000                   SYSCFG3		EQU		0FBFH
+  222  0000000                   SYSCFG4		EQU		0FBCH
+  223  0000000                   SYSCFG5		EQU		0FC4H
+  224  0000000                   SYSCFG6		EQU		0FB4H
+  225  0000000                   SYSCFG7		EQU		0FCCH
+  226  0000000                   
+  227  0000000                   BP0			EQU		0F80H
+  228  0000000                   BP0R		EQU		0F80H
+  229  0000000                   BP0D		EQU		0F84H
+  230  0000000                   BP0M		EQU		0F88H
+  231  0000000                   BP0EN		EQU		0F98H
+  232  0000000                   
+  233  0000000                   BP1			EQU		0F81H
+  234  0000000                   BP1R		EQU		0F81H
+  235  0000000                   BP1D		EQU		0F85H
+  236  0000000                   BP1M		EQU		0F89H
+  237  0000000                   BP1EN		EQU		0F99H
+  238  0000000                   
+  239  0000000                   ;.IF (PARTNO='N589A080').OR.(PARTNO='N589A150').OR.(PARTNO='N589A200').OR.(PARTNO='N589A280').OR.(PARTNO='N589A900').OR.(PARTNO='N589B080').OR.(PARTNO='N589B120').OR.(PARTNO='N589B170').OR.(PARTNO='N589B200').OR.(PARTNO='N589B250').OR.(PARTNO='N589B340').OR.(PARTNO='N589C080').OR.(PARTNO='N589C120').OR.(PARTNO='N589C170').OR.(PARTNO='N589C200').OR.(PARTNO='N589C250').OR.(PARTNO='N589C340').OR.(PARTNO='N589D080').OR.(PARTNO='N589D120').OR.(PARTNO='N589D170').OR.(PARTNO='N589D200').OR.(PARTNO='N589D250').OR.(PARTNO='N589D340').OR.(PARTNO='N589D081').OR.(PARTNO='N589D121').OR.(PARTNO='N589D171').OR.(PARTNO='N589D201').OR.(PARTNO='N589D251').OR.(PARTNO='N589D341').OR.(PARTNO='N589D481')
+  240  0000000                   ;.IF (SUBTYPE='UNDEFINE').OR.(SUBTYPE='LQFP48').OR.(SUBTYPE='SOP28').OR.(SUBTYPE='SOP20')
+  241  0000000                   BP2			EQU		0F82H
+  242  0000000                   BP2R		EQU		0F82H
+  243  0000000                   BP2D		EQU		0F86H
+  244  0000000                   BP2M		EQU		0F8AH
+  245  0000000                   BP2EN		EQU		0F9AH
+  246  0000000                   BP2MF0		EQU		0F9EH
+  247  0000000                   BP2MF1		EQU		0F9FH
+  248  0000000                   ;.ENDIF
+  249  0000000                   ;.ENDIF
+  250  0000000                   
+  251  0000000                   ;.IF (PARTNO='N589A080').OR.(PARTNO='N589A150').OR.(PARTNO='N589A200').OR.(PARTNO='N589A280').OR.(PARTNO='N589B200').OR.(PARTNO='N589B250').OR.(PARTNO='N589B340').OR.(PARTNO='N589D201').OR.(PARTNO='N589D251').OR.(PARTNO='N589D341').OR.(PARTNO='N589D481')
+  252  0000000                   ;.IF (SUBTYPE='UNDEFINE').OR.(SUBTYPE='LQFP48')
+  253  0000000                   BP3			EQU		0F83H
+  254  0000000                   BP3R		EQU		0F83H
+  255  0000000                   BP3D		EQU		0F87H
+  256  0000000                   BP3M		EQU		0F8BH
+  257  0000000                   BP3EN		EQU		0F9BH
+  258  0000000                   ;.ENDIF
+  259  0000000                   ;.ENDIF
+  260  0000000                   
+  261  0000000                   TMAC		EQU		0FA0H
+  262  0000000                   TMAV		EQU		0FA1H
+  263  0000000                   TMAO		EQU		0FA2H
+  264  0000000                   
+  265  0000000                   TMGC		EQU		0FA9H
+  266  0000000                   TMGVL		EQU		0FAAH
+  267  0000000                   TMGVH		EQU		0FABH
+  268  0000000                   TMGOL		EQU		0FACH
+  269  0000000                   TMGOH		EQU		0FADH
+  270  0000000                   
+  271  0000000                   IEF0		EQU		0F90H
+  272  0000000                   EVF0		EQU		0F92H
+  273  0000000                   IEF1		EQU		0F91H
+  274  0000000                   EVF1		EQU		0F93H
+
+
+
+
+
+  275  0000000                   
+  276  0000000                   PCMH		EQU		0FB5H
+  277  0000000                   VOL			EQU		0FB6H
+  278  0000000                   CHGC		EQU		0FB7H
+  279  0000000                   
+  280  0000000                   BANK		EQU		0F8CH
+  281  0000000                   WAKEF		EQU		0F8DH
+  282  0000000                   RSTF	   	EQU     0F8FH
+  283  0000000                   WDTC		EQU		0F96H
+  284  0000000                   
+  285  0000000                   PWMC		EQU		0FC0H
+  286  0000000                   PWM0EN		EQU		0FC2H
+  287  0000000                   PWV00		EQU		0FC5H
+  288  0000000                   PWV01		EQU		0FC6H
+  289  0000000                   PWV02		EQU		0FC7H
+  290  0000000                   PWV03		EQU		0FC8H
+  291  0000000                   PWV04		EQU		0FC9H
+  292  0000000                   PWV05		EQU		0FCAH
+  293  0000000                   PWM1EN		EQU		0FC3H
+  294  0000000                   PWV10		EQU		0FCDH
+  295  0000000                   PWV11		EQU		0FCEH
+  296  0000000                   PWV12		EQU		0FCFH
+  297  0000000                   
+  298  0000000                   PWM_G0_MASK	EQU		0FCH
+  299  0000000                   PWM_G1_MASK	EQU		0F3H
+  300  0000000                   PWM_G2_MASK	EQU		0CFH
+  301  0000000                   PWM_G3_MASK	EQU		03FH
+  302  0000000                   PWM_G4_MASK	EQU		0FCH
+  303  0000000                   PWM_G5_MASK	EQU		0F3H
+  304  0000000                   
+  305  0000000                   BP00_PWM	EQU		01H
+  306  0000000                   BP01_PWM	EQU		02H
+  307  0000000                   BP02_PWM	EQU		04H
+  308  0000000                   BP03_PWM	EQU		08H
+  309  0000000                   BP04_PWM	EQU		10H
+  310  0000000                   BP05_PWM	EQU		20H
+  311  0000000                   BP06_PWM	EQU		40H
+  312  0000000                   BP07_PWM	EQU		80H
+  313  0000000                   BP10_PWM	EQU		01H
+  314  0000000                   BP11_PWM	EQU		02H
+  315  0000000                   BP12_PWM	EQU		04H
+  316  0000000                   BP13_PWM	EQU		08H
+  317  0000000                   BP32_PWM	EQU		04H
+  318  0000000                   BP33_PWM	EQU		08H
+  319  0000000                   BP34_PWM	EQU		10H
+  320  0000000                   BP35_PWM	EQU		20H
+  321  0000000                   BP36_PWM	EQU		40H
+  322  0000000                   BP37_PWM	EQU		80H
+  323  0000000                   
+  324  0000000                   LDOEN		EQU		0FAFH
+  325  0000000                   
+  326  0000000                   .IF (PARTNO='N589A080').OR.(PARTNO='N589A150').OR.(PARTNO='N589A200').OR.(PARTNO='N589A280').OR.(PARTNO='N589B080').OR.(PARTNO='N589B120').OR.(PARTNO='N589B170').OR.(PARTNO='N589B200').OR.(PARTNO='N589B250').OR.(PARTNO='N589B340').OR.(PARTNO='N589C200').OR.(PARTNO='N589C250').OR.(PARTNO='N589C340').OR.(PARTNO='N589D200').OR.(PARTNO='N589D250').OR.(PARTNO='N589D340').OR.(PARTNO='N589D081').OR.(PARTNO='N589D121').OR.(PARTNO='N589D171').OR.(PARTNO='N589D201').OR.(PARTNO='N589D251').OR.(PARTNO='N589D341').OR.(PARTNO='N589D481')
+  327  0000000                   .IF (SUBTYPE='UNDEFINE').OR.(SUBTYPE='LQFP48').OR.(SUBTYPE='SOP28').OR.(SUBTYPE='SOP20').OR.(SUBTYPE='TSSOP20')
+  328  0000000                   SPIC		EQU		0FD8H
+  329  0000000                   SPIB		EQU		0FD9H
+  330  0000000                   SPIBN		EQU		0FDAH
+  331  0000000                   .ENDIF
+
+
+
+
+
+  332  0000000                   .ENDIF
+  333  0000000                   
+  334  0000000                   .IF (PARTNO='N589D081').OR.(PARTNO='N589D121').OR.(PARTNO='N589D171').OR.(PARTNO='N589D201').OR.(PARTNO='N589D251').OR.(PARTNO='N589D341').OR.(PARTNO='N589D481')
+  335  0000000                   .IF (SUBTYPE='UNDEFINE').OR.(SUBTYPE='SOP20').OR.(SUBTYPE='TSSOP20').OR.(SUBTYPE='LQFP48')
+  336  0000000                   IRMF0		EQU		0F9DH
+  337  0000000                   .ENDIF
+  338  0000000                   .ENDIF
+  339  0000000                   IRWS		EQU		0FDCH
+  340  0000000                   IRWD		EQU		0FDDH
+  341  0000000                   IRWSB		EQU		0FDEH
+  342  0000000                   
+  343  0000000                   CAPS		EQU		0FAEH
+  344  0000000                   LVDC		EQU		0F97H
+  345  0000000                   
+  346  0000000                   .IF (PARTNO='N589A080').OR.(PARTNO='N589A150').OR.(PARTNO='N589A200').OR.(PARTNO='N589A280').OR.(PARTNO='N589B080').OR.(PARTNO='N589B120').OR.(PARTNO='N589B170').OR.(PARTNO='N589B200').OR.(PARTNO='N589B250').OR.(PARTNO='N589B340')
+  347  0000000                   .IF (SUBTYPE='UNDEFINE').OR.(SUBTYPE='LQFP48').OR.(SUBTYPE='SOP28')
+  348  0000000                   ADRC		EQU		0FB0H
+  349  0000000                   ADR			EQU		0FB2H
+  350  0000000                   .ENDIF
+  351  0000000                   .ENDIF
+  352  0000000                   
+  353  0000000                   LRCC		EQU		0FDBH
+  354  0000000                   
+  355  0000000                   IMAGEP00	EQU		0FE0H
+  356  0000000                   IMAGEP01	EQU		0FE1H
+  357  0000000                   IMAGEP02	EQU		0FE2H
+  358  0000000                   IMAGEP03	EQU		0FE3H
+  359  0000000                   IMAGEP10	EQU		0FE4H
+  360  0000000                   IMAGEP11	EQU		0FE5H
+  361  0000000                   IMAGEP12	EQU		0FE6H
+  362  0000000                   IMAGEP13	EQU		0FE7H
+  363  0000000                   
+  364  0000000                   IMAGEP20	EQU		0FD4H		
+  365  0000000                   IMAGEP21	EQU		0FD5H
+  366  0000000                   IMAGEP22	EQU		0FD6H
+  367  0000000                   IMAGEP23	EQU		0FD7H
+  368  0000000                   
+  369  0000000                   ISPCON		EQU		0FE8H
+  370  0000000                   ISPADR0		EQU		0FE9H
+  371  0000000                   ISPADR1		EQU		0FEAH
+  372  0000000                   ISPADR2		EQU		0FEBH
+  373  0000000                   ISPDAT0		EQU		0FECH
+  374  0000000                   ISPDAT1		EQU		0FEDH
+  375  0000000                   ISPDAT2		EQU		0FEEH
+  376  0000000                   ISPDAT3		EQU		0FEFH
+  377  0000000                   ISPCMD		EQU		0FF0H
+  378  0000000                   ISPTRG		EQU		0FF1H
+  379  0000000                   ISPULK		EQU		0FF2H
+  380  0000000                   ISPEPT		EQU		0FF3H
+  381  0000000                   ISPULK1		EQU		0FF4H
+  382  0000000                   
+  383  0000000                   .ENDIF
+  384  0000000                   ;====================================================
+  385  0000000                   ; A960 series
+  386  0000000                   ;====================================================
+  387  0000000                   .IF	(MAINBODY='A960')
+  388  0000000                   SFR_BASE	EQU 	0F80H
+
+
+
+
+
+  389  0000000                   
+  390  0000000                   INTRF		EQU		0FB8H
+  391  0000000                   HWENG		EQU		0FBAH
+  392  0000000                   CFGULK		EQU		0FBBH
+  393  0000000                   SYSCFG0		EQU		0FBCH
+  394  0000000                   SYSCFG1		EQU		0FBDH
+  395  0000000                   SYSCFG2		EQU		0FBEH
+  396  0000000                   SYSCFG3		EQU		0FBFH
+  397  0000000                   SYSCFG4		EQU		0FBCH
+  398  0000000                   SYSCFG5		EQU		0FC4H
+  399  0000000                   SYSCFG6		EQU		0FB4H
+  400  0000000                   SYSCFG7		EQU		0FCCH
+  401  0000000                   SYSCFG8		EQU		0FCBH
+  402  0000000                   
+  403  0000000                   BP0			EQU		0F80H
+  404  0000000                   BP0R		EQU		0F80H
+  405  0000000                   BP0D		EQU		0F84H
+  406  0000000                   BP0M		EQU		0F88H
+  407  0000000                   BP0EN		EQU		0F98H
+  408  0000000                   
+  409  0000000                   BP1			EQU		0F81H
+  410  0000000                   BP1R		EQU		0F81H
+  411  0000000                   BP1D		EQU		0F85H
+  412  0000000                   BP1M		EQU		0F89H
+  413  0000000                   BP1EN		EQU		0F99H
+  414  0000000                   
+  415  0000000                   ;.IF (PARTNO='N589A400').OR.(PARTNO='N589A600').OR.(PARTNO='N589A900').OR.(PARTNO='N589B480').OR.(PARTNO='N589B480N').OR.(PARTNO='N589B650').OR.(PARTNO='N589B960').OR.(PARTNO='N589C480').OR.(PARTNO='N589C650').OR.(PARTNO='N589C960').OR.(PARTNO='N589D650').OR.(PARTNO='N589D650N').OR.(PARTNO='N589D960').OR.(PARTNO='N589D960N')
+  416  0000000                   ;.IF (SUBTYPE='UNDEFINE').OR.(SUBTYPE='LQFP48').OR.(SUBTYPE='SOP14').OR.(SUBTYPE='TSSOP20')
+  417  0000000                   BP2			EQU		0F82H
+  418  0000000                   BP2R		EQU		0F82H
+  419  0000000                   BP2D		EQU		0F86H
+  420  0000000                   BP2M		EQU		0F8AH
+  421  0000000                   BP2EN		EQU		0F9AH
+  422  0000000                   BP2MF0		EQU		0F9EH
+  423  0000000                   BP2MF1		EQU		0F9FH
+  424  0000000                   ;.ENDIF
+  425  0000000                   ;.ENDIF
+  426  0000000                   
+  427  0000000                   ;.IF (PARTNO='N589A400').OR.(PARTNO='N589A600').OR.(PARTNO='N589A900').OR.(PARTNO='N589B480').OR.(PARTNO='N589B650').OR.(PARTNO='N589B960').OR.(PARTNO='N589C480').OR.(PARTNO='N589C650').OR.(PARTNO='N589C960').OR.(PARTNO='N589D650').OR.(PARTNO='N589D960')
+  428  0000000                   ;.IF (SUBTYPE='UNDEFINE').OR.(SUBTYPE='LQFP48')
+  429  0000000                   BP3			EQU		0F83H
+  430  0000000                   BP3R		EQU		0F83H
+  431  0000000                   BP3D		EQU		0F87H
+  432  0000000                   BP3M		EQU		0F8BH
+  433  0000000                   BP3EN		EQU		0F9BH
+  434  0000000                   ;.ENDIF
+  435  0000000                   ;.ENDIF
+  436  0000000                   
+  437  0000000                   TMAC		EQU		0FA0H
+  438  0000000                   TMAV		EQU		0FA1H
+  439  0000000                   TMAO		EQU		0FA2H
+  440  0000000                   
+  441  0000000                   TMGC		EQU		0FA9H
+  442  0000000                   TMGVL		EQU		0FAAH
+  443  0000000                   TMGVH		EQU		0FABH
+  444  0000000                   TMGOL		EQU		0FACH
+  445  0000000                   TMGOH		EQU		0FADH
+
+
+
+
+
+  446  0000000                   
+  447  0000000                   IEF0		EQU		0F90H
+  448  0000000                   EVF0		EQU		0F92H
+  449  0000000                   IEF1		EQU		0F91H
+  450  0000000                   EVF1		EQU		0F93H
+  451  0000000                   
+  452  0000000                   PCMH		EQU		0FB5H
+  453  0000000                   VOL			EQU		0FB6H
+  454  0000000                   CHGC		EQU		0FB7H
+  455  0000000                   
+  456  0000000                   BANK		EQU		0F8CH
+  457  0000000                   WAKEF		EQU		0F8DH
+  458  0000000                   RSTF	   	EQU     0F8FH
+  459  0000000                   WDTC		EQU		0F96H
+  460  0000000                   
+  461  0000000                   
+  462  0000000                   PWMC		EQU		0FC0H
+  463  0000000                   PWMEN		EQU		0FC1H
+  464  0000000                   PWMOA		EQU		0FC2H
+  465  0000000                   PWMOB		EQU		0FC3H
+  466  0000000                   PWV0		EQU		0FC5H
+  467  0000000                   PWV1		EQU		0FC6H
+  468  0000000                   PWV2		EQU		0FC7H
+  469  0000000                   PWV3		EQU		0FC8H
+  470  0000000                   PWV4		EQU		0FC9H
+  471  0000000                   PWV5		EQU		0FCAH
+  472  0000000                   
+  473  0000000                   PWM_G0_MASK	EQU		0FCH
+  474  0000000                   PWM_G1_MASK	EQU		0F3H
+  475  0000000                   PWM_G2_MASK	EQU		0CFH
+  476  0000000                   PWM_G3_MASK	EQU		03FH
+  477  0000000                   PWM_G4_MASK	EQU		0FCH
+  478  0000000                   PWM_G5_MASK	EQU		0F3H
+  479  0000000                   
+  480  0000000                   BP00_PWM	EQU		01H
+  481  0000000                   BP01_PWM	EQU		02H
+  482  0000000                   BP02_PWM	EQU		04H
+  483  0000000                   BP03_PWM	EQU		08H
+  484  0000000                   BP04_PWM	EQU		10H
+  485  0000000                   BP05_PWM	EQU		20H
+  486  0000000                   BP06_PWM	EQU		40H
+  487  0000000                   BP07_PWM	EQU		80H
+  488  0000000                   BP10_PWM	EQU		01H
+  489  0000000                   BP11_PWM	EQU		02H
+  490  0000000                   BP12_PWM	EQU		04H
+  491  0000000                   BP13_PWM	EQU		08H
+  492  0000000                   BP32_PWM	EQU		04H
+  493  0000000                   BP33_PWM	EQU		08H
+  494  0000000                   BP34_PWM	EQU		10H
+  495  0000000                   BP35_PWM	EQU		20H
+  496  0000000                   BP36_PWM	EQU		40H
+  497  0000000                   BP37_PWM	EQU		80H
+  498  0000000                   
+  499  0000000                   PWM_G0_BP00	EQU		00H
+  500  0000000                   PWM_G0_BP06	EQU		01H
+  501  0000000                   PWM_G0_BP32	EQU		02H
+  502  0000000                   PWM_G1_BP01	EQU		00H
+
+
+
+
+
+  503  0000000                   PWM_G1_BP07	EQU		04H
+  504  0000000                   PWM_G1_BP33	EQU		08H
+  505  0000000                   PWM_G2_BP02	EQU		00H
+  506  0000000                   PWM_G2_BP10	EQU		10H
+  507  0000000                   PWM_G2_BP34	EQU		20H
+  508  0000000                   PWM_G3_BP03	EQU		00H
+  509  0000000                   PWM_G3_BP11	EQU		40H
+  510  0000000                   PWM_G3_BP35	EQU		80H
+  511  0000000                   PWM_G4_BP04	EQU		00H
+  512  0000000                   PWM_G4_BP12	EQU		01H
+  513  0000000                   PWM_G4_BP36	EQU		02H
+  514  0000000                   PWM_G5_BP05	EQU		00H
+  515  0000000                   PWM_G5_BP13	EQU		04H
+  516  0000000                   PWM_G5_BP37	EQU		08H
+  517  0000000                   
+  518  0000000                   ;LDOEN		EQU		0FAFH
+  519  0000000                   
+  520  0000000                   .IF (PARTNO='N589A400').OR.(PARTNO='N589A600').OR.(PARTNO='N589A900').OR.(PARTNO='N589B480').OR.(PARTNO='N589B650').OR.(PARTNO='N589B960').OR.(PARTNO='N589C480').OR.(PARTNO='N589C650').OR.(PARTNO='N589C960').OR.(PARTNO='N589D650').OR.(PARTNO='N589D960')
+  521  0000000                   .IF (SUBTYPE='UNDEFINE').OR.(SUBTYPE='LQFP48').OR.(SUBTYPE='TSSOP20')
+  522  0000000                   SPIC		EQU		0FD8H
+  523  0000000                   SPIB		EQU		0FD9H
+  524  0000000                   SPIBN		EQU		0FDAH
+  525  0000000                   .ENDIF
+  526  0000000                   .ENDIF
+  527  0000000                   
+  528  0000000                   IRWS		EQU		0FDCH
+  529  0000000                   IRWD		EQU		0FDDH
+  530  0000000                   IRWSB		EQU		0FDEH
+  531  0000000                   
+  532  0000000                   CAPS		EQU		0FAEH
+  533  0000000                   LVDC		EQU		0F97H
+  534  0000000                   
+  535  0000000                   .IF (PARTNO='N589A400').OR.(PARTNO='N589A600').OR.(PARTNO='N589A900').OR.(PARTNO='N589B480').OR.(PARTNO='N589B480N').OR.(PARTNO='N589B650').OR.(PARTNO='N589B960').OR.(PARTNO='N589C480').OR.(PARTNO='N589C650').OR.(PARTNO='N589C960').OR.(PARTNO='N589D650').OR.(PARTNO='N589D650N').OR.(PARTNO='N589D960').OR.(PARTNO='N589D960N')
+  536  0000000                   .IF (SUBTYPE='UNDEFINE').OR.(SUBTYPE='LQFP48').OR.(SUBTYPE='SOP14').OR.(SUBTYPE='TSSOP20')
+  537  0000000                   ADRC		EQU		0FB0H
+  538  0000000                   ADR			EQU		0FB2H
+  539  0000000                   .ENDIF
+  540  0000000                   .ENDIF
+  541  0000000                   
+  542  0000000                   LRCC		EQU		0FDBH
+  543  0000000                   
+  544  0000000                   SLDC0		EQU		0F70H
+  545  0000000                   SLDC1		EQU		0F71H
+  546  0000000                   HIDA1		EQU		0F72H
+  547  0000000                   LODA1		EQU		0F73H
+  548  0000000                   HIDA0		EQU		0F74H
+  549  0000000                   LODA0		EQU		0F75H
+  550  0000000                   SDTH		EQU		0F76H
+  551  0000000                   SLDAT		EQU		0F77H
+  552  0000000                   
+  553  0000000                   UMODE		EQU		0F78H
+  554  0000000                   TXSTS		EQU		0F79H
+  555  0000000                   RXSTS		EQU		0F7AH
+  556  0000000                   BRDIVH		EQU		0F7BH
+  557  0000000                   BRDIVL		EQU		0F7CH
+  558  0000000                   URTHD		EQU		0F7DH
+  559  0000000                   URDATA		EQU		0F7EH
+
+
+
+
+
+  560  0000000                   TDLY		EQU		0F7FH
+  561  0000000                   
+  562  0000000                   IMAGEP00	EQU		0FE0H
+  563  0000000                   IMAGEP01	EQU		0FE1H
+  564  0000000                   IMAGEP02	EQU		0FE2H
+  565  0000000                   IMAGEP03	EQU		0FE3H
+  566  0000000                   IMAGEP10	EQU		0FE4H
+  567  0000000                   IMAGEP11	EQU		0FE5H
+  568  0000000                   IMAGEP12	EQU		0FE6H
+  569  0000000                   IMAGEP13	EQU		0FE7H
+  570  0000000                   
+  571  0000000                   IMAGEP20	EQU		0FD4H		
+  572  0000000                   IMAGEP21	EQU		0FD5H
+  573  0000000                   IMAGEP22	EQU		0FD6H
+  574  0000000                   IMAGEP23	EQU		0FD7H
+  575  0000000                   
+  576  0000000                   ISPCON		EQU		0FE8H
+  577  0000000                   ISPADR0		EQU		0FE9H
+  578  0000000                   ISPADR1		EQU		0FEAH
+  579  0000000                   ISPADR2		EQU		0FEBH
+  580  0000000                   ISPDAT0		EQU		0FECH
+  581  0000000                   ISPDAT1		EQU		0FEDH
+  582  0000000                   ISPDAT2		EQU		0FEEH
+  583  0000000                   ISPDAT3		EQU		0FEFH
+  584  0000000                   ISPCMD		EQU		0FF0H
+  585  0000000                   ISPTRG		EQU		0FF1H
+  586  0000000                   ISPULK		EQU		0FF2H
+  587  0000000                   ISPEPT		EQU		0FF3H
+  588  0000000                   ISPULK1		EQU		0FF4H
+  589  0000000                   
+  590  0000000                   .ENDIF
+  591  0000000                   
+  592  0000000                   
+  593  0000000                   	PUBLIC ADD_CHECKSUM_HANDLE
+  594  0000000                   	PUBLIC	NAPP_PLAYLIST_TABLE_ADDR1
+  595  0000000                   	PUBLIC	NAPP_PLAYLIST_TABLE_ADDR2
+  596  0000000                   	PUBLIC	NAPP_PLAYLIST_TABLE_ADDR3
+  597  0000000                   
+  598  0000000                   .IFDEF DATA_FLASH_SIZE_512
+  599  0000000                   BODY_BEGIN_SEC0_ADDR	EQU 1080H
+  600  0000000                   BODY_END_SEC0_ADDR		EQU 11FFH
+  601  0000000                   BODY_BEGIN_ADDR			EQU 1400H
+  602  0000000                   .ENDIF
+  603  0000000                   .IFDEF DATA_FLASH_SIZE_1024
+  604  0000000                   BODY_BEGIN_SEC0_ADDR	EQU 1080H
+  605  0000000                   BODY_END_SEC0_ADDR		EQU 11FFH
+  606  0000000                   BODY_BEGIN_ADDR			EQU 1600H
+  607  0000000                   .ENDIF
+  608  0000000                   .IFNDEF BODY_BEGIN_ADDR
+  609  0000000                   BODY_BEGIN_ADDR		EQU 00001080H
+  610  0000000                   .ENDIF
+  611  0000000                   
+  612  0000000                   .IF	 (PARTNO='N589B080').OR.(PARTNO='N589C080').OR.(PARTNO='N589D080').OR.(PARTNO='N589D081')
+  613  0000000                   BODY_END_ADDR		EQU 0001FFFFH+1000H
+  614  0000000                   .ENDIF
+  615  0000000                   
+  616  0000000                   .IF	 (PARTNO='N589B120').OR.(PARTNO='N589C120').OR.(PARTNO='N589D120').OR.(PARTNO='N589D121')
+
+
+
+
+
+  617  0000000                   BODY_END_ADDR		EQU 00027FFFH+1000H
+  618  0000000                   .ENDIF
+  619  0000000                   
+  620  0000000                   .IF	 (PARTNO='N589A080').OR.(PARTNO='N589B170').OR.(PARTNO='N589C170').OR.(PARTNO='N589D170').OR.(PARTNO='N589D171')
+  621  0000000                   BODY_END_ADDR		EQU 0002FFFFH+1000H
+  622  0000000                   .ENDIF
+  623  0000000                   
+  624  0000000                   .IF	 (PARTNO='N589A150').OR.(PARTNO='N589B200').OR.(PARTNO='N589C200').OR.(PARTNO='N589D200').OR.(PARTNO='N589D201')
+  625  0000000                   BODY_END_ADDR		EQU 0003FFFFH+1000H
+  626  0000000                   .ENDIF
+  627  0000000                   
+  628  0000000                   .IF	 (PARTNO='N589A200').OR.(PARTNO='N589B250').OR.(PARTNO='N589C250').OR.(PARTNO='N589D250').OR.(PARTNO='N589D251')
+  629  0000000                   BODY_END_ADDR		EQU 0004FFFFH+1000H
+  630  0000000                   .ENDIF
+  631  0000000                   
+  632  0000000                   .IF	 (PARTNO='N589A280').OR.(PARTNO='N589B340').OR.(PARTNO='N589C340').OR.(PARTNO='N589D340').OR.(PARTNO='N589D341')
+  633  0000000                   BODY_END_ADDR		EQU 0005FFFFH+1000H
+  634  0000000                   .ENDIF
+  635  0000000                   
+  636  0000000                   .IF	 (PARTNO='N589A400').OR.(PARTNO='N589B480').OR.(PARTNO='N589B480N').OR.(PARTNO='N589C480').OR.(PARTNO='N589D481')
+  637  0000000                   BODY_END_ADDR		EQU 0007FFFFH+1000H
+  638  0000000                   .ENDIF
+  639  0000000                   
+  640  0000000                   .IF	 (PARTNO='N589A600').OR.(PARTNO='N589B650').OR.(PARTNO='N589C650').OR.(PARTNO='N589D650').OR.(PARTNO='N589D650N')
+  641  0000000                   BODY_END_ADDR		EQU 000BFFFFH+1000H
+  642  0000000                   .ENDIF
+  643  0000000                   
+  644  0000000                   .IF	 (PARTNO='N589A900').OR.(PARTNO='N589B960').OR.(PARTNO='N589C960').OR.(PARTNO='N589D960').OR.(PARTNO='N589D960N')
+  645  0000000                   BODY_END_ADDR		EQU 000FFFFFH+1000H
+  646  0000000                   .ENDIF
+  647  0000000                   
+  648  0000000                   NAPP_PLAYLIST_TABLE_ADDR1	EQU (BODY_END_ADDR & FFFFFFFCH)-40
+  649  0000000                   NAPP_PLAYLIST_TABLE_ADDR2	EQU (BODY_END_ADDR & FFFFFFFCH)-36
+  650  0000000                   NAPP_PLAYLIST_TABLE_ADDR3	EQU (BODY_END_ADDR & FFFFFFFCH)-32
+  651  0000000                   
+  652  0000000                       LIBRARY_CODE_NOCROSSING: SECTION
+  653  0000000                   ;===============================================================
+  654  0000000                   ;  			
+  655  0000000                   ;===============================================================
+  656  0000000                   CALC_CHECKSUM MACRO START_ADDR, END_ADDR
+  657  0000000                   	LDA #.LOW.START_ADDR
+  658  0000000                   	STA !ISPADR0
+  659  0000000                   	LDA #.HIGH.START_ADDR
+  660  0000000                   	STA !ISPADR1
+  661  0000000                   	LDA #.HIGH8.START_ADDR
+  662  0000000                   	STA !ISPADR2
+  663  0000000                   
+  664  0000000                   ;
+  665  0000000                   ; process ROM_START - 60FFFH DATA
+  666  0000000                   ;
+  667  0000000                   	LDA #A6H
+  668  0000000                   	STA !ISPULK
+  669  0000000                   	LDA #E9H
+  670  0000000                   	STA !ISPULK
+  671  0000000                   	LDA #77H
+  672  0000000                   	STA !ISPULK
+  673  0000000                   
+
+
+
+
+
+  674  0000000                   	LDA	#ISP_EN
+  675  0000000                   	TSB !ISPCON
+  676  0000000                   	LDA #ISP_CMD_READ
+  677  0000000                   	STA !ISPCMD
+  678  0000000                   
+  679  0000000                   CHECKSUM_LOOP_LIB#:
+  680  0000000                   	.IFDEF WDTIMER
+  681  0000000                   	LDA #WDTC_CLR
+  682  0000000                   	STA !WDTC
+  683  0000000                   	.ENDIF 
+  684  0000000                   
+  685  0000000                   	LDA #ISP_DONE
+  686  0000000                   	TSB !ISPTRG
+  687  0000000                   POLLING_ISP_TRG_LIB#:
+  688  0000000                   	LDA !ISPTRG
+  689  0000000                   	AND #ISP_DONE
+  690  0000000                   	BNE POLLING_ISP_TRG_LIB#
+  691  0000000                   ;
+  692  0000000                   ; accumulate the results of ISPDAT0~3
+  693  0000000                   ;
+  694  0000000                   	LDX	#0
+  695  0000000                   CHECKSUM_ACC_LIB#:
+  696  0000000                   	CLC
+  697  0000000                   	LDA	!ISPDAT0, X
+  698  0000000                   	ADC	<CHECK_RESULT
+  699  0000000                   	STA	<CHECK_RESULT
+  700  0000000                   	LDA	<CHECK_RESULT+1
+  701  0000000                   	ADC	#00H
+  702  0000000                   	STA	<CHECK_RESULT+1
+  703  0000000                   
+  704  0000000                   	INX
+  705  0000000                   	CPX	#4
+  706  0000000                   	BNE CHECKSUM_ACC_LIB#
+  707  0000000                   
+  708  0000000                   ROM_ADDR_INC_LIB#:
+  709  0000000                   	CLC
+  710  0000000                   	LDA	!ISPADR0
+  711  0000000                   	ADC #4
+  712  0000000                   	STA !ISPADR0
+  713  0000000                   	BNE	ROM_ADDR_CHECK_LIB#
+  714  0000000                   	INC	!ISPADR1
+  715  0000000                   	BNE	ROM_ADDR_CHECK_LIB#
+  716  0000000                   	INC !ISPADR2
+  717  0000000                   	BRA ROM_ADDR_CHECK_LIB#
+  718  0000000                   
+  719  0000000                   ROM_ADDR_CHECK_LIB#:
+  720  0000000                   ;
+  721  0000000                   ; check if it is the last address
+  722  0000000                   ;
+  723  0000000                   	LDA !ISPADR2
+  724  0000000                   	CMP #.HIGH8.(END_ADDR+1)
+  725  0000000                   	BNE CHECKSUM_LOOP_LIB#
+  726  0000000                   	LDA !ISPADR1
+  727  0000000                   	CMP #.HIGH.(END_ADDR+1)
+  728  0000000                   	BNE CHECKSUM_LOOP_LIB#
+  729  0000000                   	LDA !ISPADR0
+  730  0000000                   	CMP #.LOW.(END_ADDR+1)
+
+
+
+
+
+  731  0000000                   	BEQ END_CHECKSUM_LIB#	
+  732  0000000                   	JMP CHECKSUM_LOOP_LIB#
+  733  0000000                   
+  734  0000000                   END_CHECKSUM_LIB#:	
+  735  0000000                   	.IFDEF WDTIMER
+  736  0000000                   	LDA #WDTC_CLR
+  737  0000000                   	STA !WDTC
+  738  0000000                   	.ENDIF
+  739  0000000                   
+  740  0000000                   	LDA	#ISP_EN
+  741  0000000                   	TRB !ISPCON
+  742  0000000                   	STZ !ISPULK
+  743  0000000                   	ENDM
+  744  0000000                   ;===============================================
+  745  0000000                   ADD_CHECKSUM_HANDLE:
+  746  0000000                   
+  747  0000000  64 02			STZ <CHECK_RESULT
+  748  0000002  64 03			STZ <CHECK_RESULT+1
+  749  0000004                   
+  750  0000004                   .IFDEF DATA_FLASH_SIZE_512
+  751  0000004                   	CALC_CHECKSUM BODY_BEGIN_SEC0_ADDR, BODY_END_SEC0_ADDR
+  752  0000004                   .ENDIF
+  753  0000004                   .IFDEF DATA_FLASH_SIZE_1024
+  754  0000004                   	CALC_CHECKSUM BODY_BEGIN_SEC0_ADDR, BODY_END_SEC0_ADDR
+  755  0000004                   .ENDIF
+  756  0000004                   	CALC_CHECKSUM BODY_BEGIN_ADDR, BODY_END_ADDR
+  757  0000004  A9 80			LDA #.LOW.BODY_BEGIN_ADDR
+  758  0000006  8D E9 0F     	STA !ISPADR0
+  759  0000009  A9 10			LDA #.HIGH.BODY_BEGIN_ADDR
+  760  000000B  8D EA 0F     	STA !ISPADR1
+  761  000000E  A9 00			LDA #.HIGH8.BODY_BEGIN_ADDR
+  762  0000010  8D EB 0F     	STA !ISPADR2
+  763  0000013  A9 A6			LDA #A6H
+  764  0000015  8D F2 0F     	STA !ISPULK
+  765  0000018  A9 E9			LDA #E9H
+  766  000001A  8D F2 0F     	STA !ISPULK
+  767  000001D  A9 77			LDA #77H
+  768  000001F  8D F2 0F     	STA !ISPULK
+  769  0000022  A9 01			LDA	#ISP_EN
+  770  0000024  0C E8 0F     	TSB !ISPCON
+  771  0000027  A9 00			LDA #ISP_CMD_READ
+  772  0000029  8D F0 0F     	STA !ISPCMD
+  773  000002C                   CHECKSUM_LOOP_LIB#:
+  774  000002C                   	.IFDEF WDTIMER
+  775  000002C  A9 01			LDA #WDTC_CLR
+  776  000002E  8D 96 0F     	STA !WDTC
+  777  0000031                   	.ENDIF 
+  778  0000031  A9 01			LDA #ISP_DONE
+  779  0000033  0C F1 0F     	TSB !ISPTRG
+  780  0000036                   POLLING_ISP_TRG_LIB#:
+  781  0000036  AD F1 0F     	LDA !ISPTRG
+  782  0000039  29 01			AND #ISP_DONE
+  783  000003B  D0 F9			BNE POLLING_ISP_TRG_LIB#
+  784  000003D  A2 00			LDX	#0
+  785  000003F                   CHECKSUM_ACC_LIB#:
+  786  000003F  18           	CLC
+  787  0000040  BD EC 0F     	LDA	!ISPDAT0, X
+
+
+
+
+
+  788  0000043  65 02			ADC	<CHECK_RESULT
+  789  0000045  85 02			STA	<CHECK_RESULT
+  790  0000047  A5 03			LDA	<CHECK_RESULT+1
+  791  0000049  69 00			ADC	#00H
+  792  000004B  85 03			STA	<CHECK_RESULT+1
+  793  000004D  E8           	INX
+  794  000004E  E0 04			CPX	#4
+  795  0000050  D0 ED			BNE CHECKSUM_ACC_LIB#
+  796  0000052                   ROM_ADDR_INC_LIB#:
+  797  0000052  18           	CLC
+  798  0000053  AD E9 0F     	LDA	!ISPADR0
+  799  0000056  69 04			ADC #4
+  800  0000058  8D E9 0F     	STA !ISPADR0
+  801  000005B  D0 0A			BNE	ROM_ADDR_CHECK_LIB#
+  802  000005D  EE EA 0F     	INC	!ISPADR1
+  803  0000060  D0 05			BNE	ROM_ADDR_CHECK_LIB#
+  804  0000062  EE EB 0F     	INC !ISPADR2
+  805  0000065  80 00			BRA ROM_ADDR_CHECK_LIB#
+  806  0000067                   ROM_ADDR_CHECK_LIB#:
+  807  0000067  AD EB 0F     	LDA !ISPADR2
+  808  000006A  C9 10			CMP #.HIGH8.(BODY_END_ADDR+1)
+  809  000006C  D0 BE			BNE CHECKSUM_LOOP_LIB#
+  810  000006E  AD EA 0F     	LDA !ISPADR1
+  811  0000071  C9 10			CMP #.HIGH.(BODY_END_ADDR+1)
+  812  0000073  D0 B7			BNE CHECKSUM_LOOP_LIB#
+  813  0000075  AD E9 0F     	LDA !ISPADR0
+  814  0000078  C9 00			CMP #.LOW.(BODY_END_ADDR+1)
+  815  000007A  F0 03			BEQ END_CHECKSUM_LIB#	
+  816  000007C  4C 2C 00     	JMP CHECKSUM_LOOP_LIB#
+  817  000007F                   END_CHECKSUM_LIB#:	
+  818  000007F                   	.IFDEF WDTIMER
+  819  000007F  A9 01			LDA #WDTC_CLR
+  820  0000081  8D 96 0F     	STA !WDTC
+  821  0000084                   	.ENDIF
+  822  0000084  A9 01			LDA	#ISP_EN
+  823  0000086  1C E8 0F     	TRB !ISPCON
+  824  0000089  9C F2 0F     	STZ !ISPULK
+  825  000008C                   	;ENDM
+  826  000008C                   
+  827  000008C  60           	RTS
+  828  000008D                   ;===============================================
+  829  000008D                   
+  830  000008D                   
+  831  000008D                   	ENDS
+  832  0000000                   ;**The following is audio external**
+  833  0000000                   ;**The following is sentence label**
+  834  0000000                   ;**The following is INIT_DECODE_SPEECH label**
+  835  0000000                   	EXT_PROGRAM: SECTION
+  836  0000000                   	ENDS
+  837  0000000                   
+		Line(s) Assembled : 837
+		Error(s): 0
+		Warn(s) : 0
+		Begin Assembling Time : Wed Sep 08 10:37:09 2021
+		End   Assembling Time : Wed Sep 08 10:37:09 2021
+

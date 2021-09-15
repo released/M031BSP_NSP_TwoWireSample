@@ -1,0 +1,106 @@
+	CHIP		N589
+
+	INCLUDE		PGM_HEAD.INI
+	
+	GLOBAL 		COMMAND_ADDR_TABLE
+
+
+
+;==========================================================================
+;	DECLARE VARIABLES INSIDE THIS SECTION
+;	EXAMPLE => VAR1	DS	3
+;	           VAR2	DS	1
+;==========================================================================
+	USER_RAM: SECTION
+	ORG	0000H
+
+.IF	(WITH_RAM_OVER_STACK .EQ. 1)
+	USER_RAM_AFTER_RESERVED: SECTION
+
+	ENDS
+.ENDIF
+
+	ENDS
+
+;==========================================================================
+;	WRITE COMMAND SUBROUTINE INSIDE THIS SECTION
+;	1.PLEASE REMOVE MARK AND ADD YOUR CODE AS NEEDED. INCLUDE 'CMDx:' 
+;	  AND 'DW CMDx' 
+;	2.EACH SUBOUTINE SHOULD BE ENDED BY 'RTS'
+;==========================================================================
+	CODE: SECTION
+
+CMD00:
+CMD01:
+CMD02:
+CMD03:
+CMD04:
+CMD05:
+CMD06:
+CMD07:
+CMD08:
+CMD09:
+CMD10:
+CMD11:
+CMD12:
+CMD13:
+CMD14:
+CMD15:
+CMD16:
+CMD17:
+CMD18:
+CMD19:
+CMD20:
+CMD21:
+CMD22:
+CMD23:
+CMD24:
+CMD25:
+CMD26:
+CMD27:
+CMD28:
+CMD29:
+CMD30:
+CMD31:
+	RTS
+
+
+COMMAND_ADDR_TABLE:
+	DW	CMD00
+	DW	CMD01
+	DW	CMD02
+	DW	CMD03
+	DW	CMD04
+	DW	CMD05
+	DW	CMD06
+	DW	CMD07
+	DW	CMD08
+	DW	CMD09
+	DW	CMD10
+	DW	CMD11
+	DW	CMD12
+	DW  CMD13
+	DW  CMD14
+	DW  CMD15
+	DW  CMD16
+	DW  CMD17
+	DW  CMD18
+	DW  CMD19
+	DW  CMD20
+	DW  CMD21
+	DW  CMD22
+	DW  CMD23
+	DW  CMD24
+	DW  CMD25
+	DW  CMD26
+	DW  CMD27
+	DW  CMD28
+	DW  CMD29
+	DW  CMD30
+	DW  CMD31
+	
+	
+	
+	
+	
+	ENDS
