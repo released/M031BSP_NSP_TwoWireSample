@@ -1,4 +1,4 @@
-Wed Sep 08 10:37:14 2021
+Thu Aug 18 09:50:12 2022
 
 
 
@@ -9,8 +9,8 @@ Wed Sep 08 10:37:14 2021
 	Macro Assembler  -  Version 1.00.0
 		-----------------------------------------------
 
-		Input  Filename : D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING\CpuIf\NAPP.asm.app
-		Output Filename : D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING\CpuIf\Code_Release\NAPP.oc
+		Input  Filename : D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING_NSP960B\CpuIf\NAPP.asm.app
+		Output Filename : D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING_NSP960B\CpuIf\Code_Release\NAPP.oc
 
 
     1  0000000                   	SYMBOLS
@@ -31,7 +31,7 @@ Wed Sep 08 10:37:14 2021
    16  0000011  00              	DB .HIGH._@STARTADDR_PLAYLIST_TABLE
    17  0000012  00              	DB .HIGH8._@STARTADDR_PLAYLIST_TABLE
    18  0000013  00              	DB .SEGHIGH._@STARTADDR_PLAYLIST_TABLE
-   19  0000014  EE730000        	DL 000073EEH
+   19  0000014  F1600100        	DL 000160F1H
    20  0000018  EA6C0F00        	DL 000F6CEAH
    21  000001C  FFFFFFFF        	DL FFFFFFFFH
    22  0000020  00000000        	DL 00000000H
@@ -51,6 +51,6 @@ Wed Sep 08 10:37:14 2021
 		Line(s) Assembled : 35
 		Error(s): 0
 		Warn(s) : 0
-		Begin Assembling Time : Wed Sep 08 10:37:14 2021
-		End   Assembling Time : Wed Sep 08 10:37:14 2021
+		Begin Assembling Time : Thu Aug 18 09:50:12 2022
+		End   Assembling Time : Thu Aug 18 09:50:12 2022
 

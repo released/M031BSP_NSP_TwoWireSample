@@ -1,4 +1,4 @@
-Wed Sep 08 10:37:13 2021
+Thu Aug 18 09:50:11 2022
 
 
 
@@ -9,8 +9,8 @@ Wed Sep 08 10:37:13 2021
 	Macro Assembler  -  Version 1.00.0
 		-----------------------------------------------
 
-		Input  Filename : D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING\CpuIf\InitTable.asm.app
-		Output Filename : D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING\CpuIf\Code_Release\InitTable.oc
+		Input  Filename : D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING_NSP960B\CpuIf\InitTable.asm.app
+		Output Filename : D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING_NSP960B\CpuIf\Code_Release\InitTable.oc
 
 
     1  0000000                   	SYMBOLS
@@ -258,6 +258,6 @@ Wed Sep 08 10:37:13 2021
 		Line(s) Assembled : 222
 		Error(s): 0
 		Warn(s) : 0
-		Begin Assembling Time : Wed Sep 08 10:37:13 2021
-		End   Assembling Time : Wed Sep 08 10:37:13 2021
+		Begin Assembling Time : Thu Aug 18 09:50:11 2022
+		End   Assembling Time : Thu Aug 18 09:50:11 2022
 

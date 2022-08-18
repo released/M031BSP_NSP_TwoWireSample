@@ -1,4 +1,4 @@
-Wed Sep 08 10:37:11 2021
+Thu Aug 18 09:50:07 2022
 
 
 
@@ -9,8 +9,8 @@ Wed Sep 08 10:37:11 2021
 	Macro Assembler  -  Version 1.00.0
 		-----------------------------------------------
 
-		Input  Filename : D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING\CpuIf\UIO_SR.asm.app
-		Output Filename : D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING\CpuIf\Code_Release\UIO_SR.oc
+		Input  Filename : D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING_NSP960B\CpuIf\UIO_SR.asm.app
+		Output Filename : D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING_NSP960B\CpuIf\Code_Release\UIO_SR.oc
 
 
     1  0000000                   	CHIP	65C02
@@ -1044,7 +1044,7 @@ Wed Sep 08 10:37:11 2021
   949  0000000                   S_OP7		EQU	80H
   950  0000000                   ;========================================================
   951  0000000                   
-  952  0000000                   	INCLUDE	"D:\SOURCECODE\_AVERY_M031\M031BSP_NSP_TWOWIRESAMPLE\NSP_PROJECT\RINGRING\CPUIF\CONFIGURATION.INI.APP"
+  952  0000000                   	INCLUDE	"D:\SOURCECODE\_AVERY_M031\M031BSP_NSP_TWOWIRESAMPLE\NSP_PROJECT\RINGRING_NSP960B\CPUIF\CONFIGURATION.INI.APP"
   953  0000000                   LOCAL_TEST						EQU 0
   954  0000000                   ;--------------------------------------------------------------------------
   955  0000000                   ; Configurations : New add
@@ -1725,7 +1725,7 @@ Wed Sep 08 10:37:11 2021
  1575  0000000                   
  1576  0000000                   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  1577  0000000                   
- 1578  0000000                   	INCLUDE	"D:\SOURCECODE\_AVERY_M031\M031BSP_NSP_TWOWIRESAMPLE\NSP_PROJECT\RINGRING\CPUIF\RAMVAR.INI.APP"
+ 1578  0000000                   	INCLUDE	"D:\SOURCECODE\_AVERY_M031\M031BSP_NSP_TWOWIRESAMPLE\NSP_PROJECT\RINGRING_NSP960B\CPUIF\RAMVAR.INI.APP"
  1579  0000000                   ;  1WITH_SPI_SWITCH
  1580  0000000                   ;  0WITH_CHIP_SERIES
  1581  0000000                   ;  1WITH_VOL_ADJ
@@ -6989,7 +6989,7 @@ Wed Sep 08 10:37:11 2021
  6414  0000000                   
  6415  0000000                   	INCLUDE	"C:\NUVOTON\NSPPLAYLISTEDITOR\V1.13.000\NSP_SDS\SDS_NSP\INCLUDE\HWE_DEFINE.INI.APP"
  6416  0000000                   ;******* SHARED MEMORY *******************************
- 6417  0000000                   	INCLUDE	"D:\SOURCECODE\_AVERY_M031\M031BSP_NSP_TWOWIRESAMPLE\NSP_PROJECT\RINGRING\CPUIF\HWE_SHARE_RAM.INI.APP"
+ 6417  0000000                   	INCLUDE	"D:\SOURCECODE\_AVERY_M031\M031BSP_NSP_TWOWIRESAMPLE\NSP_PROJECT\RINGRING_NSP960B\CPUIF\HWE_SHARE_RAM.INI.APP"
  6418  0000000                   HWE_SLD_LEN_BA	EQU	SHM_RAM_BEGIN+102
  6419  0000000                   HWE_SLD_ADDR_BA	EQU	SHM_RAM_BEGIN+102
  6420  0000000                   HWE_CACHE1_EVENT_CHUNK	EQU	SHM_RAM_BEGIN+102
@@ -13005,6 +13005,6 @@ Wed Sep 08 10:37:11 2021
 		Line(s) Assembled : 11944
 		Error(s): 0
 		Warn(s) : 0
-		Begin Assembling Time : Wed Sep 08 10:37:11 2021
-		End   Assembling Time : Wed Sep 08 10:37:11 2021
+		Begin Assembling Time : Thu Aug 18 09:50:07 2022
+		End   Assembling Time : Thu Aug 18 09:50:07 2022
 

@@ -1,6 +1,6 @@
-Executable File = D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING\CpuIf\Code_Release\VP_CpuIf_NSP960_SOP14.ocd
+Executable File = D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING_NSP960B\CpuIf\Code_Release\VP_CpuIf_NSP960_SOP14.ocd
 
-Timestamp is Wed Sep 08 10:37:14 2021
+Timestamp is Thu Aug 18 09:50:12 2022
 
 
 Address		Length		Name		Class
@@ -15,8 +15,8 @@ Module : 1.wav.oc 	 Size :       3101	 Prgbit
 255:0xffffff	         0		CODE(2.wav.oc)	Prgbit
 255:0xffffff	         0		DATA(2.wav.oc)	Prgbit
 255:0xffffff	         0		PAGE0(2.wav.oc)	Prgbit
-255:0xffffff	      1664		_2.WAV_RES_@1@_(2.wav.oc)	Prgbit
-255:0xffffff	       836		_2.WAV_RES_@2@_(2.wav.oc)	Prgbit
+255:0xffffff	      1679		_2.WAV_RES_@1@_(2.wav.oc)	Prgbit
+255:0xffffff	       821		_2.WAV_RES_@2@_(2.wav.oc)	Prgbit
 Module : 2.wav.oc 	 Size :       2500	 Prgbit
 
 255:0xffffff	         0		CODE(3.wav.oc)	Prgbit
@@ -116,15 +116,23 @@ Module : NAPP.oc 	 Size :         53	 Prgbit
 255:0xffffff	         0		CODE(PlayListTable_Segment0000.oc)	Prgbit
 255:0xffffff	         0		DATA(PlayListTable_Segment0000.oc)	Prgbit
 255:0xffffff	         0		PAGE0(PlayListTable_Segment0000.oc)	Prgbit
-255:0xffffff	        88		_@PLAYLISTTABLE_SEGMENTINT00(PlayListTable_Segment0000.oc)	Prgbit
+255:0xffffff	       100		_@PLAYLISTTABLE_SEGMENTINT00(PlayListTable_Segment0000.oc)	Prgbit
 255:0xffffff	         0		EXT_PROGRAM(PlayListTable_Segment0000.oc)	Prgbit
-Module : PlayListTable_Segment0000.oc 	 Size :         88	 Prgbit
+Module : PlayListTable_Segment0000.oc 	 Size :        100	 Prgbit
 
-255:0xffffff	         0		CODE(ResCRC2808FB41_151549.wav.oc)	Prgbit
-255:0xffffff	         0		DATA(ResCRC2808FB41_151549.wav.oc)	Prgbit
-255:0xffffff	         0		PAGE0(ResCRC2808FB41_151549.wav.oc)	Prgbit
-255:0xffffff	      5551		_RESCRC2808FB41_151549.WAV_RES_@1@_(ResCRC2808FB41_151549.wav.oc)	Prgbit
-Module : ResCRC2808FB41_151549.wav.oc 	 Size :       5551	 Prgbit
+255:0xffffff	         0		CODE(ResCRC1568B4B6_094832.wav.oc)	Prgbit
+255:0xffffff	         0		DATA(ResCRC1568B4B6_094832.wav.oc)	Prgbit
+255:0xffffff	         0		PAGE0(ResCRC1568B4B6_094832.wav.oc)	Prgbit
+255:0xffffff	      5551		_RESCRC1568B4B6_094832.WAV_RES_@1@_(ResCRC1568B4B6_094832.wav.oc)	Prgbit
+Module : ResCRC1568B4B6_094832.wav.oc 	 Size :       5551	 Prgbit
+
+255:0xffffff	         0		CODE(ResCRCBFAD4BB_094832.wav.oc)	Prgbit
+255:0xffffff	         0		DATA(ResCRCBFAD4BB_094832.wav.oc)	Prgbit
+255:0xffffff	         0		PAGE0(ResCRCBFAD4BB_094832.wav.oc)	Prgbit
+255:0xffffff	     20775		_RESCRCBFAD4BB_094832.WAV_RES_@1@_(ResCRCBFAD4BB_094832.wav.oc)	Prgbit
+255:0xffffff	     32768		_RESCRCBFAD4BB_094832.WAV_RES_@2@_(ResCRCBFAD4BB_094832.wav.oc)	Prgbit
+255:0xffffff	      7117		_RESCRCBFAD4BB_094832.WAV_RES_@3@_(ResCRCBFAD4BB_094832.wav.oc)	Prgbit
+Module : ResCRCBFAD4BB_094832.wav.oc 	 Size :      60660	 Prgbit
 
 255:0xffffff	         0		CODE(ReservedAddrRange.oc)	Prgbit
 255:0xffffff	         0		DATA(ReservedAddrRange.oc)	Prgbit
@@ -184,8 +192,9 @@ Module : UserCmd.oc 	 Size :         65	 Prgbit
 255:0xffffff	        15		__ALIAS_EQU_1_128_16000_2_EQU_@1@_(VP_CpuIf_NSP960_SOP14_equ.oc)	Prgbit
 255:0xffffff	        15		__ALIAS_EQU_1_128_16000_3_EQU_@1@_(VP_CpuIf_NSP960_SOP14_equ.oc)	Prgbit
 255:0xffffff	        15		__ALIAS_EQU_1_128_16000_5_EQU_@1@_(VP_CpuIf_NSP960_SOP14_equ.oc)	Prgbit
-255:0xffffff	        15		__ALIAS_EQU_1_128_16000_RESCRC2808FB41_151549_EQU_@1@_(VP_CpuIf_NSP960_SOP14_equ.oc)	Prgbit
-Module : VP_CpuIf_NSP960_SOP14_equ.oc 	 Size :        105
+255:0xffffff	        15		__ALIAS_EQU_1_128_16000_RESCRC1568B4B6_094832_EQU_@1@_(VP_CpuIf_NSP960_SOP14_equ.oc)	Prgbit
+255:0xffffff	        15		__ALIAS_EQU_1_128_16000_RESCRCBFAD4BB_094832_EQU_@1@_(VP_CpuIf_NSP960_SOP14_equ.oc)	Prgbit
+Module : VP_CpuIf_NSP960_SOP14_equ.oc 	 Size :        120
 
 
 

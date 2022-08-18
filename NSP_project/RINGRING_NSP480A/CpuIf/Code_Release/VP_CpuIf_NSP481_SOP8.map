@@ -1,6 +1,6 @@
 Executable File = D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING_NSP480A\CpuIf\Code_Release\VP_CpuIf_NSP481_SOP8.ocl
 
-Timestamp is Wed Sep 15 09:38:36 2021
+Timestamp is Wed Sep 15 14:46:23 2021
 
 
 ****************************************************************************************************
@@ -148,8 +148,8 @@ ADDRESS         NAME                                    MODULE
 ****************************************************************************************************
 ADDRESS         NAME                                    MODULE                                  
 
-00:0X108F52     _ALIAS_EQU_1_128_16000_RESCRC8E3945CE_110353VP_CpuIf_NSP481_SOP8_equ.oc             
-00:0X108F61     _ALIAS_EQU_1_128_16000_RESCRC2808FB41_151549VP_CpuIf_NSP481_SOP8_equ.oc             
+00:0X108F52     _ALIAS_EQU_1_128_16000_RESCRCB9465F48_094710VP_CpuIf_NSP481_SOP8_equ.oc             
+00:0X108F61     _ALIAS_EQU_1_128_16000_RESCRC75583023_094710VP_CpuIf_NSP481_SOP8_equ.oc             
 ****************************************************************************************************
 ****************************************************************************************************
 
@@ -159,8 +159,8 @@ ADDRESS         NAME                                    MODULE
 ****************************************************************************************************
 ADDRESS         NAME                                    MODULE                                  
 
-00:0X108F61     _ALIAS_EQU_1_128_16000_RESCRC2808FB41_151549VP_CpuIf_NSP481_SOP8_equ.oc             
-00:0X108F52     _ALIAS_EQU_1_128_16000_RESCRC8E3945CE_110353VP_CpuIf_NSP481_SOP8_equ.oc             
+00:0X108F61     _ALIAS_EQU_1_128_16000_RESCRC75583023_094710VP_CpuIf_NSP481_SOP8_equ.oc             
+00:0X108F52     _ALIAS_EQU_1_128_16000_RESCRCB9465F48_094710VP_CpuIf_NSP481_SOP8_equ.oc             
 ****************************************************************************************************
 /*Global symbols sorting by name
 ****************************************************************************************************

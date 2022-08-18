@@ -59,6 +59,16 @@ update @ 2021/09/03
 ![image](https://github.com/released/M031BSP_NSP_TwoWireSample/blob/main/NSP960_EVB.jpg)
 
 
+below is NSP960_NSP_project
+
+![image](https://github.com/released/M031BSP_NSP_TwoWireSample/blob/main/NSP960_NSP_project.jpg)
+
+
+below is NSP960_NSP_programming
+
+![image](https://github.com/released/M031BSP_NSP_TwoWireSample/blob/main/NSP960_NSP_programming.jpg)
+
+
 6. below is screen capture about digit 4 , 5
 
 ![image](https://github.com/released/M031BSP_NSP_TwoWireSample/blob/main/DIGIT_4_5.jpg)

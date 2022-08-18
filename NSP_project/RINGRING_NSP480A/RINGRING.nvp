@@ -23,19 +23,6 @@ NVPSeqCount = 3
 [NotifyHostDriver]
 Enable = 1
 
-[SoundEditing]
-SendByteTwoWire0 = 10,X,EF
-LastHeight = 667
-SendByteTwoWire2 = 17,X,E8
-SendByteTwoWire1 = ,,
-SendByteTwoWire8 = 82,X,7D
-LastWidth = 1073
-SendByteTwoWire5 = 7C,01,82
-SendByteTwoWire7 = 81,X,7E
-SendByteTwoWire4 = 7F,00,01,7F
-DisplayName = 1
-SendByteTwoWire3 = F0,40,CF
-SendByteTwoWire6 = 80,X,7F
 
 [NVPSequence_DemoKit3]
 PlayRepeatCount = 0
@@ -155,3 +142,16 @@ PlayRepeatCount = 0
 PlayMode = 0
 SeqName = BP01
 
+[SoundEditing]
+SendByteTwoWire0=10,X,EF
+SendByteTwoWire1=,,
+SendByteTwoWire2=17,X,E8
+SendByteTwoWire3=F0,40,CF
+SendByteTwoWire4=7F,00,01,7F
+SendByteTwoWire5=7C,01,82
+SendByteTwoWire6=80,X,7F
+SendByteTwoWire7=81,X,7E
+SendByteTwoWire8=82,X,7D
+DisplayName=1
+LastWidth=1073
+LastHeight=667

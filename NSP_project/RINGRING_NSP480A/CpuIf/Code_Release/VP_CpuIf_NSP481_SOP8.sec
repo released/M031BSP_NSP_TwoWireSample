@@ -1,6 +1,6 @@
 Executable File = D:\SourceCode\_Avery_M031\M031BSP_NSP_TwoWireSample\NSP_project\RINGRING_NSP480A\CpuIf\Code_Release\VP_CpuIf_NSP481_SOP8.ocd
 
-Timestamp is Wed Sep 15 09:38:36 2021
+Timestamp is Wed Sep 15 14:46:22 2021
 
 
 Address		Length		Name		Class
@@ -120,19 +120,19 @@ Module : NAPP.oc 	 Size :         53	 Prgbit
 255:0xffffff	         0		EXT_PROGRAM(PlayListTable_Segment0000.oc)	Prgbit
 Module : PlayListTable_Segment0000.oc 	 Size :        100	 Prgbit
 
-255:0xffffff	         0		CODE(ResCRC2808FB41_151549.wav.oc)	Prgbit
-255:0xffffff	         0		DATA(ResCRC2808FB41_151549.wav.oc)	Prgbit
-255:0xffffff	         0		PAGE0(ResCRC2808FB41_151549.wav.oc)	Prgbit
-255:0xffffff	      5551		_RESCRC2808FB41_151549.WAV_RES_@1@_(ResCRC2808FB41_151549.wav.oc)	Prgbit
-Module : ResCRC2808FB41_151549.wav.oc 	 Size :       5551	 Prgbit
+255:0xffffff	         0		CODE(ResCRC75583023_094710.wav.oc)	Prgbit
+255:0xffffff	         0		DATA(ResCRC75583023_094710.wav.oc)	Prgbit
+255:0xffffff	         0		PAGE0(ResCRC75583023_094710.wav.oc)	Prgbit
+255:0xffffff	      5551		_RESCRC75583023_094710.WAV_RES_@1@_(ResCRC75583023_094710.wav.oc)	Prgbit
+Module : ResCRC75583023_094710.wav.oc 	 Size :       5551	 Prgbit
 
-255:0xffffff	         0		CODE(ResCRC8E3945CE_110353.wav.oc)	Prgbit
-255:0xffffff	         0		DATA(ResCRC8E3945CE_110353.wav.oc)	Prgbit
-255:0xffffff	         0		PAGE0(ResCRC8E3945CE_110353.wav.oc)	Prgbit
-255:0xffffff	     20775		_RESCRC8E3945CE_110353.WAV_RES_@1@_(ResCRC8E3945CE_110353.wav.oc)	Prgbit
-255:0xffffff	     32768		_RESCRC8E3945CE_110353.WAV_RES_@2@_(ResCRC8E3945CE_110353.wav.oc)	Prgbit
-255:0xffffff	      7117		_RESCRC8E3945CE_110353.WAV_RES_@3@_(ResCRC8E3945CE_110353.wav.oc)	Prgbit
-Module : ResCRC8E3945CE_110353.wav.oc 	 Size :      60660	 Prgbit
+255:0xffffff	         0		CODE(ResCRCB9465F48_094710.wav.oc)	Prgbit
+255:0xffffff	         0		DATA(ResCRCB9465F48_094710.wav.oc)	Prgbit
+255:0xffffff	         0		PAGE0(ResCRCB9465F48_094710.wav.oc)	Prgbit
+255:0xffffff	     20775		_RESCRCB9465F48_094710.WAV_RES_@1@_(ResCRCB9465F48_094710.wav.oc)	Prgbit
+255:0xffffff	     32768		_RESCRCB9465F48_094710.WAV_RES_@2@_(ResCRCB9465F48_094710.wav.oc)	Prgbit
+255:0xffffff	      7117		_RESCRCB9465F48_094710.WAV_RES_@3@_(ResCRCB9465F48_094710.wav.oc)	Prgbit
+Module : ResCRCB9465F48_094710.wav.oc 	 Size :      60660	 Prgbit
 
 255:0xffffff	         0		CODE(ReservedAddrRange.oc)	Prgbit
 255:0xffffff	         0		DATA(ReservedAddrRange.oc)	Prgbit
@@ -192,8 +192,8 @@ Module : UserCmd.oc 	 Size :         65	 Prgbit
 255:0xffffff	        15		__ALIAS_EQU_1_128_16000_2_EQU_@1@_(VP_CpuIf_NSP481_SOP8_equ.oc)	Prgbit
 255:0xffffff	        15		__ALIAS_EQU_1_128_16000_3_EQU_@1@_(VP_CpuIf_NSP481_SOP8_equ.oc)	Prgbit
 255:0xffffff	        15		__ALIAS_EQU_1_128_16000_5_EQU_@1@_(VP_CpuIf_NSP481_SOP8_equ.oc)	Prgbit
-255:0xffffff	        15		__ALIAS_EQU_1_128_16000_RESCRC2808FB41_151549_EQU_@1@_(VP_CpuIf_NSP481_SOP8_equ.oc)	Prgbit
-255:0xffffff	        15		__ALIAS_EQU_1_128_16000_RESCRC8E3945CE_110353_EQU_@1@_(VP_CpuIf_NSP481_SOP8_equ.oc)	Prgbit
+255:0xffffff	        15		__ALIAS_EQU_1_128_16000_RESCRC75583023_094710_EQU_@1@_(VP_CpuIf_NSP481_SOP8_equ.oc)	Prgbit
+255:0xffffff	        15		__ALIAS_EQU_1_128_16000_RESCRCB9465F48_094710_EQU_@1@_(VP_CpuIf_NSP481_SOP8_equ.oc)	Prgbit
 Module : VP_CpuIf_NSP481_SOP8_equ.oc 	 Size :        120
 
 
